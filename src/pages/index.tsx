@@ -5,6 +5,10 @@ import {
   AiFillLinkedin,
   AiFillTwitterCircle,
 } from "react-icons/ai";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import {useEffect} from "react";
+
 import { BsFillMoonStarsFill } from "react-icons/bs";
 
 import logo from "../../public/assets/logo.svg";
@@ -16,8 +20,15 @@ import { projectdata } from "../../public/assets/projects/porject";
 import Link from "next/link";
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({
+      deplay:500,
+      duration:1000,
+    }); 
+  }, [])
+  
   return (
-    <main className=" min-w-screen min-h-screen  bg-slate-900 text-slate-200 ">
+    <main className=" min-w-screen min-h-screen  bg-slate-900 text-slate-200 overflow-hidden">
       <nav className="min-w-screen h-10 p-10 shadow-2xl flex justify-between items-center ">
         <h1 className="w-10 ml-10">
           <Image src={logo} alt="logo" />
@@ -67,9 +78,23 @@ export default function Home() {
           </ul>
         </div>
 
-        <div className="relative bg-gradient-to-b from-slate-800 w-80  overflow-hidden  h-80 mx-auto rounded-full">
+        <div className="relative bg-gradient-to-b from-slate-800 w-80    h-80 mx-auto rounded-full">
           <Image src={profilepic} alt="Deco" className="w-60 mx-auto" />
         </div>
+      </section>
+
+
+      {/* 
+      
+            About me
+      
+      
+      */}
+      <section className="mt-20 min-h-screen flex flex-col lg:flex-row gap-10 lg:mb-60 ">
+      <div className="relative bg-gradient-to-b from-slate-800 w-80    h-80 mx-auto rounded-full">
+          <Image src={profilepic} alt="Deco" className="w-60 mx-auto" />
+        </div>
+      <div></div>
       </section>
 
       {/* 
@@ -85,6 +110,7 @@ export default function Home() {
         <div
           className="flex flex-col justify-center items-center space-y-5 
          md:w-[70%] lg:w-[33%]  mx-auto  p-10 text-center  shadow-xl shadow-slate-950  "
+         data-aos="fade-up-right"
         >
           <Image
             src={graphicsdesign}
@@ -103,6 +129,7 @@ export default function Home() {
         <div
           className="flex flex-col justify-center items-center space-y-5 
          md:w-[70%] lg:w-[33%]  mx-auto  p-10 text-center  shadow-xl shadow-slate-950  "
+         data-aos="zoom-in-up"
         >
           <Image
             src={webdesign}
@@ -118,6 +145,7 @@ export default function Home() {
         <div
           className="flex flex-col justify-center items-center space-y-5 
          md:w-[70%] lg:w-[33%]  mx-auto  p-10 text-center  shadow-xl shadow-slate-950  "
+         data-aos="fade-up-left"
         >
           <Image
             src={webdevelopment}
@@ -149,6 +177,7 @@ export default function Home() {
             <Link
               href={el.link}
               key={i}
+              data-aos="fade-up"
               className="flex flex-col justify-center items-start space-y-2
             md:w-[70%] lg:w-[33%]  mx-auto  p-10 text-start  shadow-xl shadow-slate-950 basis-1/4 flex-1 "
             >
@@ -182,9 +211,13 @@ export default function Home() {
           );
         })}
         <div className="flex w-full justify-center items-center mt-10">
-          <Link href="#" className="px-6 py-2 border-2 border-cyan-500 rounded-full  text-center text-3xl text-cyan-500 font-bold  hover:bg-cyan-500 hover:text-slate-800  ">Show More</Link>
+          <Link
+            href="#"
+            className="px-6 py-2 border-2 border-cyan-500 rounded-full  text-center text-3xl text-cyan-500 font-bold  hover:bg-cyan-500 hover:text-slate-800  "
+          >
+            Show More
+          </Link>
         </div>
-
       </section>
       <section className="min-h-screen"></section>
     </main>

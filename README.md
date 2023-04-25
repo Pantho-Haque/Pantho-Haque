@@ -1,38 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Pantho Haque
 
-## Getting Started
+Web developer being a student
 
-First, run the development server:
+## About Me
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+I have worked in several projects with seniors and teachers.Also I have 3 years of learning experience in those fields
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Graphics designing
+- Web Designing
+- Web Development
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Education
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Currently I am a student of 3rd year in Computer Science and Engineering , Khulna University of Engineering and Technology.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<!-- ![Profile Picture](./public/assets/profile.png) -->
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+<!-- ## Projects
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+[Include links to your most significant or relevant projects, along with a brief description, technologies used, and your role in the project.]
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### [Project Name]
 
-## Deploy on Vercel
+[Description of the project, including its goals, technologies used, and your role in the project. You can include screenshots or other media to showcase your work.]
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+[Live demo](link to demo) | [View code](link to repository)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### [Project Name]
+
+[Description of the project, including its goals, technologies used, and your role in the project. You can include screenshots or other media to showcase your work.]
+
+[Live demo](link to demo) | [View code](link to repository)
+ -->
+
+## Contact Me
+
+- [Email](mailto:panthohaque927908@gmail.com)
+- [LinkedIn](https://www.linkedin.com/in/panthohaque/)
+- [Facebook](https://www.facebook.com/panhohaque75/)
+
+Thank you for visiting my GitHub profile!

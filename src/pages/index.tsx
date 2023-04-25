@@ -22,7 +22,7 @@ import Link from "next/link";
 export default function Home() {
   useEffect(() => {
     AOS.init({
-      deplay:500,
+      delay:500,
       duration:1000,
     }); 
   }, [])
@@ -78,7 +78,7 @@ export default function Home() {
           </ul>
         </div>
 
-        <div className="relative bg-gradient-to-b from-slate-800 w-80    h-80 mx-auto rounded-full">
+        <div  className="relative bg-gradient-to-b from-slate-800 w-80    h-80 mx-auto rounded-full">
           <Image src={profilepic} alt="Deco" className="w-60 mx-auto" />
         </div>
       </section>

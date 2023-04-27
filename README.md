@@ -16,10 +16,11 @@ I have worked in several projects with seniors and teachers.Also I have 3 years 
 
 Currently I am a student of 3rd year in Computer Science and Engineering , Khulna University of Engineering and Technology.
 
+
 <div style="display:flex; justify-content:center;align-items:center">
 <img src="./public/assets/profile.png" alt="Profile Picture" width="200">
 <p style="width:100px; text-align:center" >You can visit my Portfolio by clicking <br/> <b>
-    <a href="https://pantho-haque.github.io/Pantho-Haque/">here</a>
+    <a href="https://pantho-haque.github.io/Pantho-Haque/" target="_blank">here</a>
 </b> </p>
 </div>
 

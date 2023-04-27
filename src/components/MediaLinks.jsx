@@ -1,6 +1,7 @@
 
 import {
   AiFillFacebook,
+  AiFillGithub,
   AiFillInstagram,
   AiFillLinkedin,
 } from "react-icons/ai";
@@ -21,6 +22,11 @@ export default function MediaLinks() {
       <li>
         <a href="https://www.linkedin.com/in/panthohaque/" target="_blank">
           <AiFillLinkedin className="cursor-pointer text-4xl text-slate-200" />
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/Pantho-Haque" target="_blank">
+          <AiFillGithub className="cursor-pointer text-4xl text-slate-200" />
         </a>
       </li>
     </ul>

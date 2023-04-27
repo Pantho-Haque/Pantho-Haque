@@ -6,6 +6,7 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <title>Pantho Haque</title>
+        <link rel='shortcut icon' href='/favicon.ico' />
         <script src="https://cdn.jsdelivr.net/npm/kutty@latest/dist/kutty.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/kutty@latest/dist/alpinejs.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/kutty@latest/dist/dropdown.min.js"></script>

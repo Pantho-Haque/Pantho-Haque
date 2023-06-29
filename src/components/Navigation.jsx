@@ -41,7 +41,7 @@ export default function Navigation() {
         Contact
       </a>
       <a
-        href="/Resume-PanthoHaque.pdf"
+        href="./Resume-PanthoHaque.pdf"
         className="bg-gradient-to-br from-slate-500 to-slate-900 px-4 py-2 rounded-md btn "
       >
         Resume

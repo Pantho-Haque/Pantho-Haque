@@ -16,6 +16,17 @@ I have worked in several projects with seniors and teachers.Also I have 3 years 
 
 Currently I am a student of 3rd year in Computer Science and Engineering , Khulna University of Engineering and Technology.
 
+<!-- <table border="0">
+    <tr>
+        <td><img src="./public/assets/profile.png" alt="Profile Picture" width="200">
+        </td>
+        <td>
+            <p align="center" >You can visit my Portfolio by clicking <br/> <b>
+            <a href="https://pantho-haque.github.io/Pantho-Haque/" target="_blank">here</a> </b> 
+            </p>
+        </td>
+    </tr>
+</table> -->
 
 <div style="display:flex; justify-content:center;align-items:center">
 <img src="./public/assets/profile.png" alt="Profile Picture" width="200">
@@ -100,6 +111,8 @@ Blood Bank Management System(BBM) is an android project where any user with this
 Any blood bank authority can have their authenticated ID. Using this id that blood bank can change its necessary informations.
 Data will be saved for particular user in database , so user must login to see them and must register to user this application.
 
+[_View code_](https://github.com/Pantho-Haque/BBM.git)
+
 ## **ToDo**
 
 ![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white) ![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white)
@@ -107,9 +120,6 @@ Data will be saved for particular user in database , so user must login to see t
 Simply take notes about the information provided by user and gave the ability to update or delete it anytime.Data will be saved for particular user in database , so user must login to see them and must register to user this application.
 
 [_View code_](https://github.com/Pantho-Haque/TODO-AndroidStudio.git)
-
-
-[_View code_](https://github.com/Pantho-Haque/BBM.git)
 
 # Contact Me
 

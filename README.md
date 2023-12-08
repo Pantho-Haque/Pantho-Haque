@@ -28,12 +28,22 @@ Currently I am a student of 3rd year in Computer Science and Engineering , Khuln
     </tr>
 </table> -->
 
-<div style="display:flex; justify-content:center;align-items:center">
-<img src="./public/assets/profile.png" alt="Profile Picture" width="200">
-<p style="width:100px; text-align:center" >You can visit my Portfolio by clicking <br/> <b>
+
+
+
+
+<img align="right" src="./public/assets/profile.png" alt="Profile Picture" width="200">
+
+<p align="left" >You can visit my Portfolio by clicking <br/>
+ <b>
     <a href="https://pantho-haque.github.io/Pantho-Haque/" target="_blank">here</a>
-</b> </p>
-</div>
+    </b>
+</p>
+
+
+- 💬 Ask me about **C++ , ReactJS , Android**
+
+- 📫 How to reach me **panthohaque927908@gmail.com**
 
 # Projects
 

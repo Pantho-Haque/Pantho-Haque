@@ -5,7 +5,7 @@ import { BiMenu } from "react-icons/bi";
 
 import logo from "../../public/assets/logo.svg";
 
-export default function Navigation() {
+export default function Navigation() { 
   const [navOpen, setNavOpen] = useState(false);
   const NavLinks = () => (
     <div className="flex flex-col lg:flex-row lg:space-x-2 mr-10 justify-start items-start ">
@@ -28,12 +28,12 @@ export default function Navigation() {
       >
         Skills
       </a>
-      {/* <a
+      <a
         href="#projects"
         className=" hover:bg-cyan-950  px-4 py-2 rounded-md btn "
       >
         Projects
-      </a> */}
+      </a>
       <a
         href="#contact"
         className=" hover:bg-cyan-950  px-4 py-2 rounded-md btn "

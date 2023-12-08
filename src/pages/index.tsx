@@ -74,13 +74,13 @@ export default function Home() {
       
       
       */}
-      {/* <h1
+      <h1
         id="projects"
         className="text-5xl font-semibold ml-3 pb-3 md:ml-14 mt-40 border-b-2 border-slate-800 "
       >
         # My works!!
       </h1>
-      <Projects /> */}
+      <Projects /> 
 
       {/* 
       

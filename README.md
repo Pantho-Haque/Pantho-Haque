@@ -134,3 +134,8 @@ Thank you for visiting my GitHub profile!
     https://github.com/Ileriayo/markdown-badges/tree/master
 
  -->
+<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=pantho-haque&show_icons=true&locale=en&layout=compact" alt="pantho-haque" /></p>
+
+<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=pantho-haque&show_icons=true&locale=en" alt="pantho-haque" /></p>
+
+<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=pantho-haque&" alt="pantho-haque" /></p>

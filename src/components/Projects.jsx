@@ -8,7 +8,7 @@ export default function Projects() {
   return (
     <section className="mt-5 lg:mx-40 lg:flex lg:flex-wrap gap-10 ">
       {projectdata.map((el, i) => {
-        return (
+        return ( 
           <Link
             href={el.link}
             key={i}

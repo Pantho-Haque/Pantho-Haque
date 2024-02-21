@@ -2,7 +2,7 @@
 
 # Pantho Haque
 
-Web developer being a student
+Web developer being a student. Here is my <a href="/Pantho-Haque/cv.pdf">__ CV __</a>
 
 ## About Me
 

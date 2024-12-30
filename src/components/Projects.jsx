@@ -7,52 +7,65 @@ import { projectdata } from "../../public/assets/projects/porject";
 export default function Projects() {
   return (
     <section className="mt-5 lg:mx-40 lg:flex lg:flex-wrap gap-10 ">
-      {projectdata.map((el, i) => {
-        return ( 
-          <Link
-            href={el.link}
+      {projectdata.map((project, i) => {
+        return (
+          <motion.div
             key={i}
-            data-aos="fade-up"
-            className="flex flex-col justify-center items-start space-y-2
-            md:w-[70%] lg:w-[33%]  mx-auto  p-10 text-start  shadow-xl shadow-slate-950 basis-1/4 flex-1 "
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="group relative overflow-hidden rounded-xl border-2 border-slate-800/50 hover:border-none bg-slate-900/50 p-6 hover:bg-slate-800/50 transition-all duration-300"
           >
-            <motion.div
-              whileHover={{
-                scale: 1.01,
-              }}
-            >
-              <Image
-                src={el.img}
-                className="w-full h-full object-cover mx-auto"
-                layout="responsive"
-                alt=""
-              />
-              <h1 className="text-xl font-medium text-slate-300 mb-4">
-                {el.name}
-              </h1>
-              <div className="flex gap-1 justify-start items-start">
-                {el.badge.map((elem, index) => (
-                  <p
+            <div className="space-y-4">
+              <h3 className="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+                {project.name}
+              </h3>
+
+              <p className="text-slate-300 text-base leading-relaxed ">
+                {project.description}
+              </p>
+
+              <div className="flex flex-wrap gap-2 pt-2">
+                {project.badge.map((tech, index) => (
+                  <span
                     key={index}
-                    className="h-8 px-2 border-2 border-slate-500 rounded-full  text-center text-emerald-500 font-bold "
+                    className="px-3 py-1 text-sm font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20 hover:border-cyan-500/40 transition-colors"
                   >
-                    {elem}
-                  </p>
+                    {tech}
+                  </span>
                 ))}
               </div>
-              <p className="mt-4">{el.desc}</p>
-            </motion.div>
-          </Link>
+
+             
+              
+              <Link 
+                href={project.link}
+                passHref={true}
+                className="inline-flex items-center mt-4 text-cyan-400 cursor-pointer hover:text-cyan-300 transition-colors group/link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="font-semibold">{project.link_text}</span>
+                <svg
+                  className="w-5 h-5 ml-2 transform group-hover/link:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 7l5 5m0 0l-5 5m5-5H6"
+                  />
+                </svg>
+              </Link>
+            </div>
+
+            
+          </motion.div>
         );
       })}
-      <div className="flex w-full justify-center items-center mt-10">
-        <Link
-          href="#"
-          className="px-6 py-2 border-2 border-cyan-500 rounded-full  text-center text-3xl text-cyan-500 font-bold  hover:bg-cyan-500 hover:text-slate-800  "
-        >
-          Show More
-        </Link>
-      </div>
     </section>
   );
 }

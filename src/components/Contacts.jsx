@@ -34,7 +34,7 @@ export default function Contacts() {
             <AiTwotoneMail className="text-2xl" />
             <p className="text-xl font-medium ">Email</p>
           </div>
-          <p className="font-semibold">panthohaque927908@gmail.com</p>
+          <p className="font-semibold">pantho.haque.dev@gmail.com</p>
         </div>
 
         {/* phone */}
@@ -47,7 +47,7 @@ export default function Contacts() {
             <BiPhoneCall className="text-2xl" />
             <p className="text-xl font-medium ">Phone</p>
           </div>
-          <p className="font-semibold"> +8801(.....)</p>
+          <p className="font-semibold"> +8801689833981 </p>
         </div>
       </section>
     </div>

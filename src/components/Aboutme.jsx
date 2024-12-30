@@ -6,7 +6,7 @@ export default function Aboutme() {
   return (
     <section
       id="about"
-      className="mt-20 lg:mb-60 min-h-screen flex flex-col lg:flex-row gap-10 justify-center items-center   "
+      className="mt-24 flex flex-col lg:flex-row gap-10 justify-center items-center   "
     >
       <div
         data-aos="zoom-out"

@@ -5,7 +5,7 @@ import { BiMenu } from "react-icons/bi";
 
 import logo from "../../public/assets/logo.svg";
 
-export default function Navigation() { 
+export default function Navigation({ setSection }) {
   const [navOpen, setNavOpen] = useState(false);
   const NavLinks = () => (
     <div className="flex flex-col lg:flex-row lg:space-x-2 mr-10 justify-start items-start ">
@@ -13,33 +13,46 @@ export default function Navigation() {
     <BsFillMoonStarsFill className="cursor-pointer text-xl" />
   </li> */}
 
-      <a href="#home" className=" hover:bg-cyan-950  px-4 py-2 rounded-md btn ">
+      <button
+        onClick={() => {
+          setSection("home");
+        }}
+        className=" hover:bg-cyan-950  px-4 py-2 rounded-md btn "
+      >
         Home
-      </a>
-      <a
-        href="#about"
+      </button>
+      <button
+        onClick={() => {
+          setSection("about");
+        }}
         className=" hover:bg-cyan-950  px-4 py-2 rounded-md btn "
       >
         About
-      </a>
-      <a
-        href="#skills"
+      </button>
+      <button
+        onClick={() => {
+          setSection("skills");
+        }}
         className=" hover:bg-cyan-950  px-4 py-2 rounded-md btn "
       >
         Skills
-      </a>
-      <a
-        href="#projects"
+      </button>
+      <button
+        onClick={() => {
+          setSection("projects");
+        }}
         className=" hover:bg-cyan-950  px-4 py-2 rounded-md btn "
       >
         Projects
-      </a>
-      <a
-        href="#contact"
+      </button>
+      <button
+        onClick={() => {
+          setSection("contact");
+        }}
         className=" hover:bg-cyan-950  px-4 py-2 rounded-md btn "
       >
         Contact
-      </a>
+      </button>
       <a
         href="/Pantho-Haque/Resume-PanthoHaque.pdf"
         className="bg-gradient-to-br from-slate-500 to-slate-900 px-4 py-2 rounded-md btn "

@@ -43,37 +43,45 @@ export default function Skills() {
     },
   ];
   return (
-    <section className="mt-5 lg:flex lg:flex-wrap gap-10 lg:mb-60 ">
-      {skillList.map((el, i) => {
-        return (
-          <div
-            key={i}
-            className="flex flex-col justify-center items-center space-y-5 
+    <div>
+      <h1
+        className="text-5xl font-semibold mt-24 ml-3 pb-3 md:ml-14  border-b-2 border-slate-800 "
+      >
+        # Skills
+      </h1>
+
+      <section className="mt-5 lg:flex lg:flex-wrap gap-10 ">
+        {skillList.map((el, i) => {
+          return (
+            <div
+              key={i}
+              className="flex flex-col justify-center items-center space-y-5 
      md:w-[70%] lg:w-[33%]  mx-auto  p-10 text-center  shadow-xl shadow-slate-950 
      lg:basis-1/3 lg:flex-1 xl:basis-0
      "
-            data-aos="zoom-in-down"
-          >
-            <Image
-              src={el.icon}
-              className="w-32 h-32 object-cover mx-auto"
-              alt=""
-            />
-            <h1 className="text-xl font-medium text-slate-300">{el.name}</h1>
-            <div className="flex gap-1 flex-wrap justify-center items-start">
-              {el.skills.map((elem, index) => (
-                <p
-                  key={index}
-                  className="h-8 px-2 border-2 border-emerald-900 rounded-full  text-center text-emerald-500 font-bold "
-                >
-                  {elem}
-                </p>
-              ))}
+              data-aos="zoom-in-down"
+            >
+              <Image
+                src={el.icon}
+                className="w-32 h-32 object-cover mx-auto"
+                alt=""
+              />
+              <h1 className="text-xl font-medium text-slate-300">{el.name}</h1>
+              <div className="flex gap-1 flex-wrap justify-center items-start">
+                {el.skills.map((elem, index) => (
+                  <p
+                    key={index}
+                    className="h-8 px-2 border-2 border-emerald-900 rounded-full  text-center text-emerald-500 font-bold "
+                  >
+                    {elem}
+                  </p>
+                ))}
+              </div>
+              <p>{el.desc}</p>
             </div>
-            <p>{el.desc}</p>
-          </div>
-        );
-      })}
-    </section>
+          );
+        })}
+      </section>
+    </div>
   );
 }

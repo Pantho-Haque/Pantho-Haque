@@ -1,87 +1,68 @@
 import Image from "next/image";
-
-// import database from "/assets/skills/database.png";
-// import graphicsdesign from "/assets/skills/graphicsdesign.png";
-// import webdesign from "/assets/skills/webdesign.png";
-// import webdevelopment from "/assets/skills/webdevelopment.png";
+import { motion } from "framer-motion";
+import { SKILL_LIST } from "../constants";
 
 export default function Skills() {
-  const skillList = [
-    {
-      icon: "/assets/skills/graphicsdesign.png",
-      name: "Graphics Designing",
-      skills: ["Illustrator", "Photoshop", "Powerpoint", "Figma"],
-      desc: "I am capable of designing any website, make any logo or icons that is necessary for an website using those tools.",
-    },
-    {
-      icon: "/assets/skills/webdesign.png",
-      name: "Frontend",
-      skills: [
-        "HTML5",
-        "CSS3",
-        "Bootstrap",
-        "TailwindCSS",
-        "ChakraUI",
-        "JavaScript ES6",
-        "JQuery",
-        "ReactJS",
-        "NextJS",
-      ],
-      desc: "Crafting engaging web experiences with the power of new technologies is my passion.With a keen eye for detail and a deep understanding I create intuitive, responsive websites.",
-    },
-    {
-      icon: "/assets/skills/webdevelopment.png",
-      name: "Backend",
-      skills: ["NodeJS", "ExpressJS", "Django", "Laravel"],
-      desc: "Through APIs frontend applications are being connected with backend applications.A backend applications consist of database management,authentication and etc.",
-    },
-    {
-      icon: "/assets/skills/database.png",
-      name: "Database",
-      skills: ["MySql", "Firebase"],
-      desc: "To store any users information and their data we must need to maintain a databaseI have knowledge about both SQL and NoSQL.",
-    },
-  ];
+  
   return (
-    <div>
+    <div className="px-4 md:px-8 pt-4">
       <h1
-        className="text-5xl font-semibold mt-24 ml-3 pb-3 md:ml-14  border-b-2 border-slate-800 "
+        id="skills"
+        className="text-5xl font-semibold ml-3 pb-3 md:ml-14 border-b-2 border-emerald-700"
       >
-        # Skills
+       # Skills
       </h1>
 
-      <section className="mt-5 lg:flex lg:flex-wrap gap-10 ">
-        {skillList.map((el, i) => {
-          return (
-            <div
+      <section className="mt-10 lg:mx-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {SKILL_LIST.map((el, i) => (
+            <motion.div
               key={i}
-              className="flex flex-col justify-center items-center space-y-5 
-     md:w-[70%] lg:w-[33%]  mx-auto  p-10 text-center  shadow-xl shadow-slate-950 
-     lg:basis-1/3 lg:flex-1 xl:basis-0
-     "
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="backdrop-blur-sm rounded-xl border border-slate-700 hover:border-cyan-500/40 
+                bg-gradient-to-br from-slate-900/80 to-slate-800/50 overflow-hidden 
+                hover:shadow-lg hover:shadow-cyan-500/10 transition-all duration-300 
+                flex flex-col p-6 h-full hover:scale-105"
             >
-              <Image
-                src={el.icon}
-                className="w-32 h-32 object-cover mx-auto"
-                alt=""
-                width={40}
-                height={40}
-              />
-              <h1 className="text-xl font-medium text-slate-300">{el.name}</h1>
-              <div className="flex gap-1 flex-wrap justify-center items-start">
+              <div className="flex justify-center mb-4">
+                <div className="relative">
+                  <div className="absolute -inset-2 bg-gradient-to-r from-cyan-500/20 to-emerald-500/20 rounded-full blur-md"></div>
+                  <div className="relative bg-slate-800/50 p-3 rounded-full">
+                    <Image
+                      src={el.icon}
+                      className="w-16 h-16 object-contain"
+                      alt={el.name}
+                      width={64}
+                      height={64}
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <h3 className="text-xl font-bold text-white mb-3 text-center hover:text-cyan-400 transition-colors">
+                {el.name}
+              </h3>
+
+              <div className="flex flex-wrap gap-2 justify-center mb-4">
                 {el.skills.map((elem, index) => (
-                  <p
+                  <span
                     key={index}
-                    className="h-8 px-2 border-2 border-emerald-900 rounded-full  text-center text-emerald-500 font-bold "
+                    className="px-3 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 
+                      rounded-full border border-cyan-500/20 hover:bg-cyan-500/20 transition-colors"
                   >
                     {elem}
-                  </p>
+                  </span>
                 ))}
               </div>
-              <p>{el.desc}</p>
-            </div>
-          );
-        })}
+
+              <p className="text-slate-300 text-sm leading-relaxed mt-auto text-center">
+                {el.desc}
+              </p>
+            </motion.div>
+          ))}
+        </div>
       </section>
     </div>
   );

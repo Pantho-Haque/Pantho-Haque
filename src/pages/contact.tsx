@@ -3,11 +3,12 @@ import { CONTACT } from "@/constants";
 
 export default function Contacts() {
   const { LOCATION, MAP_LINK, EMAIL, EMAIL_LINK, PHONE, PHONE_LINK } = CONTACT;
+  
   return (
-    <div className="px-4 md:px-8 py-10">
+    <div className="px-4 md:px-8 pt-4">
       <h1
         id="contact"
-        className="text-5xl font-semibold ml-3 pb-3 md:ml-14 mt-20 border-b-2 border-emerald-700"
+        className="text-5xl font-semibold ml-3 pb-3 md:ml-14   border-b-2 border-emerald-700"
       >
         # Contact
       </h1>
@@ -78,7 +79,7 @@ export default function Contacts() {
                 </label>
                 <textarea
                   id="message"
-                  rows="4"
+                  rows={4}
                   className="w-full px-4 py-2 bg-slate-700 border border-slate-600 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 text-slate-200"
                   placeholder="Your message here..."
                 ></textarea>

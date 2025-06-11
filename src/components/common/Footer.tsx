@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 export default function Footer() {
   const pathname = usePathname();
   return (
-    <footer className="bg-slate-900 py-8 border-t border-slate-800">
+    <footer className="bg-slate-900 p-10 border-t border-slate-800">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row md:justify-between items-center">
           {pathname !== "/" ? (

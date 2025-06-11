@@ -100,3 +100,10 @@ export const SKILL_LIST = [
     desc: "To store any users information and their data we must need to maintain a databaseI have knowledge about both SQL and NoSQL.",
   },
 ];
+
+export const SOCIAL_MEDIA = {
+  FACEBOOK: "https://www.facebook.com/panhohaque75",
+  INSTAGRAM: "https://www.instagram.com/pan_da_pantho/",
+  LINKEDIN: "https://www.linkedin.com/in/panthohaque/",
+  GITHUB: "https://github.com/Pantho-Haque",
+}  

@@ -1,12 +1,15 @@
+"use client";
 import MediaLinks from "../MediaLinks";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
+  const pathname = usePathname();
   return (
     <footer className="bg-slate-900 py-8 border-t border-slate-800">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row md:justify-between items-center">
-          {window.location.pathname !== "/" ? (
+          {pathname !== "/" ? (
             <>
               <div className="mb-4 md:mb-0 hidden md:block">
                 <Link href="/">

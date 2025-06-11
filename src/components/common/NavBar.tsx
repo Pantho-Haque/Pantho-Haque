@@ -1,50 +1,23 @@
-import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
+import { NavLinks } from "@/components/common/NavLinks";
 
 export default function NavBar() {
   const [navOpen, setNavOpen] = useState(false);
-  const NavLinks = () => (
-    <div className="flex flex-col md:flex-row md:space-x-2 mr-10 justify-start items-start ">
-      <Link href="/" className="hover:bg-cyan-950 px-4 py-2 rounded-md btn">
-        Home
-      </Link>
-      <Link
-        href="/about"
-        className="hover:bg-cyan-950 px-4 py-2 rounded-md btn"
-      >
-        About
-      </Link>
-      <Link
-        href="/skills"
-        className="hover:bg-cyan-950 px-4 py-2 rounded-md btn"
-      >
-        Skills
-      </Link>
-      <Link
-        href="/projects"
-        className="hover:bg-cyan-950 px-4 py-2 rounded-md btn"
-      >
-        Projects
-      </Link>
-      <Link
-        href="/contact"
-        className="hover:bg-cyan-950 px-4 py-2 rounded-md btn"
-      >
-        Contact
-      </Link>
-      {/* <a
-        href="/Pantho-Haque/Resume-PanthoHaque.pdf"
-        className="bg-gradient-to-br from-slate-500 to-slate-900 px-4 py-2 rounded-md btn "
-      >
-        Resume
-      </a> */}
-    </div>
-  );
+  
   return (
     <nav className="w-full h-10 p-10 shadow-2xl flex justify-between items-center  bg-slate-900 z-30">
-      <h1 className="w-10 ml-10">
-        <Image src="/assets/logo.svg" width={40} height={40} alt="logo" />
+      <h1 className="w-10 ml-4 md:ml-20">
+        <svg 
+          width="40" 
+          height="40" 
+          viewBox="0 0 40 40" 
+          xmlns="http://www.w3.org/2000/svg"
+          className="text-white"
+        >
+          <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" strokeWidth="2" />
+          <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fill="currentColor" fontSize="14" fontWeight="bold">PH</text>
+          <path d="M5 30 L35 10" stroke="currentColor" strokeWidth="1" opacity="0.5" />
+        </svg>
       </h1>
       <div className="hidden md:flex">
         <NavLinks />

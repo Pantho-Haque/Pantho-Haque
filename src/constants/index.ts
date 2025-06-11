@@ -1,11 +1,25 @@
-export const CONTACT = {
-  LOCATION: "BoardBazar, Gazipur, Bangladesh",
-  MAP_LINK: "https://maps.app.goo.gl/Bfy3YaBH1khwDJFr6",
-  EMAIL: "pantho.haque.dev@gmail.com",
-  EMAIL_LINK: "mailto:pantho.haque.dev@gmail.com",
-  PHONE: "+8801689833981",
-  PHONE_LINK: "tel:+8801689833981",
-};
+export const NAV_LINKS = [
+  {
+    name: "Home",
+    href: "/",
+  },
+  {
+    name: "About",
+    href: "/about",
+  },
+  {
+    name: "Skills",
+    href: "/skills",
+  },
+  {
+    name: "Projects",
+    href: "/projects",
+  },
+  {
+    name: "Contact",
+    href: "/contact",
+  },
+]
 
 export const PROJECCT_DATA = [
   {
@@ -100,6 +114,15 @@ export const SKILL_LIST = [
     desc: "To store any users information and their data we must need to maintain a databaseI have knowledge about both SQL and NoSQL.",
   },
 ];
+
+export const CONTACT = {
+  LOCATION: "BoardBazar, Gazipur, Bangladesh",
+  MAP_LINK: "https://maps.app.goo.gl/Bfy3YaBH1khwDJFr6",
+  EMAIL: "pantho.haque.dev@gmail.com",
+  EMAIL_LINK: "mailto:pantho.haque.dev@gmail.com",
+  PHONE: "+8801689833981",
+  PHONE_LINK: "tel:+8801689833981",
+};
 
 export const SOCIAL_MEDIA = {
   FACEBOOK: "https://www.facebook.com/panhohaque75",

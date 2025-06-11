@@ -3,7 +3,7 @@ import { SOCIAL_MEDIA } from "../constants";
 export default function MediaLinks() {
 
   const {FACEBOOK,INSTAGRAM,LINKEDIN,GITHUB}=SOCIAL_MEDIA;
-  
+
   return (
     <ul className="flex justify-center mt-5 space-x-5">
       <li>

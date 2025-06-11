@@ -9,12 +9,12 @@ export default function Aboutme() {
       className="mt-24 flex flex-col lg:flex-row gap-10 justify-center items-center   "
     >
       <div
-        data-aos="zoom-out"
+        
         className="relative bg-gradient-to-bl lg:bg-gradient-to-tr from-emerald-950 via-slate-900 w-full max-w-lg h-120  rounded-lg "
       >
         <Image src={aboutmepic} alt="Deco" className="w-80 mx-auto" />
       </div>
-      <div data-aos="zoom-out" className="max-w-lg lg:ml-10 px-5">
+      <div className="max-w-lg lg:ml-10 px-5">
         <h1 className="text-5xl font-semibold mt-10 lg:mt-0  mb-1">
           # About me
         </h1>

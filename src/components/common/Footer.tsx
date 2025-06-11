@@ -23,7 +23,7 @@ export default function Footer() {
               <div className="mt-4 md:mt-0 text-center md:text-left">
                 <p className="text-xs text-slate-400">
                   &copy; {new Date().getFullYear()}{" "}
-                  <span className="font-medium text-slate-300">
+                  <span className="font-medium text-slate-300 inline md:hidden ">
                     Pantho Haque
                   </span>
                 </p>

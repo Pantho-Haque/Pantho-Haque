@@ -12,10 +12,6 @@ export default function Document() {
         <link rel='shortcut icon' type="image/png" sizes="16x16" href="/Pantho-Haque/favicon-16x16.png"/>
         <link rel="shortcut icon" href="/Pantho-Haque/favicon.ico" />
         <link rel="manifest" href="/site.webmanifest"/>
-
-        <script src="https://cdn.jsdelivr.net/npm/kutty@latest/dist/kutty.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/kutty@latest/dist/alpinejs.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/kutty@latest/dist/dropdown.min.js"></script>
       </Head>
       <body>
         <Main />

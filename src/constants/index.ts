@@ -19,6 +19,10 @@ export const NAV_LINKS = [
     name: "Contact",
     href: "/contact",
   },
+  {
+    name: "Blogs",
+    href: "/blogs",
+  },
 ]
 
 export const PROJECCT_DATA = [

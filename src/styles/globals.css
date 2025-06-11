@@ -2,6 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@import "github-markdown-css/github-markdown-dark.css";
+
+.markdown-body {
+    background-color: transparent;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+    border:2px solid #5EEAD4;
+}
+
+.markdown-body li{
+    list-style-type: disc;
+}
+.markdown-body li ul li{
+    list-style-type: circle;
+}
+.markdown-body li ul li ul li{
+    list-style-type: square;
+}
+
+
 /* scrollbar */
 
 *::-webkit-scrollbar {

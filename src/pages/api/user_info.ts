@@ -10,7 +10,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       headers: {
         Accept: "application/vnd.github+json",
         Authorization:
-          "Bearer " + process.env.NEXT_GITHUB_TOKEN,
+          "Bearer " + process.env.NEXT_GITHUB_TOKEN, 
         "X-GitHub-Api-Version": "2022-11-28",
       },
     });

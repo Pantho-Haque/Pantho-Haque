@@ -14,7 +14,7 @@ export default async function handler(
         headers: {
           Accept: "application/vnd.github+json",
           Authorization:
-            "Bearer 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",
+            "Bearer " + process.env.NEXT_GITHUB_TOKEN,
           "X-GitHub-Api-Version": "2022-11-28",
         },
       }

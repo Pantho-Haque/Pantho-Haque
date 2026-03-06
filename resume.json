@@ -1,34 +1,57 @@
 {
-  "contactLinks": [
-    {
-      "icon": "github",
-      "label": "GitHub",
-      "href": "https://github.com/Pantho-Haque"
-    },
-    {
-      "icon": "mail",
-      "label": "pantho.haque.dev@gmail.com",
-      "href": "mailto:pantho.haque.dev@gmail.com"
-    },
-    {
-      "icon": "phone",
-      "label": "+88 01689833981",
-      "href": "tel:+8801689833981"
-    }
-  ],
+  "hero": {
+    "isAvailable": true,
+    "name": "pantho haque",
+    "current_position": "software engineer",
+    "company_name": "Pathao Ltd.",
+    "comment_one": "Providing exceptional services for programming and design content you need.",
+    "comment_two": "Join me below and let's create something amazing together.",
+    "contactLinks": [
+      {
+        "icon": "github",
+        "label": "GitHub",
+        "href": "https://github.com/Pantho-Haque"
+      },
+      {
+        "icon": "mail",
+        "label": "pantho.haque.dev@gmail.com",
+        "href": "mailto:pantho.haque.dev@gmail.com"
+      },
+      {
+        "icon": "phone",
+        "label": "+88 01689833981",
+        "href": "tel:+8801689833981"
+      }
+    ],
+    "photo": "",
+    "achivements": [
+      {
+        "icon": "trophy",
+        "text": "ITEE FE-Half Passer · Oct 2023",
+        "theme": "border-amber-500/30 bg-amber-500/10 text-amber-300"
+      },
+      {
+        "icon": "users",
+        "text": "Team Lead · React & Laravel · Bit2Byte KUET",
+        "theme": "border-cyan-500/30 bg-cyan-500/10 text-cyan-300"
+      }
+    ]
+  },
   "skills": {
     "languages": ["C/C++", "JavaScript", "TypeScript", "Python"],
     "frameworks": ["Next.js", "React.js", "Express.js", "Laravel", "Django"],
     "databases": ["MySQL", "Firebase", "Prisma", "Oracle SQL"],
     "tools": ["Docker", "Git", "TurboRepo", "Tailwind CSS", "Shadcn"]
   },
-  "experience": {
-    "title": "AIM Internship Program",
-    "company": "Pathao Limited",
-    "duration": "Jan 2025 – Apr 2025",
-    "description": "Built a real-time Digital Bell System without WebSocket. Designed secure JWT client-server communication with scalable architecture and MobX state management.",
-    "stack": ["Overlay", "MobX", "Turborepo"]
-  },
+  "experience": [
+    {
+      "title": "AIM Internship Program",
+      "company": "Pathao Limited",
+      "duration": "Jan 2025 – Apr 2025",
+      "description": "Built a real-time Digital Bell System without WebSocket. Designed secure JWT client-server communication with scalable architecture and MobX state management.",
+      "stack": ["Overlay", "MobX", "Turborepo"]
+    }
+  ],
   "projects": [
     {
       "name": "BanglaHire",

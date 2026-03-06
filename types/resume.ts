@@ -1,8 +1,26 @@
 export interface TResume {
-  contactLinks: TContactLink[];
+  hero:THero;
   skills: TSkills;
-  experience: TExperience;
+  experience: TExperience[];
   projects: TProject[];
+}
+
+export interface THero {
+  isAvailable: boolean;
+  name: string;
+  current_position: string;
+  company_name:string;
+  comment_one: string;
+  comment_two: string;
+  contactLinks: TContactLink[];
+  photo: string;
+  achivements: TAchievement[];
+}
+
+export interface TAchievement {
+  icon: string;
+  text: string;
+  theme:string;
 }
 
 export interface TContactLink {

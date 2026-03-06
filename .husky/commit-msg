@@ -1,0 +1,38 @@
+#!/usr/bin/env sh
+
+COMMIT_MSG_FILE=$1
+COMMIT_MSG=$(cat $COMMIT_MSG_FILE)
+
+# Check if the commit message follows the conventional format
+if ! echo "$COMMIT_MSG" | grep -qE '^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\([a-z0-9-]+\))?: .+'; then
+  echo ""
+  echo "❌ Your commit message doesn't follow the conventional commit format!"
+  echo ""
+  echo "📝 Commit messages must follow this format:"
+  echo "  type(optional-scope): description"
+  echo ""
+  echo "Examples:"
+  echo "  - feat: add user authentication"
+  echo "  - fix(api): handle null response from server"
+  echo "  - docs: update installation instructions"
+  echo ""
+  echo "✅ Valid types:"
+  echo "  - feat: A new feature"
+  echo "  - fix: A bug fix"
+  echo "  - docs: Documentation changes"
+  echo "  - style: Code style changes (formatting, missing semi-colons, etc)"
+  echo "  - refactor: Code changes that neither fix bugs nor add features"
+  echo "  - perf: Performance improvements"
+  echo "  - test: Adding or fixing tests"
+  echo "  - build: Changes to build process or external dependencies"
+  echo "  - ci: Changes to CI configuration"
+  echo "  - chore: Other changes that don't modify src or test files"
+  echo "  - revert: Reverts a previous commit"
+  echo ""
+  echo "❓ Instead of 'git commit -m \"something\"', try:"
+  echo "  git commit -m \"feat: add new feature\""
+  echo "  git commit -m \"fix: resolve login issue\""
+  exit 1
+fi
+
+exit 0

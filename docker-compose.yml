@@ -1,0 +1,29 @@
+services:
+  frontend:
+    container_name: frontend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /frontend
+    command: sh dockerEntryPoint.sh
+    environment:
+      - NEXT_API_BASE_URL=https://jsonplaceholder.typicode.com
+    volumes:
+      - source: .
+        target: /frontend
+        type: bind
+
+      - source: frontend
+        target: /frontend/node_modules
+        type: volume
+    ports:
+      - target: 3000
+        published: 3000
+        protocol: tcp
+
+      - target: 9229
+        published: 9229
+        protocol: tcp
+
+volumes:
+  frontend:

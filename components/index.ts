@@ -1,8 +1,12 @@
+import GridLightning from "./homepage/GridLightning";   
+import SectionLabel from "./homepage/SectionLabel";
+import Pill from "./homepage/Pill";
 import LocaleSwitcherSelect from "./widgets/LocalSwitcherSelect";
-import FormComponent from "./homepage/FromComponent";
 
 
 export {
     LocaleSwitcherSelect,
-    FormComponent
+    GridLightning,
+    SectionLabel,
+    Pill
 }

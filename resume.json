@@ -1,0 +1,71 @@
+{
+  "contactLinks": [
+    {
+      "icon": "github",
+      "label": "GitHub",
+      "href": "https://github.com/Pantho-Haque"
+    },
+    {
+      "icon": "mail",
+      "label": "pantho.haque.dev@gmail.com",
+      "href": "mailto:pantho.haque.dev@gmail.com"
+    },
+    {
+      "icon": "phone",
+      "label": "+88 01689833981",
+      "href": "tel:+8801689833981"
+    }
+  ],
+  "skills": {
+    "languages": ["C/C++", "JavaScript", "TypeScript", "Python"],
+    "frameworks": ["Next.js", "React.js", "Express.js", "Laravel", "Django"],
+    "databases": ["MySQL", "Firebase", "Prisma", "Oracle SQL"],
+    "tools": ["Docker", "Git", "TurboRepo", "Tailwind CSS", "Shadcn"]
+  },
+  "experience": {
+    "title": "AIM Internship Program",
+    "company": "Pathao Limited",
+    "duration": "Jan 2025 – Apr 2025",
+    "description": "Built a real-time Digital Bell System without WebSocket. Designed secure JWT client-server communication with scalable architecture and MobX state management.",
+    "stack": ["Overlay", "MobX", "Turborepo"]
+  },
+  "projects": [
+    {
+      "name": "BanglaHire",
+      "live": "https://banglahire.com",
+      "code": "https://github.com/project-documentary",
+      "stack": "Laravel · Next.js · Tailwind",
+      "desc": "Freelance marketplace with secure auth, dynamic job listings, and role-based dashboards."
+    },
+    {
+      "name": "Blog – Bit2Byte",
+      "live": "https://bit2byte.com",
+      "stack": "Next.js · SpringBoot · Tailwind",
+      "desc": "Dedicated platform for KUET's reputed software club."
+    },
+    {
+      "name": "FileDrive",
+      "code": "https://github.com/filedrive",
+      "stack": "React.js · ChakraUI · Laravel",
+      "desc": "Secure file storage system with robust authentication."
+    },
+    {
+      "name": "BioLock",
+      "code": "https://github.com/biolock",
+      "stack": "React.js · Express.js · Arduino · Twilio",
+      "desc": "Hardware + web: Arduino-connected frontend with JWT backend and Twilio."
+    },
+    {
+      "name": "Salami – Web3",
+      "code": "https://github.com/salami",
+      "stack": "Next.js · HardHat · MetaMask · Ethers.js",
+      "desc": "Send crypto salami to others via a simple Web3 registration flow."
+    },
+    {
+      "name": "BBM",
+      "code": "https://github.com/bbm",
+      "stack": "Android · Java · Firebase",
+      "desc": "Blood Bank Management app aggregating nearest blood bank info."
+    }
+  ]
+}

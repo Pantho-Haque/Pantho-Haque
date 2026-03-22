@@ -46,12 +46,7 @@
       "Shell Script",
       "SQL"
     ],
-    "frameworks": [
-      "React.js",
-      "Next.js",
-      "Laravel",
-      "Express.js"
-    ],
+    "frameworks": ["React.js", "Next.js", "Laravel", "Express.js"],
     "databases": ["PostgreSQL", "MySQL", "Firebase", "Supabase", "Redis"],
     "tools": [
       "Docker",
@@ -97,13 +92,14 @@
     },
     {
       "name": "BanglaHire",
+      "live": "https://youtu.be/BOzMvYXFKCs?si=9mFAudnuFUD1W7Lb",
       "code": "https://github.com/Pantho-Haque/Bangla_Peon",
       "stack": "Laravel · Next.js · Tailwind CSS",
       "desc": "A full-stack Bangladeshi freelance marketplace featuring secure JWT-based authentication, dynamic job listings, proposal management, and role-based dashboards for clients and freelancers."
     },
     {
       "name": "Blog – Bit2Byte",
-      "live": "https://bit2byte.com",
+      "live": "https://www.bit2bytekuet.com/",
       "stack": "Next.js · Spring Boot · Tailwind CSS",
       "desc": "Official blog and knowledge-sharing platform for Bit2Byte, KUET's reputed software engineering club. Features article publishing, member profiles, and event announcements with a Next.js frontend backed by a Spring Boot REST API."
     },

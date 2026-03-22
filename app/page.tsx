@@ -25,14 +25,20 @@ export default function Home() {
       {/* HERO */}
       <HeroSection hero={hero} />
 
-      {/* EXPERIENCE */}
-      <Experiences experiences={experience} />
+      <div className="relative z-10">
+        <GridLightning />
+        {/* EXPERIENCE */}
+        <Experiences experiences={experience} />
 
-      {/* SKILLS */}
-      <Skills skills={skills} />
+        {/* SKILLS */}
+        <Skills skills={skills} />
+      </div>
 
-      {/* PROJECTS */}
-      <Projects projects={projects} />
+      <div className="relative z-10">
+        <GridLightning />
+        {/* PROJECTS */}
+        <Projects projects={projects} />
+      </div>
     </section>
   );
 }

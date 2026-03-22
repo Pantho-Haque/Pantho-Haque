@@ -1,12 +1,9 @@
 import axios from "axios";
-import config from "@/config";
-import apiEndpoints from "@/config/apiEndpoints";
 import { NextResponse } from "next/server";
 import data from "@/resume.json"
 
 export async function GET() {
   try {
-    console.log(data);
     return NextResponse.json(data);
   } catch (error) {
     console.error("Error fetching posts:", error);

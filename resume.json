@@ -1,11 +1,11 @@
 {
   "hero": {
     "isAvailable": true,
-    "name": "pantho haque",
-    "current_position": "software engineer",
+    "name": "Pantho Haque",
+    "current_position": "Software Engineer",
     "company_name": "Pathao Ltd.",
-    "comment_one": "Providing exceptional services for programming and design content you need.",
-    "comment_two": "Join me below and let's create something amazing together.",
+    "comment_one": "Building scalable, high-quality software — from pixel-perfect frontends to production-ready deployments.",
+    "comment_two": "Open to exciting opportunities. Let's build something meaningful together.",
     "contactLinks": [
       {
         "icon": "github",
@@ -18,9 +18,9 @@
         "href": "mailto:pantho.haque.dev@gmail.com"
       },
       {
-        "icon": "phone",
-        "label": "+88 01689833981",
-        "href": "tel:+8801689833981"
+        "icon": "linkedin",
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/in/panthohaque/"
       }
     ],
     "photo": "",
@@ -38,57 +38,92 @@
     ]
   },
   "skills": {
-    "languages": ["C/C++", "JavaScript", "TypeScript", "Python"],
-    "frameworks": ["Next.js", "React.js", "Express.js", "Laravel", "Django"],
-    "databases": ["MySQL", "Firebase", "Prisma", "Oracle SQL"],
-    "tools": ["Docker", "Git", "TurboRepo", "Tailwind CSS", "Shadcn"]
+    "languages": [
+      "JavaScript",
+      "TypeScript",
+      "PHP",
+      "Go",
+      "Shell Script",
+      "SQL"
+    ],
+    "frameworks": [
+      "React.js",
+      "Next.js",
+      "Laravel",
+      "Express.js"
+    ],
+    "databases": ["PostgreSQL", "MySQL", "Firebase", "Supabase", "Redis"],
+    "tools": [
+      "Docker",
+      "GitHub Actions",
+      "CI/CD Pipelines",
+      "Linux",
+      "Nginx",
+      "Git",
+      "Postman",
+      "Vercel"
+    ]
   },
   "experience": [
     {
-      "title": "AIM Internship Program",
+      "title": "Software Engineer",
       "company": "Pathao Limited",
-      "duration": "Jan 2025 – Apr 2025",
-      "description": "Built a real-time Digital Bell System without WebSocket. Designed secure JWT client-server communication with scalable architecture and MobX state management.",
-      "stack": ["Overlay", "MobX", "Turborepo"]
+      "duration": "Jan 2025 – Present",
+      "description": "Working on the frontend engineering team, building and maintaining high-traffic consumer-facing web applications using React.js and Next.js. Collaborating with cross-functional teams to deliver performant, accessible UI features at scale. Contributing to CI/CD workflows and ensuring robust deployment pipelines for production releases.",
+      "stack": [
+        "React.js",
+        "Next.js",
+        "TypeScript",
+        "Docker",
+        "CI/CD",
+        "Gitlab Actions",
+        "Go Lang"
+      ]
     }
   ],
   "projects": [
     {
+      "name": "Postbox",
+      "live": "https://postbox-pantho.vercel.app",
+      "code": "https://github.com/Pantho-Haque/postbox",
+      "stack": "Next.js · TypeScript · Tailwind CSS · Husky",
+      "desc": "A browser-based Postman alternative featuring collection management, HTTP request building, and full request history — all persisted in localStorage. Supports keyboard shortcuts for power-user workflows and enforces code quality via Husky pre-commit hooks."
+    },
+    {
+      "name": "DomiKnows",
+      "live": "https://dominowsknow.vercel.app",
+      "stack": "Next.js · TypeScript · Tailwind CSS · Supabase · Gemini API · RAG",
+      "desc": "A personal productivity playground that visualizes Markdown notes fetched directly from a GitHub repository, with session storage caching to gracefully handle GitHub rate limits. Also build a chatbot using RAG with Gemini API."
+    },
+    {
       "name": "BanglaHire",
-      "live": "https://banglahire.com",
-      "code": "https://github.com/project-documentary",
-      "stack": "Laravel · Next.js · Tailwind",
-      "desc": "Freelance marketplace with secure auth, dynamic job listings, and role-based dashboards."
+      "code": "https://github.com/Pantho-Haque/Bangla_Peon",
+      "stack": "Laravel · Next.js · Tailwind CSS",
+      "desc": "A full-stack Bangladeshi freelance marketplace featuring secure JWT-based authentication, dynamic job listings, proposal management, and role-based dashboards for clients and freelancers."
     },
     {
       "name": "Blog – Bit2Byte",
       "live": "https://bit2byte.com",
-      "stack": "Next.js · SpringBoot · Tailwind",
-      "desc": "Dedicated platform for KUET's reputed software club."
+      "stack": "Next.js · Spring Boot · Tailwind CSS",
+      "desc": "Official blog and knowledge-sharing platform for Bit2Byte, KUET's reputed software engineering club. Features article publishing, member profiles, and event announcements with a Next.js frontend backed by a Spring Boot REST API."
     },
     {
       "name": "FileDrive",
-      "code": "https://github.com/filedrive",
-      "stack": "React.js · ChakraUI · Laravel",
-      "desc": "Secure file storage system with robust authentication."
+      "code": "https://github.com/Pantho-Haque/FileDrive",
+      "stack": "React.js · Chakra UI · Laravel",
+      "desc": "A secure cloud file storage system with role-based access control, robust authentication, and organized file management — built with a Laravel REST API and a React frontend."
     },
     {
       "name": "BioLock",
-      "code": "https://github.com/biolock",
+      "code": "https://github.com/Pantho-Haque/BioLock",
       "stack": "React.js · Express.js · Arduino · Twilio",
-      "desc": "Hardware + web: Arduino-connected frontend with JWT backend and Twilio."
+      "desc": "An IoT-integrated security system bridging hardware and software — an Arduino-connected frontend communicates with a JWT-secured Express backend, with Twilio handling real-time SMS alerts for access events."
     },
     {
       "name": "Salami – Web3",
-      "code": "https://github.com/salami",
-      "stack": "Next.js · HardHat · MetaMask · Ethers.js",
-      "desc": "Send crypto salami to others via a simple Web3 registration flow."
-    },
-    {
-      "name": "BBM",
-      "code": "https://github.com/bbm",
-      "stack": "Android · Java · Firebase",
-      "desc": "Blood Bank Management app aggregating nearest blood bank info."
+      "code": "https://github.com/Pantho-Haque/Salami---Web3",
+      "stack": "Next.js · Hardhat · MetaMask · Ethers.js",
+      "desc": "A Web3 micro-payment DApp that lets users register and send crypto tips to peers via MetaMask. Built with Hardhat for smart contract development and Ethers.js for blockchain interaction."
     }
   ]
 }

@@ -7,7 +7,7 @@ import { THero } from "@/types";
 export default function HeroSection({ hero }: { hero: THero }) {
   return (
     <div className="relative z-10 mx-auto max-w-4xl px-6 pb-10 pt-20 text-center">
-      <div className="rounded-3xl mb-12 bg-white/[0.001] backdrop-blur-sm shadow-[0_0_80px_rgba(0,0,0,0.003),inset_0_1px_0_rgba(255,255,255,0.004)]">
+      <div className="rounded-3xl mb-12 bg-white/[0.00001] backdrop-blur-md shadow-[0_0_80px_rgba(0,0,0,0.0001),inset_0_1px_0_rgba(255,255,255,0.0004)]">
         {hero.isAvailable && (
           <motion.div
             {...fi(0.1)}
@@ -20,7 +20,7 @@ export default function HeroSection({ hero }: { hero: THero }) {
 
         <motion.h1
           {...fu(0.2)}
-          className="mb-4 text-white bg-gradient-to-r from-teal-300 via-cyan-300 to-teal-400 bg-clip-text text-5xl font-black leading-tight tracking-tight lg:text-7xl capitalize"
+          className="mb-4 text-white bg-linear-to-r from-teal-300 via-cyan-300 to-teal-400 bg-clip-text text-5xl font-black leading-tight tracking-tight lg:text-7xl capitalize"
         >
           {hero.name}
         </motion.h1>
@@ -69,7 +69,7 @@ export default function HeroSection({ hero }: { hero: THero }) {
         transition={{ duration: 0.7, delay: 0.5 }}
         className="relative mx-auto mb-10 h-72 w-72 cursor-pointer"
       >
-        <div className="absolute -inset-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-emerald-500/20 blur-xl" />
+        <div className="absolute -inset-3 rounded-full bg-linear-to-r from-cyan-500/20 to-emerald-500/20 blur-xl" />
         <div className="relative h-full w-full overflow-hidden rounded-full border-2 border-cyan-500/30 bg-slate-800/50 shadow-xl shadow-cyan-500/10 backdrop-blur-sm transition-transform duration-500 hover:scale-105">
           {hero.photo.trim() ? (
             <Image
@@ -85,7 +85,7 @@ export default function HeroSection({ hero }: { hero: THero }) {
               !!! 404 !!!
             </div>
           )}
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-slate-900/80 to-transparent" />
         </div>
       </motion.div>
 

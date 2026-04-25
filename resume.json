@@ -65,6 +65,61 @@
       "company": "Pathao Limited",
       "duration": "Jan 2025 – Present",
       "description": "Working on the frontend engineering team, building and maintaining high-traffic consumer-facing web applications using React.js and Next.js. Collaborating with cross-functional teams to deliver performant, accessible UI features at scale. Contributing to CI/CD workflows and ensuring robust deployment pipelines for production releases.",
+      "detailed_desc_html":"<div class="font-mono text-sm leading-relaxed">
+
+  <div class="text-base font-medium mb-1">Software Engineer — Pathao Limited</div>
+  <div class="text-xs text-gray-500 mb-5">Jan 2025 – Present · React.js · Next.js · TypeScript · Go · Docker · CI/CD</div>
+
+  <!-- FRONTEND ARCHITECTURE -->
+  <div class="border-l-2 border-gray-300 pl-4 mb-5">
+    <div class="text-xs font-medium tracking-widest text-gray-400 mb-2">FRONTEND ARCHITECTURE & COMPONENT SYSTEMS</div>
+    <div class="mb-2">Architected and scaled data-intensive dashboard systems <mark class="bg-blue-100 text-inherit px-1 rounded">(Promo, Marshal, Plutus, Quest V3, Sancus, Dakpeon)</mark> using React — building reusable, modular component libraries and configuration-driven UIs for complex workflows across <mark class="bg-green-100 text-inherit px-1 rounded">20+ pages</mark>.</div>
+    <div>Designed dynamic UIs for complex workflows — campaigns, onboarding portals, and financial tools — reducing feature development time and improving extensibility.</div>
+  </div>
+
+  <!-- STATE MANAGEMENT -->
+  <div class="border-l-2 border-gray-300 pl-4 mb-5">
+    <div class="text-xs font-medium tracking-widest text-gray-400 mb-2">STATE MANAGEMENT & DATA FLOW</div>
+    <div class="mb-2">Managed complex client-side state using React patterns <mark class="bg-blue-100 text-inherit px-1 rounded">(hooks, context, controlled forms)</mark> for multi-step workflows and real-time updates.</div>
+    <div>Integrated frontend with real-time backend services ensuring consistent data across multiple dashboards while reducing unnecessary re-renders and UI drift.</div>
+  </div>
+
+  <!-- PERFORMANCE -->
+  <div class="border-l-2 border-gray-300 pl-4 mb-5">
+    <div class="text-xs font-medium tracking-widest text-gray-400 mb-2">PERFORMANCE OPTIMIZATION</div>
+    <div class="mb-2">Diagnosed and resolved critical UI bottlenecks <mark class="bg-red-100 text-inherit px-1 rounded">(dashboard freezes, heavy renders)</mark> using memoization, component-level optimizations, and better state isolation — improving responsiveness for high-volume users by <mark class="bg-green-100 text-inherit px-1 rounded">~40%</mark>.</div>
+    <div>Optimized map-heavy interfaces <mark class="bg-blue-100 text-inherit px-1 rounded">(geofencing, markers, animations)</mark> for smooth interaction under high data load. Improved perceived performance with loading states, skeletons, and async feedback patterns.</div>
+  </div>
+
+  <!-- PRODUCT & FEATURES -->
+  <div class="border-l-2 border-gray-300 pl-4 mb-5">
+    <div class="text-xs font-medium tracking-widest text-gray-400 mb-2">PRODUCT & FEATURE ENGINEERING</div>
+    <div class="mb-2">Delivered high-impact features including <mark class="bg-yellow-100 text-inherit px-1 rounded">surge pricing controls, zonal promotions, campaign lifecycle tools</mark>, and audit/activity logs powering logistics, rides, and financial operations.</div>
+    <div>Built "Prism" microservice enabling real-time parcel data with low-latency caching strategies supporting the logistics and ride ecosystem.</div>
+  </div>
+
+  <!-- UX & ACCESSIBILITY -->
+  <div class="border-l-2 border-gray-300 pl-4 mb-5">
+    <div class="text-xs font-medium tracking-widest text-gray-400 mb-2">UX ENGINEERING & ACCESSIBILITY</div>
+    <div class="mb-2">Redesigned critical workflows <mark class="bg-blue-100 text-inherit px-1 rounded">(Promo, Discount, Food Ops, Partner Search)</mark> with input validation, structured layouts, and real-time feedback — reducing operational errors and improving usability.</div>
+    <div>Implemented <mark class="bg-green-100 text-inherit px-1 rounded">multi-language support (Bengali · English · Nepali)</mark> for broader accessibility across diverse user bases.</div>
+  </div>
+
+  <!-- DEVOPS -->
+  <div class="border-l-2 border-gray-300 pl-4 mb-5">
+    <div class="text-xs font-medium tracking-widest text-gray-400 mb-2">DEVOPS & DEPLOYMENT</div>
+    <div class="mb-2">Containerized frontend apps using <mark class="bg-blue-100 text-inherit px-1 rounded">Docker</mark>, eliminating environment inconsistencies and reducing onboarding time from hours to minutes.</div>
+    <div>Strengthened <mark class="bg-blue-100 text-inherit px-1 rounded">CI/CD pipelines</mark> for frontend delivery, improving deployment speed and stability. Led production deployments and resolved critical performance issues for high-volume users.</div>
+  </div>
+
+  <!-- BEYOND CORE -->
+  <div class="border-l-2 border-gray-300 pl-4">
+    <div class="text-xs font-medium tracking-widest text-gray-400 mb-2">BEYOND CORE RESPONSIBILITIES</div>
+    <div class="mb-2">Built and maintained a centralized <mark class="bg-yellow-100 text-inherit px-1 rounded">engineering knowledge base</mark> covering CI/CD, Kubernetes, Helm, and deployment workflows.</div>
+    <div>Developed automation scripts and reusable CI templates, standardizing development workflows. Proactively improved developer experience by simplifying onboarding and reducing friction for new engineers.</div>
+  </div>
+
+</div>",
       "stack": [
         "React.js",
         "Next.js",

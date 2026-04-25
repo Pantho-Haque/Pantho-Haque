@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Icon } from "@/components";
@@ -5,6 +6,8 @@ import { fu, fi } from "@/utils/tinyHelpers";
 import { THero } from "@/types";
 
 export default function HeroSection({ hero }: { hero: THero }) {
+  const [imageError, setImageError] = useState(false);
+
   return (
     <div className="relative z-10 mx-auto max-w-4xl px-6 pb-10 pt-20 text-center">
       <div className="rounded-3xl mb-12 bg-white/[0.00001] backdrop-blur-md shadow-[0_0_80px_rgba(0,0,0,0.0001),inset_0_1px_0_rgba(255,255,255,0.0004)]">
@@ -71,7 +74,7 @@ export default function HeroSection({ hero }: { hero: THero }) {
       >
         <div className="absolute -inset-3 rounded-full bg-linear-to-r from-cyan-500/20 to-emerald-500/20 blur-xl" />
         <div className="relative h-full w-full overflow-hidden rounded-full border-2 border-cyan-500/30 bg-slate-800/50 shadow-xl shadow-cyan-500/10 backdrop-blur-sm transition-transform duration-500 hover:scale-105">
-          {hero.photo.trim() ? (
+          {hero.photo.trim() && !imageError ? (
             <Image
               src={hero.photo.trim()}
               alt="Pantho Haque"
@@ -79,6 +82,7 @@ export default function HeroSection({ hero }: { hero: THero }) {
               priority
               width={288}
               height={288}
+              onError={() => setImageError(true)}
             />
           ) : (
             <div className="h-full w-full bg-slate-700/50 flex items-center justify-center text-slate-500 text-4xl">
@@ -93,7 +97,7 @@ export default function HeroSection({ hero }: { hero: THero }) {
         {...fu(0.75)}
         className="mb-16 flex flex-wrap items-center justify-center gap-3"
       >
-        {hero.achivements.map((ac, i) => (
+        {hero.achievements.map((ac, i) => (
           <div
             key={i}
             className={`flex items-center gap-2 rounded-lg border  px-4 py-2 text-xs font-semibold ${ac.theme}`}

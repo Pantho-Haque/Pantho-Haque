@@ -2,7 +2,7 @@
   "hero": {
     "isAvailable": true,
     "name": "Pantho Haque",
-    "current_position": "Software Engineer",
+    "current_position": "Software Engineer I",
     "company_name": "Pathao Ltd.",
     "comment_one": "Building scalable, high-quality software — from pixel-perfect frontends to production-ready deployments.",
     "comment_two": "Open to exciting opportunities. Let's build something meaningful together.",
@@ -23,8 +23,8 @@
         "href": "https://www.linkedin.com/in/panthohaque/"
       }
     ],
-    "photo": "",
-    "achivements": [
+    "photo": "https://domiknows.vercel.app/api/cdn/profile_picture.png",
+    "achievements": [
       {
         "icon": "trophy",
         "text": "ITEE FE-Half Passer · Oct 2023",
@@ -32,7 +32,7 @@
       },
       {
         "icon": "users",
-        "text": "Team Lead · React & Laravel · Bit2Byte KUET",
+        "text": "Team Lead · React Js & Next Js · Bit2Byte KUET",
         "theme": "border-cyan-500/30 bg-cyan-500/10 text-cyan-300"
       }
     ]
@@ -59,67 +59,19 @@
       "Vercel"
     ]
   },
+  "education": {
+    "institution": "Khulna University of Engineering & Technology",
+    "degree": "B.Sc in Computer Science & Engineering",
+    "cgpa": "3.69",
+    "graduation": "June 2025"
+  },
   "experience": [
     {
-      "title": "Software Engineer",
+      "title": "Software Engineer I",
       "company": "Pathao Limited",
       "duration": "Jan 2025 – Present",
       "description": "Working on the frontend engineering team, building and maintaining high-traffic consumer-facing web applications using React.js and Next.js. Collaborating with cross-functional teams to deliver performant, accessible UI features at scale. Contributing to CI/CD workflows and ensuring robust deployment pipelines for production releases.",
-      "detailed_desc_html":"<div class="font-mono text-sm leading-relaxed">
-
-  <div class="text-base font-medium mb-1">Software Engineer — Pathao Limited</div>
-  <div class="text-xs text-gray-500 mb-5">Jan 2025 – Present · React.js · Next.js · TypeScript · Go · Docker · CI/CD</div>
-
-  <!-- FRONTEND ARCHITECTURE -->
-  <div class="border-l-2 border-gray-300 pl-4 mb-5">
-    <div class="text-xs font-medium tracking-widest text-gray-400 mb-2">FRONTEND ARCHITECTURE & COMPONENT SYSTEMS</div>
-    <div class="mb-2">Architected and scaled data-intensive dashboard systems <mark class="bg-blue-100 text-inherit px-1 rounded">(Promo, Marshal, Plutus, Quest V3, Sancus, Dakpeon)</mark> using React — building reusable, modular component libraries and configuration-driven UIs for complex workflows across <mark class="bg-green-100 text-inherit px-1 rounded">20+ pages</mark>.</div>
-    <div>Designed dynamic UIs for complex workflows — campaigns, onboarding portals, and financial tools — reducing feature development time and improving extensibility.</div>
-  </div>
-
-  <!-- STATE MANAGEMENT -->
-  <div class="border-l-2 border-gray-300 pl-4 mb-5">
-    <div class="text-xs font-medium tracking-widest text-gray-400 mb-2">STATE MANAGEMENT & DATA FLOW</div>
-    <div class="mb-2">Managed complex client-side state using React patterns <mark class="bg-blue-100 text-inherit px-1 rounded">(hooks, context, controlled forms)</mark> for multi-step workflows and real-time updates.</div>
-    <div>Integrated frontend with real-time backend services ensuring consistent data across multiple dashboards while reducing unnecessary re-renders and UI drift.</div>
-  </div>
-
-  <!-- PERFORMANCE -->
-  <div class="border-l-2 border-gray-300 pl-4 mb-5">
-    <div class="text-xs font-medium tracking-widest text-gray-400 mb-2">PERFORMANCE OPTIMIZATION</div>
-    <div class="mb-2">Diagnosed and resolved critical UI bottlenecks <mark class="bg-red-100 text-inherit px-1 rounded">(dashboard freezes, heavy renders)</mark> using memoization, component-level optimizations, and better state isolation — improving responsiveness for high-volume users by <mark class="bg-green-100 text-inherit px-1 rounded">~40%</mark>.</div>
-    <div>Optimized map-heavy interfaces <mark class="bg-blue-100 text-inherit px-1 rounded">(geofencing, markers, animations)</mark> for smooth interaction under high data load. Improved perceived performance with loading states, skeletons, and async feedback patterns.</div>
-  </div>
-
-  <!-- PRODUCT & FEATURES -->
-  <div class="border-l-2 border-gray-300 pl-4 mb-5">
-    <div class="text-xs font-medium tracking-widest text-gray-400 mb-2">PRODUCT & FEATURE ENGINEERING</div>
-    <div class="mb-2">Delivered high-impact features including <mark class="bg-yellow-100 text-inherit px-1 rounded">surge pricing controls, zonal promotions, campaign lifecycle tools</mark>, and audit/activity logs powering logistics, rides, and financial operations.</div>
-    <div>Built "Prism" microservice enabling real-time parcel data with low-latency caching strategies supporting the logistics and ride ecosystem.</div>
-  </div>
-
-  <!-- UX & ACCESSIBILITY -->
-  <div class="border-l-2 border-gray-300 pl-4 mb-5">
-    <div class="text-xs font-medium tracking-widest text-gray-400 mb-2">UX ENGINEERING & ACCESSIBILITY</div>
-    <div class="mb-2">Redesigned critical workflows <mark class="bg-blue-100 text-inherit px-1 rounded">(Promo, Discount, Food Ops, Partner Search)</mark> with input validation, structured layouts, and real-time feedback — reducing operational errors and improving usability.</div>
-    <div>Implemented <mark class="bg-green-100 text-inherit px-1 rounded">multi-language support (Bengali · English · Nepali)</mark> for broader accessibility across diverse user bases.</div>
-  </div>
-
-  <!-- DEVOPS -->
-  <div class="border-l-2 border-gray-300 pl-4 mb-5">
-    <div class="text-xs font-medium tracking-widest text-gray-400 mb-2">DEVOPS & DEPLOYMENT</div>
-    <div class="mb-2">Containerized frontend apps using <mark class="bg-blue-100 text-inherit px-1 rounded">Docker</mark>, eliminating environment inconsistencies and reducing onboarding time from hours to minutes.</div>
-    <div>Strengthened <mark class="bg-blue-100 text-inherit px-1 rounded">CI/CD pipelines</mark> for frontend delivery, improving deployment speed and stability. Led production deployments and resolved critical performance issues for high-volume users.</div>
-  </div>
-
-  <!-- BEYOND CORE -->
-  <div class="border-l-2 border-gray-300 pl-4">
-    <div class="text-xs font-medium tracking-widest text-gray-400 mb-2">BEYOND CORE RESPONSIBILITIES</div>
-    <div class="mb-2">Built and maintained a centralized <mark class="bg-yellow-100 text-inherit px-1 rounded">engineering knowledge base</mark> covering CI/CD, Kubernetes, Helm, and deployment workflows.</div>
-    <div>Developed automation scripts and reusable CI templates, standardizing development workflows. Proactively improved developer experience by simplifying onboarding and reducing friction for new engineers.</div>
-  </div>
-
-</div>",
+      "detailed_desc_html": "<div class='font-mono text-sm leading-relaxed'><div class='mb-4 border-l-2 border-gray-300 pl-4'><div class='text-xs font-medium tracking-widest text-gray-400 mb-1'>FRONTEND ARCHITECTURE</div><div class='text-xs mb-1'>Architected and scaled data-intensive <strong>dashboard systems</strong> using React — reusable component libraries and configuration-driven UIs across <strong>20+ pages</strong>.</div><div class='text-xs'>Designed dynamic UIs for campaigns, onboarding portals, and financial tools — improving extensibility and reducing development time.</div></div><div class='mb-4 border-l-2 border-gray-300 pl-4'><div class='text-xs font-medium tracking-widest text-gray-400 mb-1'>STATE MANAGEMENT & DATA FLOW</div><div class='text-xs mb-1'>Managed complex client-side state using <strong>hooks, context, and controlled forms</strong> for multi-step workflows and real-time updates.</div><div class='text-xs'>Integrated frontend with real-time backend services — ensuring data consistency and minimizing unnecessary re-renders.</div></div><div class='mb-4 border-l-2 border-gray-300 pl-4'><div class='text-xs font-medium tracking-widest text-gray-400 mb-1'>PERFORMANCE OPTIMIZATION</div><div class='text-xs mb-1'>Resolved critical UI bottlenecks using memoization and state isolation — improving responsiveness for high-volume users by <strong>~40%</strong>.</div><div class='text-xs'>Optimized map-heavy interfaces <strong>(geofencing, markers, animations)</strong> and improved perceived latency with skeletons and async feedback patterns.</div></div><div class='mb-4 border-l-2 border-gray-300 pl-4'><div class='text-xs font-medium tracking-widest text-gray-400 mb-1'>PRODUCT & FEATURE ENGINEERING</div><div class='text-xs mb-1'>Delivered features including <strong>surge pricing, zonal promotions, and campaign lifecycle tools</strong> powering logistics, rides, and financial operations.</div><div class='text-xs'>Built a microservice for real-time parcel data with low-latency caching across the logistics and ride ecosystem.</div></div><div class='mb-4 border-l-2 border-gray-300 pl-4'><div class='text-xs font-medium tracking-widest text-gray-400 mb-1'>UX & ACCESSIBILITY</div><div class='text-xs mb-1'>Redesigned critical workflows with validation, structured inputs, and real-time feedback — reducing operational errors.</div><div class='text-xs'>Implemented <strong>multi-language support (Bengali · English · Nepali)</strong> for broader accessibility.</div></div><div class='mb-4 border-l-2 border-gray-300 pl-4'><div class='text-xs font-medium tracking-widest text-gray-400 mb-1'>DEVOPS & DEPLOYMENT</div><div class='text-xs mb-1'>Containerized apps with <strong>Docker</strong>, eliminating environment inconsistencies and cutting onboarding time significantly.</div><div class='text-xs'>Strengthened <strong>CI/CD pipelines</strong>, led production deployments, and resolved critical performance issues for high-volume users.</div></div><div class='border-l-2 border-gray-300 pl-4'><div class='text-xs font-medium tracking-widest text-gray-400 mb-1'>BEYOND CORE</div><div class='text-xs mb-1'>Maintained a centralized <strong>engineering knowledge base</strong> covering CI/CD, Kubernetes, Helm, and deployment workflows.</div><div class='text-xs'>Built automation scripts and reusable CI templates — standardizing workflows and improving developer onboarding experience.</div></div></div>",
       "stack": [
         "React.js",
         "Next.js",
@@ -137,44 +89,51 @@
       "live": "https://postbox-pantho.vercel.app",
       "code": "https://github.com/Pantho-Haque/postbox",
       "stack": "Next.js · TypeScript · Tailwind CSS · Husky",
-      "desc": "A browser-based Postman alternative featuring collection management, HTTP request building, and full request history — all persisted in localStorage. Supports keyboard shortcuts for power-user workflows and enforces code quality via Husky pre-commit hooks."
+      "desc": "A browser-based Postman alternative featuring collection management, HTTP request building, and full request history — all persisted in localStorage. Supports keyboard shortcuts for power-user workflows and enforces code quality via Husky pre-commit hooks.",
+      "priority": 1
     },
     {
       "name": "DomiKnows",
       "live": "https://dominowsknow.vercel.app",
       "stack": "Next.js · TypeScript · Tailwind CSS · Supabase · Gemini API · RAG",
-      "desc": "A personal productivity playground that visualizes Markdown notes fetched directly from a GitHub repository, with session storage caching to gracefully handle GitHub rate limits. Also build a chatbot using RAG with Gemini API."
+      "desc": "A personal productivity playground that visualizes Markdown notes fetched directly from a GitHub repository, with session storage caching to gracefully handle GitHub rate limits. Also build a chatbot using RAG with Gemini API.",
+      "priority": 3
     },
     {
       "name": "BanglaHire",
       "live": "https://youtu.be/BOzMvYXFKCs?si=9mFAudnuFUD1W7Lb",
       "code": "https://github.com/Pantho-Haque/Bangla_Peon",
       "stack": "Laravel · Next.js · Tailwind CSS",
-      "desc": "A full-stack Bangladeshi freelance marketplace featuring secure JWT-based authentication, dynamic job listings, proposal management, and role-based dashboards for clients and freelancers."
+      "desc": "A full-stack Bangladeshi freelance marketplace featuring secure JWT-based authentication, dynamic job listings, proposal management, and role-based dashboards for clients and freelancers.",
+      "priority": 4
     },
     {
       "name": "Blog – Bit2Byte",
       "live": "https://www.bit2bytekuet.com/",
       "stack": "Next.js · Spring Boot · Tailwind CSS",
-      "desc": "Official blog and knowledge-sharing platform for Bit2Byte, KUET's reputed software engineering club. Features article publishing, member profiles, and event announcements with a Next.js frontend backed by a Spring Boot REST API."
+      "desc": "Official blog and knowledge-sharing platform for Bit2Byte, KUET's reputed software engineering club. Features article publishing, member profiles, and event announcements with a Next.js frontend backed by a Spring Boot REST API.",
+      "priority": 5
     },
     {
       "name": "FileDrive",
       "code": "https://github.com/Pantho-Haque/FileDrive",
       "stack": "React.js · Chakra UI · Laravel",
-      "desc": "A secure cloud file storage system with role-based access control, robust authentication, and organized file management — built with a Laravel REST API and a React frontend."
+      "desc": "A secure cloud file storage system with role-based access control, robust authentication, and organized file management — built with a Laravel REST API and a React frontend.",
+      "priority": 2
     },
     {
       "name": "BioLock",
       "code": "https://github.com/Pantho-Haque/BioLock",
       "stack": "React.js · Express.js · Arduino · Twilio",
-      "desc": "An IoT-integrated security system bridging hardware and software — an Arduino-connected frontend communicates with a JWT-secured Express backend, with Twilio handling real-time SMS alerts for access events."
+      "desc": "An IoT-integrated security system bridging hardware and software — an Arduino-connected frontend communicates with a JWT-secured Express backend, with Twilio handling real-time SMS alerts for access events.",
+      "priority": 6
     },
     {
       "name": "Salami – Web3",
       "code": "https://github.com/Pantho-Haque/Salami---Web3",
       "stack": "Next.js · Hardhat · MetaMask · Ethers.js",
-      "desc": "A Web3 micro-payment DApp that lets users register and send crypto tips to peers via MetaMask. Built with Hardhat for smart contract development and Ethers.js for blockchain interaction."
+      "desc": "A Web3 micro-payment DApp that lets users register and send crypto tips to peers via MetaMask. Built with Hardhat for smart contract development and Ethers.js for blockchain interaction.",
+      "priority": 7
     }
   ]
 }

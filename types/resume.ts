@@ -1,8 +1,16 @@
 export interface TResume {
-  hero:THero;
+  hero: THero;
   skills: TSkills;
   experience: TExperience[];
   projects: TProject[];
+  education: TEducation;
+}
+
+export interface TEducation {
+  institution: string;
+  degree: string;
+  cgpa: string;
+  graduation: string;
 }
 
 export interface THero {
@@ -14,7 +22,7 @@ export interface THero {
   comment_two: string;
   contactLinks: TContactLink[];
   photo: string;
-  achivements: TAchievement[];
+  achievements: TAchievement[];
 }
 
 export interface TAchievement {
@@ -50,4 +58,5 @@ export interface TProject {
   code: string; // GitHub repository or source code link
   stack: string[];
   desc: string; // Description of the project
+  priority: number;
 }

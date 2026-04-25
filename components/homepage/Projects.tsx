@@ -5,6 +5,8 @@ import SectionLabel from "./SectionLabel";
 import { Code2, ExternalLink } from "lucide-react";
 
 export default function Projects({ projects }: { projects: TProject[] }) {
+  const sortedProjectsWithPriority = projects.sort((a, b) => a.priority - b.priority);
+
   return (
     <motion.div
       {...fu(0.2)}
@@ -12,7 +14,7 @@ export default function Projects({ projects }: { projects: TProject[] }) {
     >
       <SectionLabel>Projects</SectionLabel>
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-        {projects.map((p, i) => (
+        {sortedProjectsWithPriority.map((p, i) => (
           <motion.div
             key={p.name}
             initial={{ opacity: 0, y: 12 }}

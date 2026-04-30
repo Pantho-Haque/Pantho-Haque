@@ -1,62 +1,170 @@
 "use client";
-
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 import { SectionLabel, Pill } from "@/components";
 import { TExperience } from "@/types";
-import { fu } from "@/utils/tinyHelpers";
 
-export default function Experiences({
-  experiences,
-}: {
-  experiences: TExperience[];
-}) {
+function TypingText({ text, delay = 0 }: { text: string; delay?: number }) {
+  const [displayed, setDisplayed] = useState("");
+  const [started, setStarted] = useState(false);
+
+  useEffect(() => {
+    const t = setTimeout(() => setStarted(true), delay);
+    return () => clearTimeout(t);
+  }, [delay]);
+
+  useEffect(() => {
+    if (!started) return;
+    let i = 0;
+    const interval = setInterval(() => {
+      setDisplayed(text.slice(0, i + 1));
+      i++;
+      if (i >= text.length) clearInterval(interval);
+    }, 30);
+    return () => clearInterval(interval);
+  }, [started, text]);
+
   return (
-    <motion.div
-      {...fu(0.1)}
-      className="relative z-10 mx-auto mb-12 max-w-4xl px-6 flex flex-col gap-3"
-    >
-      <SectionLabel>Experience</SectionLabel>
+    <span style={{ fontFamily: "var(--font-mono)" }}>
+      {displayed}
+      {displayed.length < text.length && (
+        <span style={{ animation: "blink 0.7s infinite" }}>_</span>
+      )}
+    </span>
+  );
+}
 
-      {experiences?.map((exp, i) => (
-        <div
-          key={i}
-          className="group relative overflow-hidden rounded-2xl border border-teal-500/12 bg-slate-900/65 p-7 backdrop-blur-sm transition-all duration-250 hover:-translate-y-0.5 hover:border-teal-500/30 hover:shadow-[0_12px_32px_rgba(0,0,0,0.3)]"
-        >
-          {/* Top accent line */}
-          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-teal-400 via-cyan-400 to-transparent opacity-70" />
+export default function Experiences({ experiences }: { experiences: TExperience[] }) {
+  return (
+    <section style={{
+      position: "relative",
+      zIndex: 10,
+      maxWidth: 1100,
+      margin: "0 auto 40px",
+      padding: "0 24px",
+    }}>
+      <SectionLabel>OPERATIONAL HISTORY</SectionLabel>
 
-          {/* Header row */}
-          <div className="mb-4 flex flex-wrap items-start justify-between gap-3">
-            <div className="flex items-center gap-4">
-              {/* Logo placeholder — swap with real <Image> if you have it */}
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[10px] border border-teal-500/15 bg-teal-500/8 text-lg">
-                🛵
-              </div>
+      {/* Terminal header */}
+      <div style={{
+        background: "rgba(0,8,0,0.9)",
+        border: "1px solid var(--border)",
+        marginBottom: 12,
+        padding: "8px 14px",
+        display: "flex",
+        alignItems: "center",
+        gap: 8,
+        borderBottom: "1px solid var(--border)",
+      }}>
+        <span style={{ width: 8, height: 8, borderRadius: "50%", background: "var(--red)", display: "inline-block" }} />
+        <span style={{ width: 8, height: 8, borderRadius: "50%", background: "var(--amber)", display: "inline-block" }} />
+        <span style={{ width: 8, height: 8, borderRadius: "50%", background: "var(--green-dim)", display: "inline-block" }} />
+        <span style={{
+          fontFamily: "var(--font-mono)",
+          fontSize: 10,
+          color: "var(--muted)",
+          marginLeft: 8,
+          letterSpacing: "0.1em",
+        }}>
+          <TypingText text="root@subject:~$ cat employment_log.txt" />
+        </span>
+      </div>
+
+      <div style={{
+        display: "flex",
+        flexDirection: "column",
+        gap: 10,
+      }}>
+        {experiences?.map((exp, idx) => (
+          <div
+            key={idx}
+            style={{
+              background: "rgba(0,8,0,0.8)",
+              border: "1px solid var(--border)",
+              padding: "16px 20px",
+              position: "relative",
+              overflow: "hidden",
+            }}
+          >
+            {/* Index number */}
+            <div style={{
+              position: "absolute",
+              top: 12,
+              right: 14,
+              fontFamily: "var(--font-crt)",
+              fontSize: 28,
+              color: "rgba(0,255,65,0.06)",
+              lineHeight: 1,
+              userSelect: "none",
+            }}>
+              {String(idx + 1).padStart(2, "0")}
+            </div>
+
+            <div style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "flex-start",
+              flexWrap: "wrap",
+              gap: 10,
+              marginBottom: 8,
+            }}>
               <div>
-                <p className="font-bold text-slate-100">{exp.title}</p>
-                <p className="font-mono text-sm font-semibold tracking-[0.04em] text-teal-400">
-                  {exp.company}
-                </p>
+                <div style={{
+                  fontFamily: "var(--font-display)",
+                  fontSize: 14,
+                  fontWeight: 700,
+                  color: "var(--green)",
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  marginBottom: 2,
+                }}>
+                  {exp.title}
+                </div>
+                <div style={{
+                  fontFamily: "var(--font-mono)",
+                  fontSize: 11,
+                  color: "var(--amber)",
+                  letterSpacing: "0.05em",
+                }}>
+                  @ {exp.company}
+                </div>
+              </div>
+              <div style={{
+                fontFamily: "var(--font-mono)",
+                fontSize: 10,
+                color: "var(--muted)",
+                background: "rgba(0,255,65,0.05)",
+                padding: "4px 8px",
+                border: "1px solid var(--border)",
+              }}>
+                {exp.duration}
               </div>
             </div>
-            <span className="rounded-full border border-slate-700/60 px-3 py-1 font-mono text-xs text-slate-500">
-              {exp.duration}
-            </span>
-          </div>
 
-          {/* Description — indented to align with text column */}
-          <p className="mb-5 pl-[60px] text-sm leading-[1.85] text-slate-400">
-            {exp.description}
-          </p>
+            <p style={{
+              fontFamily: "var(--font-sans)",
+              fontSize: 13,
+              lineHeight: 1.6,
+              color: "rgba(0,255,65,0.7)",
+              marginBottom: 14,
+            }}>
+              {exp.description}
+            </p>
 
-          {/* Stack pills */}
-          <div className="flex flex-wrap gap-2 pl-[60px]">
-            {exp.stack.map((t) => (
-              <Pill key={t}>{t}</Pill>
-            ))}
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 5 }}>
+              {exp.stack?.map((s) => (
+                <Pill key={s}>{s}</Pill>
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
-    </motion.div>
+        ))}
+      </div>
+
+      <style>{`
+        @keyframes blink {
+          0%, 49% { opacity: 1; }
+          50%, 100% { opacity: 0; }
+        }
+      `}</style>
+    </section>
   );
 }

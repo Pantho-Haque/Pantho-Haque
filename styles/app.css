@@ -2,6 +2,7 @@
 
 @import "./components/index.css";
 @import "./font.css";
+@import "./survailance.css";
 
 
 *::-webkit-scrollbar {

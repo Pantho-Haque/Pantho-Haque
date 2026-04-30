@@ -24,6 +24,7 @@
       }
     ],
     "photo": "https://domiknows.vercel.app/api/cdn/profile_picture.png",
+    "cover_photo":"https://domiknows.vercel.app/api/cdn/cover_photo_pantho.jpeg",
     "achievements": [
       {
         "icon": "trophy",

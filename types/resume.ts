@@ -22,6 +22,7 @@ export interface THero {
   comment_two: string;
   contactLinks: TContactLink[];
   photo: string;
+  cover_photo:string;
   achievements: TAchievement[];
 }
 
@@ -56,7 +57,7 @@ export interface TProject {
   name: string;
   live?: string; // URL to access the project
   code: string; // GitHub repository or source code link
-  stack: string[];
+  stack: string;
   desc: string; // Description of the project
   priority: number;
 }

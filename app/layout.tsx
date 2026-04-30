@@ -2,6 +2,11 @@ import Providers from "@/context/providers";
 import type { Metadata } from "next";
 import { getLocale } from "next-intl/server";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Share_Tech_Mono, Orbitron, VT323 } from "next/font/google";
+
+const shareTechMono = Share_Tech_Mono({ weight: "400", subsets: ["latin"], variable: "--font-mono-google" });
+const orbitron = Orbitron({ weight: ["400", "700", "900"], subsets: ["latin"], variable: "--font-display-google" });
+const vt323 = VT323({ weight: "400", subsets: ["latin"], variable: "--font-crt-google" });
 
 import "@/styles/app.css";
 
@@ -16,7 +21,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pantho Haque | Portfolio",
+  title: "Pantho Haque",
+  description: "Software Engineer — React · Next.js · TypeScript",
   icons: [
     { rel: "icon", url: "/favicon.ico" },
   ],
@@ -30,7 +36,7 @@ export default async function RootLayout({
   const locale = await getLocale();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className={`${shareTechMono.variable} ${orbitron.variable} ${vt323.variable}`}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

@@ -73,9 +73,7 @@ function Footer() {
       fontSize: 9,
       color: "rgba(0,255,65,0.3)",
       letterSpacing: "0.15em",
-      maxWidth: 1100,
-      margin: "0 auto",
-    }}>
+    }} className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8">
       <span>SURVEILLANCE NETWORK // ALL RIGHTS RESERVED</span>
       <span style={{ animation: "blink 2s infinite" }}>● MONITORING ACTIVE</span>
       <style>{`
@@ -136,7 +134,9 @@ export default function Home() {
       minHeight: "100vh",
       background: "var(--bg)",
       color: "var(--green)",
-    }}>
+    }}
+    className="flex justify-center"
+    >
       <GridBg />
       <Vignette />
       <Scanlines />

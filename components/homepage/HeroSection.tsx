@@ -94,10 +94,23 @@ function TrackingBox({ hero, imageError, setImageError }: {
   setImageError: (v: boolean) => void;
 }) {
   const [blink, setBlink] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     const id = setInterval(() => setBlink(b => !b), 900);
     return () => clearInterval(id);
   }, []);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 640);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  const labelFontSize = isMobile ? 7 : 9;
+  const nameFontSize = isMobile ? 10 : 12;
+  const positionFontSize = isMobile ? 6 : 8;
+  const idTagFontSize = isMobile ? 6 : 8;
 
   return (
     <div style={{
@@ -105,30 +118,38 @@ function TrackingBox({ hero, imageError, setImageError }: {
       top: "6%",
       left: "4%",
       width: "92%",
-      height: "88%",
+      height: "80%",
       zIndex: 8,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
     }}>
-      {/* Tracking border */}
-      {/* <div style={{
-        position: "absolute", inset: 0,
-        border: "1px solid var(--green)",
-        boxShadow: "0 0 24px rgba(0,255,65,0.2), inset 0 0 20px rgba(0,255,65,0.04)",
-        animation: "tracking-pulse 3s ease-in-out infinite",
-      }}>
-        <CornerBracket position="tl" size={16} />
-        <CornerBracket position="tr" size={16} />
-        <CornerBracket position="bl" size={16} />
-        <CornerBracket position="br" size={16} />
-      </div> */}
-
-      {/* Top label */}
+      {/* Visible tracking box frame in center - portrait aspect ratio */}
       <div style={{
-        position: "absolute", top: -12, left: "50%", transform: "translateX(-50%)",
-        background: "rgba(0,0,0,0.88)", border: "1px solid var(--green)",
-        padding: "2px 10px", fontSize: 8, letterSpacing: "0.2em",
-        color: "var(--green)", fontFamily: "var(--font-mono)", whiteSpace: "nowrap", zIndex: 15,
+        position: "absolute",
+        top: "30%",
+        bottom: "12%",
+        left: "40%",
+        right: "40%",
+        border: "1px solid var(--green)",
+        boxShadow: "0 0 30px rgba(0,255,65,0.25), inset 0 0 20px rgba(0,255,65,0.06)",
+        zIndex: 12,
       }}>
-        PERSON OF INTEREST
+        <CornerBracket position="tl" size={18} thickness={2} />
+        <CornerBracket position="tr" size={18} thickness={2} />
+        <CornerBracket position="bl" size={18} thickness={2} />
+        <CornerBracket position="br" size={18} thickness={2} />
+      </div>
+
+      {/* Person of interest label above the box */}
+      <div style={{
+        position: "absolute", top: "26%", left: "50%", transform: "translateX(-50%)",
+        background: "rgba(0,0,0,0.9)", border: "1px solid var(--green)",
+        padding: isMobile ? "2px 10px" : "3px 14px", fontSize: labelFontSize, letterSpacing: "0.2em",
+        color: "var(--green)", fontFamily: "var(--font-mono)", whiteSpace: "nowrap", zIndex: 16,
+        boxShadow: "0 0 20px rgba(0,255,65,0.3)",
+      }}>
+        ● PERSON OF INTEREST
       </div>
 
       {/* Photo */}
@@ -139,7 +160,7 @@ function TrackingBox({ hero, imageError, setImageError }: {
             alt={hero.name}
             fill
             priority
-            style={{ objectFit: "cover", objectPosition: "top center", filter: "grayscale(10%) contrast(1.05) brightness(0.9)" }}
+            style={{ objectFit: "cover", objectPosition: "center", filter: "grayscale(10%) contrast(1.05) brightness(0.9)" }}
             onError={() => setImageError(true)}
           />
         ) : (
@@ -154,10 +175,10 @@ function TrackingBox({ hero, imageError, setImageError }: {
 
         {/* Name overlay inside photo */}
         <div style={{ position:"absolute",bottom:10,left:0,right:0,textAlign:"center",zIndex:6,fontFamily:"var(--font-mono)" }}>
-          <div style={{ fontSize: 12, color: "var(--green)", fontWeight: 700, letterSpacing: "0.1em" }}>
+          <div style={{ fontSize: nameFontSize, color: "var(--green)", fontWeight: 700, letterSpacing: "0.1em" }}>
             {hero.name.toUpperCase()}
           </div>
-          <div style={{ fontSize: 8, color: "rgba(0,255,65,0.6)", letterSpacing: "0.08em", marginTop: 3 }}>
+          <div style={{ fontSize: positionFontSize, color: "rgba(0,255,65,0.6)", letterSpacing: "0.08em", marginTop: 3 }}>
             {hero.current_position.toUpperCase()}
           </div>
         </div>
@@ -165,9 +186,9 @@ function TrackingBox({ hero, imageError, setImageError }: {
 
       {/* Bottom blinking ID tag */}
       <div style={{
-        position: "absolute", bottom: -12, left: "50%", transform: "translateX(-50%)",
+        position: "absolute", bottom: "13%", left: "50%", transform: "translateX(-50%)",
         background: "rgba(0,0,0,0.88)", border: "1px solid rgba(0,255,65,0.4)",
-        padding: "2px 10px", fontSize: 8, letterSpacing: "0.15em",
+        padding: isMobile ? "1px 8px" : "2px 10px", fontSize: idTagFontSize, letterSpacing: "0.15em",
         color: blink ? "var(--green)" : "rgba(0,255,65,0.25)",
         fontFamily: "var(--font-mono)", whiteSpace: "nowrap", zIndex: 15, transition: "color 0.3s",
       }}>
@@ -182,6 +203,14 @@ function FacialRecognitionPanel({ hero }: { hero: THero }) {
   const [done, setDone] = useState(false);
   const [activeField, setActiveField] = useState(0);
   const [imageError, setImageError] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 640);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   useEffect(() => {
     const id = setInterval(() => {
@@ -206,15 +235,21 @@ function FacialRecognitionPanel({ hero }: { hero: THero }) {
     { label: "STATUS", value: hero.isAvailable ? "AVAILABLE" : "ENGAGED", highlight: true, good: hero.isAvailable },
   ];
 
+  const panelWidth = isMobile ? 140 : 220;
+  const headerFontSize = isMobile ? 7 : 8;
+  const fieldLabelFontSize = isMobile ? 6 : 8;
+  const fieldValueFontSize = isMobile ? 10 : 12;
+
   return (
     <div style={{
       background: "rgba(0,6,0,0.95)", border: "1px solid var(--border)",
-      padding: "14px", fontFamily: "var(--font-mono)", width: 240, flexShrink: 0,
+      padding: isMobile ? "8px" : "12px", fontFamily: "var(--font-mono)",
+      width: panelWidth, flexShrink: 0, maxWidth: "100%",
     }}>
       {/* Header */}
       <div style={{
-        fontSize: 8, letterSpacing: "0.2em", color: "var(--green-dim)",
-        marginBottom: 10, borderBottom: "1px solid var(--border)", paddingBottom: 7,
+        fontSize: headerFontSize, letterSpacing: "0.2em", color: "var(--green-dim)",
+        marginBottom: 6, borderBottom: "1px solid var(--border)", paddingBottom: 5,
         display: "flex", justifyContent: "space-between", alignItems: "center",
       }}>
         <span>AI FACIAL RECOGNITION</span>
@@ -226,16 +261,16 @@ function FacialRecognitionPanel({ hero }: { hero: THero }) {
       {/* Thumbnail */}
       <div style={{
         position: "relative", width: "100%", aspectRatio: "4/3",
-        border: "1px solid var(--border)", background: "#000", overflow: "hidden", marginBottom: 12,
+        border: "1px solid var(--border)", background: "#000", overflow: "hidden", marginBottom: 8,
       }}>
-        <CornerBracket position="tl" size={12} />
-        <CornerBracket position="tr" size={12} />
-        <CornerBracket position="bl" size={12} />
-        <CornerBracket position="br" size={12} />
+        <CornerBracket position="tl" size={10} />
+        <CornerBracket position="tr" size={10} />
+        <CornerBracket position="bl" size={10} />
+        <CornerBracket position="br" size={10} />
 
         {hero.photo.trim() && !imageError ? (
           <Image src={hero.photo.trim()} alt={hero.name} fill
-            style={{ objectFit:"cover",objectPosition:"top",filter:"grayscale(40%) contrast(1.1)",opacity:0.85 }}
+            style={{ objectFit:"cover",objectPosition:"center",filter:"grayscale(40%) contrast(1.1)",opacity:0.85 }}
             onError={() => setImageError(true)}
           />
         ) : (
@@ -267,14 +302,14 @@ function FacialRecognitionPanel({ hero }: { hero: THero }) {
       {/* Fields */}
       {fields.map(({ label, value, highlight, good }, i) => (
         <div key={label} style={{
-          marginBottom: 7, padding: "4px 6px",
+          marginBottom: 4, padding: "3px 4px",
           background: (!done && activeField === i) ? "rgba(0,255,65,0.06)" : "transparent",
           border: (!done && activeField === i) ? "1px solid rgba(0,255,65,0.2)" : "1px solid transparent",
           transition: "all 0.3s",
         }}>
-          <div style={{ fontSize: 8, color: "var(--muted)", letterSpacing: "0.15em", marginBottom: 1 }}>{label}:</div>
+          <div style={{ fontSize: fieldLabelFontSize, color: "var(--muted)", letterSpacing: "0.15em", marginBottom: 1 }}>{label}:</div>
           <div style={{
-            fontSize: 12,
+            fontSize: fieldValueFontSize,
             color: highlight ? (good ? "var(--green)" : "var(--amber)") : "rgba(0,255,65,0.8)",
             letterSpacing: "0.04em",
           }}>
@@ -284,10 +319,10 @@ function FacialRecognitionPanel({ hero }: { hero: THero }) {
       ))}
 
       {/* Confidence bar */}
-      <div style={{ marginTop: 10, borderTop: "1px solid var(--border)", paddingTop: 8 }}>
-        <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 4 }}>
-          <span style={{ fontSize: 8, color: "var(--muted)", letterSpacing: "0.08em" }}>MATCH CONFIDENCE</span>
-          <span style={{ fontSize: 8, color: "var(--green)" }}>{Math.min(progress * 0.987, 98.7).toFixed(1)}%</span>
+      <div style={{ marginTop: 6, borderTop: "1px solid var(--border)", paddingTop: 6 }}>
+        <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 3 }}>
+          <span style={{ fontSize: fieldLabelFontSize, color: "var(--muted)", letterSpacing: "0.08em" }}>MATCH CONFIDENCE</span>
+          <span style={{ fontSize: fieldLabelFontSize, color: "var(--green)" }}>{Math.min(progress * 0.987, 98.7).toFixed(1)}%</span>
         </div>
         <div style={{ height: 5, background: "#001500", border: "1px solid var(--border)", overflow: "hidden" }}>
           <div style={{
@@ -296,20 +331,6 @@ function FacialRecognitionPanel({ hero }: { hero: THero }) {
             transition: "width 0.06s linear",
           }} />
         </div>
-      </div>
-
-      {/* Quick capabilities scan */}
-      <div style={{ marginTop: 10, borderTop: "1px solid var(--border)", paddingTop: 8 }}>
-        <div style={{ fontSize: 8, color: "var(--muted)", letterSpacing: "0.12em", marginBottom: 6 }}>IDENTIFIED CAPABILITIES:</div>
-        {["React / Next.js", "TypeScript", "Docker / CI/CD", "Go Lang"].map((skill, i) => (
-          <div key={skill} style={{
-            display: "flex", alignItems: "center", gap: 6, marginBottom: 4,
-            opacity: progress > (i + 1) * 22 ? 1 : 0.15, transition: "opacity 0.4s",
-          }}>
-            <div style={{ width: 4, height: 4, background: "var(--green)", flexShrink: 0 }} />
-            <span style={{ fontSize: 9, color: "var(--green-dim)", letterSpacing: "0.06em" }}>{skill}</span>
-          </div>
-        ))}
       </div>
     </div>
   );
@@ -320,7 +341,7 @@ export default function HeroSection({ hero }: { hero: THero }) {
   if (!hero) return null;
 
   return (
-    <section style={{ position: "relative", zIndex: 10, padding: "40px 24px 36px", maxWidth: 1100, margin: "0 auto" }}>
+    <section style={{ position: "relative", zIndex: 10, padding: "40px 24px 36px" }} className="w-full mx-auto px-4 sm:px-6 md:px-8">
       {/* Top HUD bar */}
       <div style={{
         display: "flex", alignItems: "center", justifyContent: "space-between",
@@ -332,9 +353,9 @@ export default function HeroSection({ hero }: { hero: THero }) {
       </div>
 
       {/* Main layout */}
-      <div style={{ display: "flex", gap: 16, alignItems: "flex-start", flexWrap: "wrap" }}>
+      <div style={{ display: "flex", gap: 16, alignItems: "stretch", flexWrap: "wrap" }}>
         {/* CCTV main frame */}
-        <div style={{ flex: "1 1 420px", position: "relative" }}>
+        <div style={{ flex: "1 1 420px", position: "relative", minHeight: 300 }}>
           <div style={{
             position: "relative", background: "#020402",
             border: "1px solid var(--border)", overflow: "hidden", aspectRatio: "16/10",

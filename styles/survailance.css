@@ -36,6 +36,13 @@ body {
   font-family: var(--font-mono);
   overflow-x: hidden;
   cursor: crosshair;
+  font-size: 15px;
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+  }
 }
 
 /* Scanline overlay */

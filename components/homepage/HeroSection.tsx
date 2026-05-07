@@ -235,101 +235,105 @@ function FacialRecognitionPanel({ hero }: { hero: THero }) {
     { label: "STATUS", value: hero.isAvailable ? "AVAILABLE" : "ENGAGED", highlight: true, good: hero.isAvailable },
   ];
 
-  const panelWidth = isMobile ? 140 : 220;
+  const panelWidth = isMobile ? "100%" : "auto";
   const headerFontSize = isMobile ? 7 : 8;
   const fieldLabelFontSize = isMobile ? 6 : 8;
   const fieldValueFontSize = isMobile ? 10 : 12;
 
   return (
-    <div style={{
-      background: "rgba(0,6,0,0.95)", border: "1px solid var(--border)",
-      padding: isMobile ? "8px" : "12px", fontFamily: "var(--font-mono)",
-      width: panelWidth, flexShrink: 0, maxWidth: "100%",
-    }}>
+    <div className="bg-[rgba(0,6,0,0.95)] border border-(--border) font-[var(--font-mono)] flex-shrink-0"
+      style={{ padding: isMobile ? "8px" : "12px", width: panelWidth }}>
       {/* Header */}
-      <div style={{
-        fontSize: headerFontSize, letterSpacing: "0.2em", color: "var(--green-dim)",
-        marginBottom: 6, borderBottom: "1px solid var(--border)", paddingBottom: 5,
-        display: "flex", justifyContent: "space-between", alignItems: "center",
-      }}>
+      <div className="flex justify-between items-center border-b border-[var(--border)] pb-1.5 mb-1.5"
+        style={{ fontSize: headerFontSize, letterSpacing: "0.2em", color: "var(--green-dim)" }}>
         <span>AI FACIAL RECOGNITION</span>
-        <span style={{ color: done ? "var(--green)" : "var(--amber)", animation: "blink 1s infinite" }}>
+        <span className="animate-[blink_1s_infinite]" style={{ color: done ? "var(--green)" : "var(--amber)" }}>
           {done ? "● DONE" : "● SCAN"}
         </span>
       </div>
 
-      {/* Thumbnail */}
-      <div style={{
-        position: "relative", width: "100%", aspectRatio: "4/3",
-        border: "1px solid var(--border)", background: "#000", overflow: "hidden", marginBottom: 8,
-      }}>
-        <CornerBracket position="tl" size={10} />
-        <CornerBracket position="tr" size={10} />
-        <CornerBracket position="bl" size={10} />
-        <CornerBracket position="br" size={10} />
+      {/* Content row: Image left on mobile, stacked on PC */}
+      <div className={`flex ${isMobile ? "flex-row gap-2 items-start" : "flex-col"}`}>
+        {/* Thumbnail - fixed size on left */}
+        <div className="relative bg-black border border-[var(--border)] overflow-hidden flex-shrink-0"
+          style={{ width: isMobile ? 80 : 100, height: isMobile ? 60 : 75 }}>
+          <CornerBracket position="tl" size={8} />
+          <CornerBracket position="tr" size={8} />
+          <CornerBracket position="bl" size={8} />
+          <CornerBracket position="br" size={8} />
 
-        {hero.photo.trim() && !imageError ? (
-          <Image src={hero.photo.trim()} alt={hero.name} fill
-            style={{ objectFit:"cover",objectPosition:"center",filter:"grayscale(40%) contrast(1.1)",opacity:0.85 }}
-            onError={() => setImageError(true)}
-          />
-        ) : (
-          <div style={{ width:"100%",height:"100%",display:"flex",alignItems:"center",justifyContent:"center",color:"var(--muted)",fontSize:9 }}>NO SIGNAL</div>
-        )}
+          {hero.photo.trim() && !imageError ? (
+            <Image src={hero.photo.trim()} alt={hero.name} fill
+              className="object-cover object-center"
+              style={{ filter: "grayscale(40%) contrast(1.1)", opacity: 0.85 }}
+              onError={() => setImageError(true)}
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center text-[var(--muted)]" style={{ fontSize: 8 }}>NO SIGNAL</div>
+          )}
 
-        {/* Scan sweep */}
-        {!done && (
-          <div style={{
-            position: "absolute", left: 0, right: 0, height: 1,
-            background: "linear-gradient(90deg, transparent 0%, var(--green) 40%, rgba(0,255,65,0.5) 60%, transparent 100%)",
-            top: `${progress}%`, boxShadow: "0 0 10px var(--green)", zIndex: 5,
-          }} />
-        )}
+          {/* Scan sweep */}
+          {!done && (
+            <div className="absolute left-0 right-0 h-px z-5"
+              style={{ top: `${progress}%`, background: "linear-gradient(90deg, transparent 0%, var(--green) 40%, rgba(0,255,65,0.5) 60%, transparent 100%)", boxShadow: "0 0 10px var(--green)" }}
+            />
+          )}
 
-        {/* Face mesh */}
-        {done && (
-          <svg style={{ position:"absolute",inset:0,width:"100%",height:"100%",zIndex:6,opacity:0.55 }} viewBox="0 0 100 75">
-            {[[28,18],[50,16],[72,18],[22,32],[50,30],[78,32],[28,50],[50,48],[72,50],[38,22],[62,22],[50,38]].map(([cx,cy],i) => (
-              <circle key={i} cx={cx} cy={cy} r="1.2" fill="var(--green)" />
-            ))}
-            {[[28,18,50,16],[50,16,72,18],[28,18,28,50],[72,18,72,50],[28,32,72,32],[50,16,50,48]].map(([x1,y1,x2,y2],i) => (
-              <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke="var(--green)" strokeWidth="0.4" opacity="0.35"/>
-            ))}
-          </svg>
-        )}
-      </div>
+          {/* Face mesh */}
+          {done && (
+            <svg className="absolute inset-0 w-full h-full z-6" style={{ opacity: 0.55 }} viewBox="0 0 100 75">
+              {[[28,18],[50,16],[72,18],[22,32],[50,30],[78,32],[28,50],[50,48],[72,50],[38,22],[62,22],[50,38]].map(([cx,cy],i) => (
+                <circle key={i} cx={cx} cy={cy} r="1.2" fill="var(--green)" />
+              ))}
+              {[[28,18,50,16],[50,16,72,18],[28,18,28,50],[72,18,72,50],[28,32,72,32],[50,16,50,48]].map(([x1,y1,x2,y2],i) => (
+                <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke="var(--green)" strokeWidth="0.4" opacity="0.35"/>
+              ))}
+            </svg>
+          )}
+        </div>
 
-      {/* Fields */}
-      {fields.map(({ label, value, highlight, good }, i) => (
-        <div key={label} style={{
-          marginBottom: 4, padding: "3px 4px",
-          background: (!done && activeField === i) ? "rgba(0,255,65,0.06)" : "transparent",
-          border: (!done && activeField === i) ? "1px solid rgba(0,255,65,0.2)" : "1px solid transparent",
-          transition: "all 0.3s",
-        }}>
-          <div style={{ fontSize: fieldLabelFontSize, color: "var(--muted)", letterSpacing: "0.15em", marginBottom: 1 }}>{label}:</div>
-          <div style={{
-            fontSize: fieldValueFontSize,
-            color: highlight ? (good ? "var(--green)" : "var(--amber)") : "rgba(0,255,65,0.8)",
-            letterSpacing: "0.04em",
-          }}>
-            {done || i < activeField ? value : "████████"}
+        {/* Fields on right - stacked in a column */}
+        <div className="flex flex-col gap-1 mt-2 flex-1 min-w-0">
+          {/* NAME and AGE in one row */}
+          <div className="flex items-center gap-1">
+            <span style={{ fontSize: fieldLabelFontSize, color: "var(--muted)", letterSpacing: "0.15em" }}>NAME:</span>
+            <span style={{ fontSize: fieldValueFontSize, color: "rgba(0,255,65,0.8)", letterSpacing: "0.04em" }}>{hero.name}</span>
+            <span style={{ fontSize: fieldLabelFontSize, color: "var(--muted)", letterSpacing: "0.15em", marginLeft: 8 }}>AGE:</span>
+            <span style={{ fontSize: fieldValueFontSize, color: "rgba(0,255,65,0.8)", letterSpacing: "0.04em" }}>~24</span>
+          </div>
+          {/* ROLE */}
+          <div className="flex items-center gap-1">
+            <span style={{ fontSize: fieldLabelFontSize, color: "var(--muted)", letterSpacing: "0.15em" }}>ROLE:</span>
+            <span style={{ fontSize: fieldValueFontSize, color: "rgba(0,255,65,0.8)", letterSpacing: "0.04em" }}>{hero.current_position}</span>
+          </div>
+          {/* STATUS and MATCH */}
+          <div className="flex items-center gap-1">
+            <span style={{ fontSize: fieldLabelFontSize, color: "var(--muted)", letterSpacing: "0.15em" }}>STATUS:</span>
+            <span style={{ fontSize: fieldValueFontSize, color: hero.isAvailable ? "var(--green)" : "var(--amber)", letterSpacing: "0.04em" }}>
+              {hero.isAvailable ? "AVAILABLE" : "ENGAGED"}
+            </span>
+            <span style={{ fontSize: fieldLabelFontSize, color: "var(--muted)", letterSpacing: "0.08em", marginLeft: 8 }}>MATCH:</span>
+            <div className="h-1 flex-1 max-w-[50px] bg-[#001500] border border-[var(--border)] overflow-hidden">
+              <div className="h-full bg-gradient-to-r from-[var(--green-dark)] to-[var(--green)]"
+                style={{ width: `${Math.min(progress, 98.7)}%`, transition: "width 0.06s linear" }}
+              />
+            </div>
+            <span style={{ fontSize: fieldLabelFontSize, color: "var(--green)" }}>{Math.min(progress * 0.987, 98.7).toFixed(1)}%</span>
           </div>
         </div>
-      ))}
+      </div>
 
-      {/* Confidence bar */}
-      <div style={{ marginTop: 6, borderTop: "1px solid var(--border)", paddingTop: 6 }}>
-        <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 3 }}>
-          <span style={{ fontSize: fieldLabelFontSize, color: "var(--muted)", letterSpacing: "0.08em" }}>MATCH CONFIDENCE</span>
-          <span style={{ fontSize: fieldLabelFontSize, color: "var(--green)" }}>{Math.min(progress * 0.987, 98.7).toFixed(1)}%</span>
-        </div>
-        <div style={{ height: 5, background: "#001500", border: "1px solid var(--border)", overflow: "hidden" }}>
-          <div style={{
-            height: "100%", width: `${Math.min(progress, 98.7)}%`,
-            background: "linear-gradient(90deg, var(--green-dark), var(--green))",
-            transition: "width 0.06s linear",
-          }} />
+      {/* Capabilities scan */}
+      <div className="mt-1.5 border-t border-[var(--border)] pt-1.5">
+        <div style={{ fontSize: fieldLabelFontSize, color: "var(--muted)", letterSpacing: "0.12em", marginBottom: 4 }}>IDENTIFIED CAPABILITIES:</div>
+        <div className="flex flex-wrap gap-1">
+          {["React / Next.js", "TypeScript", "Docker / CI/CD", "Go Lang"].map((skill, i) => (
+            <div key={skill} className="flex items-center gap-1 transition-opacity duration-400"
+              style={{ opacity: progress > (i + 1) * 22 ? 1 : 0.15 }}>
+              <div className="w-1 h-1 bg-[var(--green)]" />
+              <span style={{ fontSize: fieldLabelFontSize, color: "var(--green-dim)", letterSpacing: "0.06em" }}>{skill}</span>
+            </div>
+          ))}
         </div>
       </div>
     </div>
@@ -353,9 +357,9 @@ export default function HeroSection({ hero }: { hero: THero }) {
       </div>
 
       {/* Main layout */}
-      <div style={{ display: "flex", gap: 16, alignItems: "stretch", flexWrap: "wrap" }}>
+      <div className="flex flex-col md:flex-row gap-4 items-stretch">
         {/* CCTV main frame */}
-        <div style={{ flex: "1 1 420px", position: "relative", minHeight: 300 }}>
+        <div className="w-full md:flex-1 relative">
           <div style={{
             position: "relative", background: "#020402",
             border: "1px solid var(--border)", overflow: "hidden", aspectRatio: "16/10",

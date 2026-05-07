@@ -241,22 +241,22 @@ function FacialRecognitionPanel({ hero }: { hero: THero }) {
   const fieldValueFontSize = isMobile ? 10 : 12;
 
   return (
-    <div className="bg-[rgba(0,6,0,0.95)] border border-(--border) font-[var(--font-mono)] flex-shrink-0"
+    <div className="bg-[rgba(0,6,0,0.95)] border border-(--border) font-(--font-mono) shrink-0"
       style={{ padding: isMobile ? "8px" : "12px", width: panelWidth }}>
       {/* Header */}
-      <div className="flex justify-between items-center border-b border-[var(--border)] pb-1.5 mb-1.5"
+      <div className="flex justify-between items-center border-b border-(--border) pb-1.5 mb-1.5"
         style={{ fontSize: headerFontSize, letterSpacing: "0.2em", color: "var(--green-dim)" }}>
         <span>AI FACIAL RECOGNITION</span>
-        <span className="animate-[blink_1s_infinite]" style={{ color: done ? "var(--green)" : "var(--amber)" }}>
+        <span style={{ color: done ? "var(--green)" : "var(--amber)" }}>
           {done ? "● DONE" : "● SCAN"}
         </span>
       </div>
 
       {/* Content row: Image left on mobile, stacked on PC */}
-      <div className={`flex ${isMobile ? "flex-row gap-2 items-start" : "flex-col"}`}>
+      <div className={`flex flex-row gap-3 items-start md:flex-col`}>
         {/* Thumbnail - fixed size on left */}
-        <div className="relative bg-black border border-[var(--border)] overflow-hidden flex-shrink-0"
-          style={{ width: isMobile ? 80 : 100, height: isMobile ? 60 : 75 }}>
+        <div className="relative bg-black border self-center border-(--border) overflow-hidden shrink-0"
+          style={{ width: isMobile ? 80 : 100, height: isMobile ? 60 : 75 , marginTop: isMobile ? 0 : 12}}>
           <CornerBracket position="tl" size={8} />
           <CornerBracket position="tr" size={8} />
           <CornerBracket position="bl" size={8} />
@@ -264,12 +264,12 @@ function FacialRecognitionPanel({ hero }: { hero: THero }) {
 
           {hero.photo.trim() && !imageError ? (
             <Image src={hero.photo.trim()} alt={hero.name} fill
-              className="object-cover object-center"
+              className="object-cover object-center "
               style={{ filter: "grayscale(40%) contrast(1.1)", opacity: 0.85 }}
               onError={() => setImageError(true)}
             />
           ) : (
-            <div className="w-full h-full flex items-center justify-center text-[var(--muted)]" style={{ fontSize: 8 }}>NO SIGNAL</div>
+            <div className="w-full h-full flex items-center justify-center text-(--muted)" style={{ fontSize: 8 }}>NO SIGNAL</div>
           )}
 
           {/* Scan sweep */}
@@ -292,8 +292,8 @@ function FacialRecognitionPanel({ hero }: { hero: THero }) {
           )}
         </div>
 
-        {/* Fields on right - stacked in a column */}
-        <div className="flex flex-col gap-1 mt-2 flex-1 min-w-0">
+        {/* Fields on right - stacked in a column with top padding */}
+        <div className="flex flex-col gap-1 flex-1 min-w-0" style={{ paddingTop: "8px" }}>
           {/* NAME and AGE in one row */}
           <div className="flex items-center gap-1">
             <span style={{ fontSize: fieldLabelFontSize, color: "var(--muted)", letterSpacing: "0.15em" }}>NAME:</span>
@@ -313,7 +313,7 @@ function FacialRecognitionPanel({ hero }: { hero: THero }) {
               {hero.isAvailable ? "AVAILABLE" : "ENGAGED"}
             </span>
             <span style={{ fontSize: fieldLabelFontSize, color: "var(--muted)", letterSpacing: "0.08em", marginLeft: 8 }}>MATCH:</span>
-            <div className="h-1 flex-1 max-w-[50px] bg-[#001500] border border-[var(--border)] overflow-hidden">
+            <div className="h-1 flex-1 max-w-[50px] bg-[#001500] border border-(--border) overflow-hidden">
               <div className="h-full bg-gradient-to-r from-[var(--green-dark)] to-[var(--green)]"
                 style={{ width: `${Math.min(progress, 98.7)}%`, transition: "width 0.06s linear" }}
               />
@@ -324,13 +324,13 @@ function FacialRecognitionPanel({ hero }: { hero: THero }) {
       </div>
 
       {/* Capabilities scan */}
-      <div className="mt-1.5 border-t border-[var(--border)] pt-1.5">
-        <div style={{ fontSize: fieldLabelFontSize, color: "var(--muted)", letterSpacing: "0.12em", marginBottom: 4 }}>IDENTIFIED CAPABILITIES:</div>
-        <div className="flex flex-wrap gap-1">
+      <div className="mt-1.5 border-t border-(--border) pt-1.5">
+        <div style={{ fontSize: fieldLabelFontSize, color: "var(--green)", letterSpacing: "0.12em", marginBottom: 4, marginTop: 12 }}>IDENTIFIED CAPABILITIES:</div>
+        <div className="grid grid-cols-2 gap-x-4 gap-y-1">
           {["React / Next.js", "TypeScript", "Docker / CI/CD", "Go Lang"].map((skill, i) => (
-            <div key={skill} className="flex items-center gap-1 transition-opacity duration-400"
-              style={{ opacity: progress > (i + 1) * 22 ? 1 : 0.15 }}>
-              <div className="w-1 h-1 bg-[var(--green)]" />
+            <div key={skill} className="flex items-center gap-1 transition-opacity duration-300"
+              style={{ opacity: progress > (i + 1) * 22 ? 1 : 0.35 }}>
+              <div className="w-1 h-1 bg-(--green)" />
               <span style={{ fontSize: fieldLabelFontSize, color: "var(--green-dim)", letterSpacing: "0.06em" }}>{skill}</span>
             </div>
           ))}
@@ -401,6 +401,23 @@ export default function HeroSection({ hero }: { hero: THero }) {
         {/* Right panel */}
         <FacialRecognitionPanel hero={hero} />
       </div>
+      {/* Contact links */}
+      <div style={{ display:"flex",flexWrap:"wrap",gap:10,marginTop:12 , justifyContent: "end"}}>
+        {hero.contactLinks?.map((l) => (
+          <a key={l.label} href={l.href} style={{
+            display:"flex",alignItems:"center",gap:7,padding:"6px 14px",
+            background:"transparent",border:"1px solid var(--border)",
+            color:"var(--green-dim)",fontFamily:"var(--font-mono)",fontSize:10,
+            letterSpacing:"0.1em",textDecoration:"none",textTransform:"uppercase",
+            transition:"all 0.15s",cursor:"crosshair",
+          }}
+            onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.background="var(--green-muted)"; el.style.borderColor="var(--green)"; el.style.color="var(--green)"; }}
+            onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.background="transparent"; el.style.borderColor="var(--border)"; el.style.color="var(--green-dim)"; }}
+          >
+            {Icon(l.icon)}{l.label}
+          </a>
+        ))}
+      </div>
 
       {/* Bio + Achievements strip */}
       <div style={{ display: "flex", gap: 14, marginTop: 14, flexWrap: "wrap" }}>
@@ -429,23 +446,7 @@ export default function HeroSection({ hero }: { hero: THero }) {
         </div>
       </div>
 
-      {/* Contact links */}
-      <div style={{ display:"flex",flexWrap:"wrap",gap:10,marginTop:12 }}>
-        {hero.contactLinks?.map((l) => (
-          <a key={l.label} href={l.href} style={{
-            display:"flex",alignItems:"center",gap:7,padding:"6px 14px",
-            background:"transparent",border:"1px solid var(--border)",
-            color:"var(--green-dim)",fontFamily:"var(--font-mono)",fontSize:10,
-            letterSpacing:"0.1em",textDecoration:"none",textTransform:"uppercase",
-            transition:"all 0.15s",cursor:"crosshair",
-          }}
-            onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.background="var(--green-muted)"; el.style.borderColor="var(--green)"; el.style.color="var(--green)"; }}
-            onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.background="transparent"; el.style.borderColor="var(--border)"; el.style.color="var(--green-dim)"; }}
-          >
-            {Icon(l.icon)}{l.label}
-          </a>
-        ))}
-      </div>
+      
 
       <style>{`
         @keyframes blink { 0%,49%{opacity:1} 50%,100%{opacity:0} }

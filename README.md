@@ -14,15 +14,12 @@
   </a>
 </p>
 
----
 
 ## 💼 Current Role
 
 **Software Engineer I** at **[Pathao Ltd.](https://pathao.com)** · _Jan 2025 – Present_
 
 Building scalable, high-quality software — from pixel-perfect frontends to production-ready deployments. Open to exciting opportunities. Let's build something meaningful together.
-
----
 
 ## 🏆 Featured Projects
 
@@ -34,8 +31,6 @@ A powerful Postman alternative featuring collection management, HTTP request bui
 
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![Tailwind](https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
 
----
-
 <!-- FILEDRIVE - Priority 2 -->
 ### [FileDrive](https://github.com/Pantho-Haque/FileDrive) 🔐
 > **Secure Cloud Storage** | [Code](https://github.com/Pantho-Haque/FileDrive)
@@ -44,7 +39,6 @@ A secure cloud file storage system with role-based access control, robust authen
 
 ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=%23261C2C) ![Chakra](https://img.shields.io/badge/Chakra-4ED1C5?style=flat-square&logo=chakraui&logoColor=white) ![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=flat-square&logo=laravel&logoColor=white)
 
----
 
 <!-- DOMIKNOWS - Priority 3 -->
 ### [DomiKnows](https://dominowsknow.vercel.app) 🧠
@@ -54,7 +48,6 @@ A knowledge hub that visualizes Markdown notes from GitHub with session caching 
 
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white) ![Gemini](https://img.shields.io/badge/Gemini-8E75B2?style=flat-square&logo=google&logoColor=white)
 
----
 
 <!-- BANGLAHIRE - Priority 4 -->
 ### [BanglaHire](https://github.com/Pantho-Haque/Bangla_Peon) 💼
@@ -64,7 +57,6 @@ A full-stack freelance marketplace featuring secure JWT-based authentication, dy
 
 ![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=flat-square&logo=laravel&logoColor=white) ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white) ![Tailwind](https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
 
----
 
 <!-- BLOG BIT2BYTE - Priority 5 -->
 ### [Blog – Bit2Byte](https://www.bit2bytekuet.com/) 📝
@@ -74,42 +66,26 @@ Official blog and knowledge-sharing platform for Bit2Byte, KUET's reputed softwa
 
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white) ![Spring Boot](https://img.shields.io/badge/Spring-6DB33F?style=flat-square&logo=spring&logoColor=white) ![Tailwind](https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
 
----
 
 ## 📊 GitHub Statistics
 
-<table bgcolor="#0d1117" border="2" bordercolor="#00e676" cellpadding="0" cellspacing="0" rules="none">
-<tr>
-<td width="50%" valign="middle" bgcolor="#0d1117" style="padding: 16px 8px 16px 16px;">
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=pantho-haque&show_icons=true&count_private=true&include_all_commits=true&bg_color=0d1117&title_color=00e676&text_color=c9d1d9&border_color=0d1117&hide_border=true" alt="Pantho's GitHub Stats" width="100%" />
-</td>
-<td width="50%" valign="middle" bgcolor="#0d1117" style="padding: 16px 16px 16px 8px;">
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=pantho-haque&layout=compact&bg_color=0d1117&title_color=00e676&text_color=c9d1d9&border_color=0d1117&hide_border=true" alt="Top Languages" width="100%" />
-</td>
-</tr>
-</table>
+<p align="center">
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=pantho-haque&show_icons=true&count_private=true&include_all_commits=true&bg_color=0d111700&title_color=00e676&text_color=c9d1d9&border_color=0d111700&hide_border=true" alt="Pantho's GitHub Stats" width="49%" />
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=pantho-haque&layout=compact&bg_color=0d111700&title_color=00e676&text_color=c9d1d9&border_color=0d111700&hide_border=true" alt="Top Languages" width="49%" />
+</p>
 
-<table bgcolor="#0d1117" border="2" bordercolor="#00e676" cellpadding="0" cellspacing="0" rules="none">
-<tr>
-<td width="50%" valign="middle" bgcolor="#0d1117" style="padding: 16px 8px 16px 16px;">
-  <img src="https://streak-stats.demolab.com/?user=pantho-haque&theme=transparent&title_color=00e676&text_color=c9d1d9&border_color=0d1117&stroke=00e676&ring=00e676&fire=00e676&currStreakNum=c9d1d9&sideNums=c9d1d9&currStreakLabel=c9d1d9&sideLabels=c9d1d9&hide_border=true" alt="GitHub Streak" width="100%" />
-</td>
-<td width="50%" valign="middle" bgcolor="#0d1117" style="padding: 16px 16px 16px 8px;">
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=pantho-haque&repo=hittable&bg_color=0d1117&title_color=00e676&text_color=c9d1d9&border_color=30363d" alt="Featured Repo" width="100%" />
-</td>
-</tr>
-</table>
+<p align="center">
+  <img src="https://streak-stats.demolab.com/?user=pantho-haque&theme=transparent&title_color=00e676&text_color=c9d1d9&border_color=0d111700&stroke=00e676&ring=00e676&fire=00e676&currStreakNum=c9d1d9&sideNums=c9d1d9&currStreakLabel=c9d1d9&sideLabels=c9d1d9&hide_border=true" alt="GitHub Streak" width="49%" />
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=pantho-haque&repo=hittable&bg_color=0d111700&title_color=00e676&text_color=c9d1d9&border_color=30363d" alt="Featured Repo" width="49%" />
+</p>
 
 <p align="center">
   <img src="https://img.shields.io/github/followers/Pantho-Haque?style=for-the-badge&logo=github&color=161b22" alt="Followers" />
   <img src="https://img.shields.io/github/stars/Pantho-Haque?style=for-the-badge&logo=github&color=161b22" alt="Stars"  />
 </p>
 
----
-
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=pantho-haque&bg_color=0d1117&color=00e676&line=00e676&point=00e676&area=true&hide_border=true&area_color=161b22" alt="Contribution Activity" />
 
----
 
 ## 📂 Other Projects
 
@@ -126,7 +102,6 @@ Official blog and knowledge-sharing platform for Bit2Byte, KUET's reputed softwa
 | **BBM** | Blood Bank Management Android app with Firebase auth. | Android · Firebase | [Code](https://github.com/Pantho-Haque/BBM) |
 | **ToDo** | Android note-taking app with Firebase backend. | Android · Firebase | [Code](https://github.com/Pantho-Haque/TODO-AndroidStudio) |
 
----
 
 ## 🛠️ Tech Stack
 
@@ -138,7 +113,6 @@ Official blog and knowledge-sharing platform for Bit2Byte, KUET's reputed softwa
 
 **Tools:** Docker · GitHub Actions · CI/CD Pipelines · Linux · Nginx · Git · Postman · Vercel
 
----
 
 ## ⚡ Achievements
 

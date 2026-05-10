@@ -78,19 +78,19 @@ Official blog and knowledge-sharing platform for Bit2Byte, KUET's reputed softwa
 
 ## 📊 GitHub Statistics
 
-<p align="center">
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=pantho-haque&show_icons=true&count_private=true&include_all_commits=true&theme=transparent&title_color=00e676&text_color=c9d1d9&border_color=30363d" alt="Pantho's GitHub Stats" width="49%" />
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=pantho-haque&layout=compact&theme=transparent&title_color=00e676&text_color=c9d1d9&border_color=30363d" alt="Top Languages" width="49%" />
+<p align="center" style="background: #0d1117; border: 1px solid #00e676; border-radius: 10px ; display: flex; align-items: center; justify-content: center; gap: 10px; padding: 10px;">
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=pantho-haque&show_icons=true&count_private=true&include_all_commits=true&bg_color=0d1117&title_color=00e676&text_color=c9d1d9&border_color=0d1117&hide_border=true" alt="Pantho's GitHub Stats" width="49%" />
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=pantho-haque&layout=compact&bg_color=0d1117&title_color=00e676&text_color=c9d1d9&border_color=0d1117&hide_border=true" alt="Top Languages" width="49%" />
 </p>
 
-<p align="center">
-  <img src="https://streak-stats.demolab.com/?user=pantho-haque&theme=transparent&title_color=00e676&text_color=c9d1d9&border_color=30363d&stroke=00e676&ring=00e676&fire=00e676&currStreakNum=c9d1d9&sideNums=c9d1d9&currStreakLabel=c9d1d9&sideLabels=c9d1d9" alt="GitHub Streak" width="49%" />
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=pantho-haque&repo=hittable&theme=transparent&title_color=00e676&text_color=c9d1d9&border_color=30363d" alt="Featured Repo" width="49%" />
+<p align="center" style="background: #0d1117; border: 1px solid #00e676; border-radius: 10px ; display: flex; align-items: center; justify-content: center; gap: 10px; padding: 10px;">
+  <img src="https://streak-stats.demolab.com/?user=pantho-haque&theme=transparent&title_color=00e676&text_color=c9d1d9&border_color=0d1117&stroke=00e676&ring=00e676&fire=00e676&currStreakNum=c9d1d9&sideNums=c9d1d9&currStreakLabel=c9d1d9&sideLabels=c9d1d9&hide_border=true" alt="GitHub Streak" width="49%" />
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=pantho-haque&repo=hittable&bg_color=0d1117&title_color=00e676&text_color=c9d1d9&border_color=30363d" alt="Featured Repo" width="49%" />
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/github/followers/Pantho-Haque?style=for-the-badge&logo=github&color=161b22" alt="Followers" />
-  <img src="https://img.shields.io/github/stars/Pantho-Haque?style=for-the-badge&logo=github&color=161b22" alt="Stars" />
+  <img src="https://img.shields.io/github/stars/Pantho-Haque?style=for-the-badge&logo=github&color=161b22" alt="Stars"  />
 </p>
 
 ---

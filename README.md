@@ -1,152 +1,147 @@
-<!-- eslint-disable-file no-use-before-define  -->
+<!-- eslint-disable-file no-use-before-define -->
 
-# Pantho Haque
+# Hi, I'm Pantho Haque! 👋
 
-Web developer being a student. Here is my <a href="https://pantho-haque.github.io/Pantho-Haque/cv.pdf">__ CV __</a>
-
-
-## About Me
-
-I have worked in several projects with seniors and teachers.Also I have 3 years of learning experience in those fields
-
-- Graphics designing
-- Web Designing
-- Web Development
-
-## Education
-
-Currently I am a student of 3rd year in Computer Science and Engineering , Khulna University of Engineering and Technology.
-
-<!-- <table border="0">
-    <tr>
-        <td><img src="./public/assets/profile.png" alt="Profile Picture" width="200">
-        </td>
-        <td>
-            <p align="center" >You can visit my Portfolio by clicking <br/> <b>
-            <a href="https://pantho-haque.github.io/Pantho-Haque/" target="_blank">here</a> </b> 
-            </p>
-        </td>
-    </tr>
-</table> -->
-
-
-
-
-
-<img align="right" src="./public/assets/profile.png" alt="Profile Picture" width="200">
-
-<p align="left" >You can visit my Portfolio by clicking <br/>
- <b>
-    <a href="https://pantho-haque.github.io/Pantho-Haque/" target="_blank">here</a>
-    </b>
+<p align="left">
+  <a href="https://github.com/Pantho-Haque" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white&color=58a6ff" alt="GitHub" />
+  </a>
+  <a href="https://www.linkedin.com/in/panthohaque/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&color=58a6ff" alt="LinkedIn" />
+  </a>
+  <a href="mailto:pantho.haque.dev@gmail.com">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white&color=58a6ff" alt="Email" />
+  </a>
 </p>
 
+---
 
-- 💬 Ask me about **C++ , ReactJS , Android**
+## 💼 Current Role
 
-- 📫 How to reach me **panthohaque927908@gmail.com**
+**Software Engineer I** at **[Pathao Ltd.](https://pathao.com)** · _Jan 2025 – Present_
 
-# Projects
+Building scalable, high-quality software — from pixel-perfect frontends to production-ready deployments. Open to exciting opportunities. Let's build something meaningful together.
 
-## **FileDrive**
+---
 
-![Chakra](https://img.shields.io/badge/chakra-%234ED1C5.svg?style=for-the-badge&logo=chakraui&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Laravel](https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white)
+## 🏆 Featured Projects
 
-This project maintains specialised frontend design with a backend api. I used **React** as frontend library and **ChakraUI** fro designing purpose.For backend development I used the famous php framework **Laravel**
+<!-- Hittable - Priority 1 -->
+### [Hittable](https://hittable.vercel.app) ⭐
+> **Browser-based API Client** | [Live](https://hittable.vercel.app) · [Code](https://github.com/Pantho-Haque/hittable)
 
-[_Live demo_](https://filedrive-21sl.onrender.com/) | [_View code_](https://github.com/Pantho-Haque/FileDrive.git)
+A powerful Postman alternative featuring collection management, HTTP request building, and full request history — all persisted in localStorage. Supports keyboard shortcuts for power-user workflows and enforces code quality via Husky pre-commit hooks.
 
-## **Mayajal**
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![Tailwind](https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
 
-![Chakra](https://img.shields.io/badge/chakra-%234ED1C5.svg?style=for-the-badge&logo=chakraui&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+---
 
-It was a great experience to work with MAYAJAL.That site was a simple campaign form that was made for conducting the registration process some of their user.
+<!-- FILEDRIVE - Priority 2 -->
+### [FileDrive](https://github.com/Pantho-Haque/FileDrive) 🔐
+> **Secure Cloud Storage** | [Code](https://github.com/Pantho-Haque/FileDrive)
 
-[_Live demo_](https://pantho-haque.github.io/mayajaal/) | [_View code_](https://github.com/Pantho-Haque/mayajaal.git)
+A secure cloud file storage system with role-based access control, robust authentication, and organized file management — built with a Laravel REST API and a React frontend.
 
-## **BioLock**
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=%23261C2C) ![Chakra](https://img.shields.io/badge/Chakra-4ED1C5?style=flat-square&logo=chakraui&logoColor=white) ![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=flat-square&logo=laravel&logoColor=white)
 
-![Chakra](https://img.shields.io/badge/chakra-%234ED1C5.svg?style=for-the-badge&logo=chakraui&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB) ![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white)
+---
 
-This project allows user to maintain a special security to his/her house.House Owners or family members have to register their fingerprints and then they are allowd to go through this security system.While a intruder attemps to move this prototype can detect and makes an alarm also send an alert message to house owner.
+<!-- DOMIKNOWS - Priority 3 -->
+### [DomiKnows](https://dominowsknow.vercel.app) 🧠
+> **Personal Productivity Playground** | [Live](https://dominowsknow.vercel.app)
 
-All those functionalities are maintaining my an website which is created with **ReactJS** and **Express.JS**.
+A knowledge hub that visualizes Markdown notes from GitHub with session caching for rate limit handling. Also includes an AI chatbot powered by RAG with Gemini API.
 
-[_View code_](https://github.com/Pantho-Haque/BioLock.git)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white) ![Gemini](https://img.shields.io/badge/Gemini-8E75B2?style=flat-square&logo=google&logoColor=white)
 
-## **MyCM**
+---
 
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white) ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase)
+<!-- BANGLAHIRE - Priority 4 -->
+### [BanglaHire](https://github.com/Pantho-Haque/Bangla_Peon) 💼
+> **Bangladeshi Freelance Marketplace** | [Demo](https://youtu.be/BOzMvYXFKCs?si=9mFAudnuFUD1W7Lb) · [Code](https://github.com/Pantho-Haque/Bangla_Peon)
 
-A classroom management system where a student can find his daily updates and informations about his/her class and labs.A student can create his class and assign a **Class Representetive** who has right to modify the routines or notices of a class and everyone can use that information to maintaine the academic progress.
+A full-stack freelance marketplace featuring secure JWT-based authentication, dynamic job listings, proposal management, and role-based dashboards for clients and freelancers.
 
-[_Live demo_](https://pantho-haque.github.io/mycm/) | [_View code_](https://github.com/Pantho-Haque/mycm.git)
+![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=flat-square&logo=laravel&logoColor=white) ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white) ![Tailwind](https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
 
-## **TravelGB**
+---
 
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white) ![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)
+<!-- BLOG BIT2BYTE - Priority 5 -->
+### [Blog – Bit2Byte](https://www.bit2bytekuet.com/) 📝
+> **Official Blog Platform** | [Live](https://www.bit2bytekuet.com/)
 
-The project was made as a freelancing work which has 4 pages with full responsive view.
+Official blog and knowledge-sharing platform for Bit2Byte, KUET's reputed software engineering club. Features article publishing, member profiles, and event announcements.
 
-[_Live demo_](https://pantho-haque.github.io/TRAvelGB/) | [_View code_](https://github.com/Pantho-Haque/TRAvelGB.git)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white) ![Spring Boot](https://img.shields.io/badge/Spring-6DB33F?style=flat-square&logo=spring&logoColor=white) ![Tailwind](https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
 
-## **Pless**
+---
 
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+## 📊 GitHub Statistics
 
-A single page of a website that has responsive navigation bar with other components which was under a freelancing project.Totally basic and raw coding was applied to make this page.
+<p align="center">
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=pantho-haque&show_icons=true&count_private=true&include_all_commits=true&theme=transparent&title_color=00e676&text_color=c9d1d9&border_color=30363d" alt="Pantho's GitHub Stats" width="49%" />
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=pantho-haque&layout=compact&theme=transparent&title_color=00e676&text_color=c9d1d9&border_color=30363d" alt="Top Languages" width="49%" />
+</p>
 
-[_Live demo_](https://pantho-haque.github.io/pless/) | [_View code_](https://github.com/Pantho-Haque/pless.git)
+<p align="center">
+  <img src="https://streak-stats.demolab.com/?user=pantho-haque&theme=transparent&title_color=00e676&text_color=c9d1d9&border_color=30363d&stroke=00e676&ring=00e676&fire=00e676&currStreakNum=c9d1d9&sideNums=c9d1d9&currStreakLabel=c9d1d9&sideLabels=c9d1d9" alt="GitHub Streak" width="49%" />
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=pantho-haque&repo=hittable&theme=transparent&title_color=00e676&text_color=c9d1d9&border_color=30363d" alt="Featured Repo" width="49%" />
+</p>
 
-## **MathTime**
+<p align="center">
+  <img src="https://img.shields.io/github/followers/Pantho-Haque?style=for-the-badge&logo=github&color=161b22" alt="Followers" />
+  <img src="https://img.shields.io/github/stars/Pantho-Haque?style=for-the-badge&logo=github&color=161b22" alt="Stars" />
+</p>
 
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+---
 
-A totally simple multiplication table generator made with **HTML5** , **CSS3** and **JAVASCRIPT ES6**
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=pantho-haque&bg_color=0d1117&color=00e676&line=00e676&point=00e676&area=true&hide_border=true&area_color=161b22" alt="Contribution Activity" />
 
-[_Live demo_](https://pantho-haque.github.io/Math-Time/) | [_View code_](https://github.com/Pantho-Haque/Math-Time.git)
+---
 
-## **What Time**
+## 📂 Other Projects
 
-![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)
+| Project | Description | Stack | Links |
+|---------|-------------|-------|-------|
+| **BioLock** | IoT-integrated security system with Arduino, Express backend, and Twilio SMS alerts for access events. | React · Express.js · Arduino · Twilio | [Code](https://github.com/Pantho-Haque/BioLock) |
+| **Salami – Web3** | Web3 micro-payment DApp for crypto tips via MetaMask using Hardhat and Ethers.js. | Next.js · Hardhat · MetaMask · Ethers.js | [Code](https://github.com/Pantho-Haque/Salami---Web3) |
+| **Mayajal** | Campaign registration form for event participants. | React · Chakra UI | [Live](https://pantho-haque.github.io/mayajaal/) · [Code](https://github.com/Pantho-Haque/mayajaal) |
+| **MyCM** | Classroom management system with CR assignments and notice boards. | HTML5 · CSS3 · jQuery · Firebase | [Live](https://pantho-haque.github.io/mycm/) · [Code](https://github.com/Pantho-Haque/mycm) |
+| **TravelGB** | Responsive 4-page travel website for freelance work. | HTML5 · CSS3 · Bootstrap · jQuery | [Live](https://pantho-haque.github.io/TRAvelGB/) · [Code](https://github.com/Pantho-Haque/TRAvelGB) |
+| **Pless** | Single-page responsive website with navigation bar. | HTML5 · CSS3 · JavaScript | [Live](https://pantho-haque.github.io/pless/) · [Code](https://github.com/Pantho-Haque/pless) |
+| **MathTime** | Multiplication table generator. | HTML5 · CSS3 · JavaScript | [Live](https://pantho-haque.github.io/Math-Time/) · [Code](https://github.com/Pantho-Haque/Math-Time) |
+| **What Time** | Flutter app showing current time for chosen locations. | Flutter | [Code](https://github.com/Pantho-Haque/What-time) |
+| **BBM** | Blood Bank Management Android app with Firebase auth. | Android · Firebase | [Code](https://github.com/Pantho-Haque/BBM) |
+| **ToDo** | Android note-taking app with Firebase backend. | Android · Firebase | [Code](https://github.com/Pantho-Haque/TODO-AndroidStudio) |
 
-A **Flutter** project that shows us the current time for the choosen location.
+---
 
-[_View code_](https://github.com/Pantho-Haque/What-time.git)
+## 🛠️ Tech Stack
 
-## **BBM**
+**Languages:** JavaScript · TypeScript · PHP · Go · Shell Script · SQL
 
-![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white) ![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white)
+**Frameworks:** React.js · Next.js · Laravel · Express.js
 
-Blood Bank Management System(BBM) is an android project where any user with this application can visit the blood banks available to donate bloods and their blood related informations separately, can search about the blood for any particular bloodbank and get the details of that bank.
-Any blood bank authority can have their authenticated ID. Using this id that blood bank can change its necessary informations.
-Data will be saved for particular user in database , so user must login to see them and must register to user this application.
+**Databases:** PostgreSQL · MySQL · Firebase · Supabase · Redis
 
-[_View code_](https://github.com/Pantho-Haque/BBM.git)
+**Tools:** Docker · GitHub Actions · CI/CD Pipelines · Linux · Nginx · Git · Postman · Vercel
 
-## **ToDo**
+---
 
-![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white) ![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white)
+## ⚡ Achievements
 
-Simply take notes about the information provided by user and gave the ability to update or delete it anytime.Data will be saved for particular user in database , so user must login to see them and must register to user this application.
+<p>
+  <img src="https://img.shields.io/badge/ITEE%20FE--Half%20Passer-Oct%202023-amber?style=for-the-badge&logoColor=white" alt="ITEE FE" />
+  <img src="https://img.shields.io/badge/Team%20Lead%20·%20React%20Js%20%26%20Next%20Js%20·%20Bit2Byte%20KUET-cyan?style=for-the-badge&logoColor=white" alt="Team Lead" />
+</p>
 
-[_View code_](https://github.com/Pantho-Haque/TODO-AndroidStudio.git)
+---
 
-# Contact Me
-
-- [Email](mailto:panthohaque927908@gmail.com)
-- [LinkedIn](https://www.linkedin.com/in/panthohaque/)
-- [Facebook](https://www.facebook.com/panhohaque75/)
-
-Thank you for visiting my GitHub profile!
+<p align="center">
+  <i>Thank you for visiting my GitHub profile!</i>
+</p>
 
 <!--
     Badge links
     https://github.com/Ileriayo/markdown-badges/tree/master
-
  -->
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=pantho-haque&show_icons=true&locale=en&layout=compact" alt="pantho-haque" /></p>
-
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=pantho-haque&show_icons=true&locale=en" alt="pantho-haque" /></p>
-
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=pantho-haque&" alt="pantho-haque" /></p>

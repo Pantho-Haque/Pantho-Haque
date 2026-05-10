@@ -86,9 +86,9 @@
   ],
   "projects": [
     {
-      "name": "Postbox",
-      "live": "https://postbox-pantho.vercel.app",
-      "code": "https://github.com/Pantho-Haque/postbox",
+      "name": "Hittable",
+      "live": "https://hittable.vercel.app",
+      "code": "https://github.com/Pantho-Haque/hittable",
       "stack": "Next.js · TypeScript · Tailwind CSS · Husky",
       "desc": "A browser-based Postman alternative featuring collection management, HTTP request building, and full request history — all persisted in localStorage. Supports keyboard shortcuts for power-user workflows and enforces code quality via Husky pre-commit hooks.",
       "priority": 1

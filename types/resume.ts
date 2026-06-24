@@ -1,4 +1,5 @@
 export interface TResume {
+  summary: string;
   hero: THero;
   skills: TSkills;
   experience: TExperience[];
@@ -17,11 +18,12 @@ export interface THero {
   isAvailable: boolean;
   name: string;
   current_position: string;
-  company_name:string;
+  company_name: string;
   comment_one: string;
   comment_two: string;
   contactLinks: TContactLink[];
   photo: string;
+  resume_profile_pic: string;
   cover_photo:string;
   achievements: TAchievement[];
 }
@@ -29,7 +31,7 @@ export interface THero {
 export interface TAchievement {
   icon: string;
   text: string;
-  theme:string;
+  theme: string;
 }
 
 export interface TContactLink {
@@ -50,6 +52,7 @@ export interface TExperience {
   company: string;
   duration: string;
   description: string;
+  detailed_desc_html: string;
   stack: string[];
 }
 

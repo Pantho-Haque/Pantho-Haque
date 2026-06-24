@@ -1,4 +1,5 @@
 {
+  "summary": "Software Engineer with 1+ years building scalable, high-traffic web applications at Pathao. Specialized in React.js and Next.js with a proven track record of delivering production dashboards, performance optimizations, and multi-language support across logistics and rides platforms serving millions of users.",
   "hero": {
     "isAvailable": true,
     "name": "Pantho Haque",
@@ -8,9 +9,9 @@
     "comment_two": "Open to exciting opportunities. Let's build something meaningful together.",
     "contactLinks": [
       {
-        "icon": "github",
-        "label": "GitHub",
-        "href": "https://github.com/Pantho-Haque"
+        "icon": "phone",
+        "label": "+8801689833981",
+        "href": "tel:+8801689833981"
       },
       {
         "icon": "mail",
@@ -21,9 +22,15 @@
         "icon": "linkedin",
         "label": "LinkedIn",
         "href": "https://www.linkedin.com/in/panthohaque/"
+      },
+      {
+        "icon": "github",
+        "label": "GitHub",
+        "href": "https://github.com/Pantho-Haque"
       }
     ],
     "photo": "https://domiknows.vercel.app/api/cdn/profile_picture%20copy.png",
+    "resume_profile_pic":"https://domiknows.vercel.app/api/cdn/smile_dp.png",
     "cover_photo": "https://domiknows.vercel.app/api/cdn/cover_photo_pantho.jpeg",
     "achievements": [
       {
@@ -40,24 +47,36 @@
   },
   "skills": {
     "languages": [
-      "JavaScript",
       "TypeScript",
-      "PHP",
+      "JavaScript",
       "Go",
-      "Shell Script",
-      "SQL"
+      "PHP",
+      "SQL",
+      "Shell Script"
     ],
-    "frameworks": ["React.js", "Next.js", "Laravel", "Express.js"],
-    "databases": ["PostgreSQL", "MySQL", "Firebase", "Supabase", "Redis"],
+    "frameworks": [
+      "React.js",
+      "Next.js",
+      "Tailwind CSS",
+      "Laravel",
+      "Express.js"
+    ],
+    "databases": [
+      "PostgreSQL",
+      "MySQL",
+      "Supabase",
+      "Firebase",
+      "Redis"
+    ],
     "tools": [
       "Docker",
-      "GitHub Actions",
       "CI/CD Pipelines",
-      "Linux",
+      "GitLab Actions",
+      "GitHub Actions",
       "Nginx",
-      "Git",
-      "Postman",
-      "Vercel"
+      "Linux",
+      "Vercel",
+      "Git"
     ]
   },
   "education": {
@@ -71,16 +90,16 @@
       "title": "Software Engineer I",
       "company": "Pathao Limited",
       "duration": "Jan 2025 – Present",
-      "description": "Working on the frontend engineering team, building and maintaining high-traffic consumer-facing web applications using React.js and Next.js. Collaborating with cross-functional teams to deliver performant, accessible UI features at scale. Contributing to CI/CD workflows and ensuring robust deployment pipelines for production releases.",
-      "detailed_desc_html": "<div class='font-mono text-sm leading-relaxed'><div class='mb-4 border-l-2 border-gray-300 pl-4 border-t' style='padding-top: 4px;'><div class='text-xs font-semibold tracking-widest text-gray-400 mb-1'>FRONTEND ARCHITECTURE</div><div class='text-xs'>Architected <strong>12+ production dashboards</strong> using React — <strong>70+ pages</strong>, reusable components, configuration-driven UIs. Impact: <strong>reduced feature dev time by ~30%</strong>.</div></div><div class='mb-4 border-l-2 border-gray-300 pl-4 border-t' style='padding-top: 4px;'><div class='text-xs font-semibold tracking-widest text-gray-400 mb-1'>STATE MANAGEMENT & PERFORMANCE</div><div class='text-xs'>Optimized complex state (hooks, context) and resolved critical UI bottlenecks — <strong>~40% improvement in responsiveness</strong> for high-volume users. Minimized re-renders across real-time dashboards.</div></div><div class='mb-4 border-l-2 border-gray-300 pl-4 border-t' style='padding-top: 4px;'><div class='text-xs font-semibold tracking-widest text-gray-400 mb-1'>PRODUCT & FEATURE DELIVERY</div><div class='text-xs'>Shipped <strong>surge pricing, zonal promotions, lifecycle tools</strong> powering logistics & rides. Built real-time microservice for parcel data — supporting <strong>millions of daily transactions</strong>.</div></div><div class='mb-4 border-l-2 border-gray-300 pl-4 border-t' style='padding-top: 4px;'><div class='text-xs font-semibold tracking-widest text-gray-400 mb-1'>UX & LOCALIZATION</div><div class='text-xs'>Redesigned workflows reducing operational errors. Shipped <strong>multi-language support (BN/EN/NP)</strong> — expanding accessibility across <strong>3 regions</strong>.</div></div><div class='mb-4 border-l-2 border-gray-300 pl-4 border-t' style='padding-top: 4px;'><div class='text-xs font-semibold tracking-widest text-gray-400 mb-1'>DEVOPS & RELIABILITY</div><div class='text-xs'>Containerized with Docker, strengthened CI/CD pipelines — <strong>reduced deployment friction</strong>. Led production deployments, resolved critical perf issues impacting <strong>millions of users</strong>.</div></div><div class='border-l-2 border-gray-300 pl-4 border-t' style='padding-top: 4px;'><div class='text-xs font-semibold tracking-widest text-gray-400 mb-1'>KNOWLEDGE & DEVELOPER EXPERIENCE</div><div class='text-xs'>Built engineering Knowledge base (CI/CD, Kubernetes, Helm). Created reusable CI templates — <strong>standardized workflows</strong> for team.</div></div></div>",
+      "description": "Frontend engineer building and scaling high-traffic consumer-facing web applications for logistics and rides platforms serving millions of daily users.",
+      "detailed_desc_html": "<ul class='list-none space-y-2'><li class='flex items-start gap-2'><span class='text-gray-300 mt-1'>▸</span><span><strong>Architected 12+ production dashboards</strong> using React — spanning 70+ pages with reusable, configuration-driven UI components, reducing feature development time by ~30%</span></li><li class='flex items-start gap-2'><span class='text-gray-300 mt-1'>▸</span><span><strong>Optimized state management</strong> and resolved critical UI bottlenecks — achieving ~40% improvement in responsiveness for high-volume user bases across real-time dashboards</span></li><li class='flex items-start gap-2'><span class='text-gray-300 mt-1'>▸</span><span><strong>Shipped surge pricing, zonal promotions,</strong> and lifecycle management tools powering logistics and rides operations supporting millions of daily transactions</span></li><li class='flex items-start gap-2'><span class='text-gray-300 mt-1'>▸</span><span><strong>Designed multi-language support</strong> (Bengali, English, Nepali) — expanding platform accessibility across 3 regions</span></li><li class='flex items-start gap-2'><span class='text-gray-300 mt-1'>▸</span><span><strong>Containerized services with Docker</strong> and strengthened CI/CD pipelines — enabling reliable production rollouts and reduced deployment friction</span></li></ul>",
       "stack": [
         "React.js",
         "Next.js",
         "TypeScript",
         "Docker",
         "CI/CD",
-        "Gitlab Actions",
-        "Go Lang"
+        "GitLab Actions",
+        "Go"
       ]
     }
   ],
@@ -89,51 +108,51 @@
       "name": "Hittable",
       "live": "https://hittable.vercel.app",
       "code": "https://github.com/Pantho-Haque/hittable",
-      "stack": "Next.js · TypeScript · Tailwind CSS · Husky",
-      "desc": "A browser-based Postman alternative featuring collection management, HTTP request building, and full request history — all persisted in localStorage. Supports keyboard shortcuts for power-user workflows and enforces code quality via Husky pre-commit hooks.",
+      "stack": "Next.js · TypeScript · Tailwind CSS",
+      "desc": "A browser-based Postman alternative with collection management, HTTP request building, and full request history persisted in localStorage.",
       "priority": 1
+    },
+    {
+      "name": "FileDrive",
+      "code": "https://github.com/Pantho-Haque/FileDrive",
+      "stack": "React.js · Chakra UI · Laravel",
+      "desc": "A secure cloud file storage system with role-based access control, authentication, and organized file management.",
+      "priority": 2
     },
     {
       "name": "DomiKnows",
       "live": "https://dominowsknow.vercel.app",
-      "stack": "Next.js · TypeScript · Tailwind CSS · Supabase · Gemini API · RAG",
-      "desc": "A personal productivity playground that visualizes Markdown notes fetched directly from a GitHub repository, with session storage caching to gracefully handle GitHub rate limits. Also build a chatbot using RAG with Gemini API.",
+      "stack": "Next.js · TypeScript · Supabase · Gemini API",
+      "desc": "A productivity platform that visualizes Markdown notes from GitHub repositories with session storage caching and a RAG-powered chatbot.",
       "priority": 3
     },
     {
       "name": "BanglaHire",
-      "live": "https://youtu.be/BOzMvYXFKCs?si=9mFAudnuFUD1W7Lb",
+      "live": "https://youtu.be/BOzMvYXFKCs",
       "code": "https://github.com/Pantho-Haque/Bangla_Peon",
       "stack": "Laravel · Next.js · Tailwind CSS",
-      "desc": "A full-stack Bangladeshi freelance marketplace featuring secure JWT-based authentication, dynamic job listings, proposal management, and role-based dashboards for clients and freelancers.",
+      "desc": "A full-stack freelance marketplace with JWT authentication, dynamic job listings, and role-based dashboards.",
       "priority": 4
     },
     {
       "name": "Blog – Bit2Byte",
       "live": "https://www.bit2bytekuet.com/",
       "stack": "Next.js · Spring Boot · Tailwind CSS",
-      "desc": "Official blog and knowledge-sharing platform for Bit2Byte, KUET's reputed software engineering club. Features article publishing, member profiles, and event announcements with a Next.js frontend backed by a Spring Boot REST API.",
+      "desc": "Official knowledge-sharing platform for Bit2Byte, KUET's software engineering club.",
       "priority": 5
-    },
-    {
-      "name": "FileDrive",
-      "code": "https://github.com/Pantho-Haque/FileDrive",
-      "stack": "React.js · Chakra UI · Laravel",
-      "desc": "A secure cloud file storage system with role-based access control, robust authentication, and organized file management — built with a Laravel REST API and a React frontend.",
-      "priority": 2
     },
     {
       "name": "BioLock",
       "code": "https://github.com/Pantho-Haque/BioLock",
       "stack": "React.js · Express.js · Arduino · Twilio",
-      "desc": "An IoT-integrated security system bridging hardware and software — an Arduino-connected frontend communicates with a JWT-secured Express backend, with Twilio handling real-time SMS alerts for access events.",
+      "desc": "An IoT-integrated security system bridging hardware and software with real-time SMS alerts.",
       "priority": 6
     },
     {
       "name": "Salami – Web3",
       "code": "https://github.com/Pantho-Haque/Salami---Web3",
       "stack": "Next.js · Hardhat · MetaMask · Ethers.js",
-      "desc": "A Web3 micro-payment DApp that lets users register and send crypto tips to peers via MetaMask. Built with Hardhat for smart contract development and Ethers.js for blockchain interaction.",
+      "desc": "A Web3 micro-payment DApp for sending crypto tips via MetaMask using Hardhat and Ethers.js.",
       "priority": 7
     }
   ]

@@ -47,7 +47,7 @@ export default function Skills({ skills }: { skills: TSkills }) {
     <section style={{
       position: "relative",
       zIndex: 10,
-      maxWidth: 1100,
+      maxWidth: 1500,
       margin: "0 auto 40px",
       padding: "0 24px",
     }}>

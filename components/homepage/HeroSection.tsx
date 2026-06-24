@@ -340,12 +340,12 @@ function FacialRecognitionPanel({ hero }: { hero: THero }) {
   );
 }
 
-export default function HeroSection({ hero }: { hero: THero }) {
+export default function HeroSection({ hero, summary }: { hero: THero; summary?: string }) {
   const [imageError, setImageError] = useState(false);
   if (!hero) return null;
 
   return (
-    <section style={{ position: "relative", zIndex: 10, padding: "40px 24px 36px" }} className="w-full mx-auto px-4 sm:px-6 md:px-8">
+    <section style={{ position: "relative", zIndex: 10, padding: "40px 24px 36px", maxWidth: 1500, margin: "0 auto" }} className="w-full px-4 sm:px-6 md:px-8">
       {/* Top HUD bar */}
       <div style={{
         display: "flex", alignItems: "center", justifyContent: "space-between",
@@ -353,7 +353,23 @@ export default function HeroSection({ hero }: { hero: THero }) {
         color: "var(--muted)", borderBottom: "1px solid var(--border)", paddingBottom: 7, letterSpacing: "0.15em",
       }}>
         <span>SURVEILLANCE NETWORK // PORTFOLIO-NODE-01 // SUBJECT ACQUIRED</span>
-        <span style={{ color: "var(--green)", animation: "blink 2s infinite" }}>● LIVE</span>
+        <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+          <a
+            href="https://domiknows.vercel.app/resume"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              color: "var(--green)", textDecoration: "none", letterSpacing: "0.12em",
+              padding: "3px 10px", border: "1px solid var(--border)",
+              transition: "all 0.15s",
+            }}
+            onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = "var(--green-muted)"; (e.currentTarget as HTMLElement).style.borderColor = "var(--green)"; }}
+            onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = "transparent"; (e.currentTarget as HTMLElement).style.borderColor = "var(--border)"; }}
+          >
+            [ VIEW RESUME ]
+          </a>
+          <span style={{ color: "var(--green)", animation: "blink 2s infinite" }}>● LIVE</span>
+        </div>
       </div>
 
       {/* Main layout */}
@@ -419,7 +435,7 @@ export default function HeroSection({ hero }: { hero: THero }) {
         ))}
       </div>
 
-      {/* Bio + Achievements strip */}
+      {/* Bio + Summary + Achievements strip */}
       <div style={{ display: "flex", gap: 14, marginTop: 14, flexWrap: "wrap" }}>
         <div style={{
           flex: "1 1 300px", padding: "12px 16px",
@@ -429,7 +445,14 @@ export default function HeroSection({ hero }: { hero: THero }) {
         }}>
           <div style={{ position:"absolute",top:0,left:0,width:2,height:"100%",background:"var(--green)" }} />
           <div style={{ fontSize:8,color:"var(--muted)",letterSpacing:"0.15em",marginBottom:4 }}>{"// SUBJECT PROFILE //"}</div>
-          {hero.comment_one}<br />{hero.comment_two}
+          {summary && (
+            <div style={{ marginBottom: 8, color: "rgba(0,255,65,0.7)", fontSize: 11 }}>
+              {summary}
+            </div>
+          )}
+          <div style={{ fontSize: 10, color: "rgba(0,255,65,0.4)" }}>
+            {hero.comment_one}<br />{hero.comment_two}
+          </div>
         </div>
 
         <div style={{ flex:"0 1 auto",display:"flex",flexDirection:"column",gap:8,justifyContent:"center" }}>

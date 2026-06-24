@@ -126,7 +126,7 @@ export default function Home() {
     );
   }
 
-  const { skills, experience, projects, hero } = resumeData!;
+  const { skills, experience, projects, hero, summary } = resumeData!;
 
   return (
     <main style={{
@@ -142,7 +142,7 @@ export default function Home() {
       <Scanlines />
 
       <div style={{ position: "relative", zIndex: 10 }}>
-        <HeroSection hero={hero} />
+        <HeroSection hero={hero} summary={summary} />
         <Experiences experiences={experience} />
         <Skills skills={skills} />
         <Projects projects={projects} />

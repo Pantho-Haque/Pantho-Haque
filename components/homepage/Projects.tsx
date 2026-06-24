@@ -10,7 +10,7 @@ export default function Projects({ projects }: { projects: TProject[] }) {
     <section style={{
       position: "relative",
       zIndex: 10,
-      maxWidth: 1100,
+      maxWidth: 1500,
       margin: "0 auto 80px",
       padding: "0 24px",
     }}>

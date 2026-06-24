@@ -150,6 +150,19 @@ export default function Experiences({ experiences }: { experiences: TExperience[
               {exp.description}
             </p>
 
+            {exp.detailed_desc_html && (
+              <div
+                style={{
+                  fontFamily: "var(--font-mono)",
+                  fontSize: 11,
+                  lineHeight: 1.7,
+                  color: "rgba(0,255,65,0.55)",
+                  marginBottom: 14,
+                }}
+                dangerouslySetInnerHTML={{ __html: exp.detailed_desc_html }}
+              />
+            )}
+
             <div style={{ display: "flex", flexWrap: "wrap", gap: 5 }}>
               {exp.stack?.map((s) => (
                 <Pill key={s}>{s}</Pill>

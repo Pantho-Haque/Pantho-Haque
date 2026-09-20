@@ -1,36 +1,18 @@
-'use client';
+"use client";
+import { useEffect } from "react";
 
-import { useEffect } from 'react';
-
-export default function Error({
-  error,
-  reset,
-}: {
-  error: Error & { digest?: string };
-  reset: () => void;
-}) {
-  useEffect(() => {
-    // Log the error to an error reporting service
-    console.error(error);
-  }, [error]);
+export default function Error({ error, reset }: { error: Error & { digest?: string }; reset: () => void }) {
+  useEffect(() => { console.error(error); }, [error]);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-8">
-      <div className="max-w-md w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8 text-center">
-        <h1 className="text-2xl font-bold text-red-600 mb-4">Something went wrong!</h1>
-        <p className="text-gray-600 dark:text-gray-300 mb-6">
-          {error.message || 'An unexpected error has occurred.'}
-        </p>
-        <div className="text-sm text-gray-500 mb-6">
-          {error.digest && <p>Error ID: {error.digest}</p>}
-        </div>
-        <button
-          className="rounded-full border border-solid border-transparent bg-foreground text-background px-4 py-2 font-medium hover:bg-[#383838] dark:hover:bg-[#ccc] transition-colors"
-          onClick={() => reset()}
-        >
-          Try again
-        </button>
-      </div>
-    </div>
+    <main className="flex min-h-screen flex-col items-center justify-center gap-4 bg-(--bg) px-6 text-center font-(--font-mono) text-(--green)">
+      <div className="font-(--font-crt) text-[64px] leading-none text-(--red) [text-shadow:0_0_24px_rgba(255,51,51,0.5)]">SYSTEM FAULT</div>
+      <div className="text-[14px] tracking-[0.25em] text-(--amber)">● FEED INTERRUPTED</div>
+      <p className="max-w-sm text-[14px] leading-relaxed text-(--muted)">{error.message || "An unexpected error has occurred."}</p>
+      {error.digest && <p className="text-[12px] tracking-[0.15em] text-(--muted)">TRACE: {error.digest}</p>}
+      <button onClick={reset} className="mt-2 cursor-crosshair border border-(--border) px-3 py-1.5 text-[13px] tracking-[0.15em] transition-colors hover:border-(--green) hover:bg-(--green-muted)">
+        [ RE-ESTABLISH CONNECTION ]
+      </button>
+    </main>
   );
 }

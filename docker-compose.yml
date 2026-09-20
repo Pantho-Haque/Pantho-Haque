@@ -6,8 +6,6 @@ services:
       dockerfile: Dockerfile
     working_dir: /frontend
     command: sh dockerEntryPoint.sh
-    environment:
-      - NEXT_API_BASE_URL=https://jsonplaceholder.typicode.com
     volumes:
       - source: .
         target: /frontend

@@ -1,157 +1,42 @@
 "use client";
-import { useState, useEffect } from "react";
 import { SectionLabel, Pill } from "@/components";
 import { TSkills } from "@/types";
-
-function TypingText({ text, delay = 0 }: { text: string; delay?: number }) {
-  const [displayed, setDisplayed] = useState("");
-  const [started, setStarted] = useState(false);
-
-  useEffect(() => {
-    const t = setTimeout(() => setStarted(true), delay);
-    return () => clearTimeout(t);
-  }, [delay]);
-
-  useEffect(() => {
-    if (!started) return;
-    let i = 0;
-    const interval = setInterval(() => {
-      setDisplayed(text.slice(0, i + 1));
-      i++;
-      if (i >= text.length) clearInterval(interval);
-    }, 30);
-    return () => clearInterval(interval);
-  }, [started, text]);
-
-  return (
-    <span style={{ fontFamily: "var(--font-mono)" }}>
-      {displayed}
-      {displayed.length < text.length && (
-        <span style={{ animation: "blink 0.7s infinite" }}>_</span>
-      )}
-    </span>
-  );
-}
-
-const categoryIcons: Record<string, string> = {
-  languages: "01",
-  frameworks: "02",
-  databases: "03",
-  tools: "04",
-};
+import { TerminalBar } from "./Terminal";
+import Reveal from "./Reveal";
 
 export default function Skills({ skills }: { skills: TSkills }) {
-  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const entries = Object.entries(skills) as [string, string[]][];
+  const total = entries.reduce((n, [, l]) => n + l.length, 0);
 
   return (
-    <section style={{
-      position: "relative",
-      zIndex: 10,
-      maxWidth: 1500,
-      margin: "0 auto 40px",
-      padding: "0 24px",
-    }}>
+    <section id="capabilities" className="relative z-10 mx-auto mb-14 max-w-[1500px] scroll-mt-16 px-4 sm:px-6 md:px-8">
       <SectionLabel>CAPABILITY MATRIX</SectionLabel>
+      <TerminalBar command={`root@subject:~$ cat skills.json | jq '.categories[]'  # ${total} entries indexed`} />
 
-      {/* Terminal header */}
-      <div style={{
-        background: "rgba(0,8,0,0.9)",
-        border: "1px solid var(--border)",
-        marginBottom: 12,
-        padding: "8px 14px",
-        display: "flex",
-        alignItems: "center",
-        gap: 8,
-        borderBottom: "1px solid var(--border)",
-      }}>
-        <span style={{ width: 8, height: 8, borderRadius: "50%", background: "var(--red)", display: "inline-block" }} />
-        <span style={{ width: 8, height: 8, borderRadius: "50%", background: "var(--amber)", display: "inline-block" }} />
-        <span style={{ width: 8, height: 8, borderRadius: "50%", background: "var(--green-dim)", display: "inline-block" }} />
-        <span style={{
-          fontFamily: "var(--font-mono)",
-          fontSize: 10,
-          color: "var(--muted)",
-          marginLeft: 8,
-          letterSpacing: "0.1em",
-        }}>
-          <TypingText text="root@subject:~$ cat skills.json | jq '.categories[]'" />
-        </span>
-      </div>
+      <div className="grid gap-2.5 [grid-template-columns:repeat(auto-fit,minmax(220px,1fr))]">
+        {entries.map(([cat, list], idx) => (
+          <Reveal key={cat} delay={idx * 0.08}>
+            <div className="group relative h-full overflow-hidden border border-(--border) bg-(--surface) px-4 py-3.5 transition-all duration-200 hover:border-(--green) hover:bg-(--surface-hover) hover:shadow-[0_0_24px_rgba(var(--green-rgb),0.12)]">
+              {/* hover scan sweep */}
+              <div aria-hidden className="pointer-events-none absolute left-0 right-0 top-0 h-0.5 opacity-0 [background:linear-gradient(90deg,transparent,var(--green),transparent)] group-hover:animate-[sweep_1.4s_linear_infinite]" />
 
-      <div style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-        gap: 10,
-      }}>
-        {Object.entries(skills).map(([cat, list], idx) => (
-          <div
-            key={cat}
-            onClick={() => setActiveCategory(activeCategory === cat ? null : cat)}
-            style={{
-              background: activeCategory === cat ? "rgba(0,30,0,0.9)" : "rgba(0,8,0,0.8)",
-              border: `1px solid ${activeCategory === cat ? "var(--green)" : "var(--border)"}`,
-              padding: "14px 16px",
-              cursor: "crosshair",
-              transition: "all 0.15s",
-              position: "relative",
-              overflow: "hidden",
-            }}
-            onMouseEnter={e => {
-              if (activeCategory !== cat) {
-                (e.currentTarget as HTMLElement).style.borderColor = "rgba(0,255,65,0.4)";
-              }
-            }}
-            onMouseLeave={e => {
-              if (activeCategory !== cat) {
-                (e.currentTarget as HTMLElement).style.borderColor = "var(--border)";
-              }
-            }}
-          >
-            {/* Category number */}
-            <div style={{
-              position: "absolute",
-              top: 8,
-              right: 10,
-              fontFamily: "var(--font-crt)",
-              fontSize: 28,
-              color: "rgba(0,255,65,0.06)",
-              lineHeight: 1,
-              userSelect: "none",
-            }}>
-              {categoryIcons[cat] ?? String(idx + 1).padStart(2, "0")}
+              <div className="absolute right-2.5 top-2 select-none font-(--font-crt) text-[28px] leading-none text-[rgba(var(--green-rgb),0.06)] transition-colors group-hover:text-[rgba(var(--green-rgb),0.2)]">
+                {String(idx + 1).padStart(2, "0")}
+              </div>
+
+              <div className="mb-2.5 flex items-center gap-1.5 font-(--font-display) text-[12px] font-bold uppercase tracking-[0.25em] text-(--green)">
+                <span className="text-(--muted) transition-transform group-hover:translate-x-0.5">▸</span>
+                {cat}
+                <span className="ml-auto mr-8 font-(--font-mono) text-[11px] font-normal tracking-[0.15em] text-(--muted)">{list.length} ENTRIES</span>
+              </div>
+
+              <div className="flex flex-wrap gap-1.5">
+                {list.map((s) => <Pill key={s}>{s}</Pill>)}
+              </div>
             </div>
-
-            <div style={{
-              fontFamily: "var(--font-display)",
-              fontSize: 9,
-              fontWeight: 700,
-              color: "var(--green)",
-              letterSpacing: "0.25em",
-              textTransform: "uppercase",
-              marginBottom: 10,
-              display: "flex",
-              alignItems: "center",
-              gap: 6,
-            }}>
-              <span style={{ color: "var(--muted)" }}>▸</span>
-              {cat}
-            </div>
-
-            <div style={{ display: "flex", flexWrap: "wrap", gap: 5 }}>
-              {(list as string[]).map((s) => (
-                <Pill key={s}>{s}</Pill>
-              ))}
-            </div>
-          </div>
+          </Reveal>
         ))}
       </div>
-
-      <style>{`
-        @keyframes blink {
-          0%, 49% { opacity: 1; }
-          50%, 100% { opacity: 0; }
-        }
-      `}</style>
     </section>
   );
 }

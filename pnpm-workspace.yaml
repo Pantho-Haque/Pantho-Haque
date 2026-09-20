@@ -1,0 +1,4 @@
+# pnpm 11 blocks postinstall scripts unless allowed here.
+allowBuilds:
+  sharp: true
+  unrs-resolver: true

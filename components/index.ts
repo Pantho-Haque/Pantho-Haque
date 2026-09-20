@@ -1,16 +1,16 @@
-import GridLightning from "./homepage/GridLightning";
 import SectionLabel from "./homepage/SectionLabel";
 import Pill from "./homepage/Pill";
 import HeroSection from "./homepage/HeroSection";
 import Experiences from "./homepage/Experiences";
 import Skills from "./homepage/Skills";
 import Projects from "./homepage/Projects";
-import LocaleSwitcherSelect from "./widgets/LocalSwitcherSelect";
+import Education from "./homepage/Education";
+import HudNav from "./homepage/HudNav";
+import CursorReticle from "./homepage/CursorReticle";
+import ThemeSwitcher from "./homepage/ThemeSwitcher";
 import Icon from "./widgets/iconMap";
 
 export {
-  LocaleSwitcherSelect,
-  GridLightning,
   SectionLabel,
   Pill,
   HeroSection,
@@ -18,4 +18,8 @@ export {
   Experiences,
   Skills,
   Projects,
+  Education,
+  HudNav,
+  CursorReticle,
+  ThemeSwitcher,
 };

@@ -1,27 +1,18 @@
+# Run the portfolio locally in one command:  docker compose up   →  http://localhost:3000
+# Your files are mounted live, so edits hot-reload. Env comes from .env.local in this folder.
 services:
-  frontend:
-    container_name: frontend
-    build:
-      context: .
-      dockerfile: Dockerfile
-    working_dir: /frontend
-    command: sh dockerEntryPoint.sh
-    volumes:
-      - source: .
-        target: /frontend
-        type: bind
-
-      - source: frontend
-        target: /frontend/node_modules
-        type: volume
+  portfolio:
+    build: .
+    command: sh -c "pnpm install --frozen-lockfile --store-dir /app/node_modules/.pnpm-store && pnpm dev --hostname 0.0.0.0"
     ports:
-      - target: 3000
-        published: 3000
-        protocol: tcp
-
-      - target: 9229
-        published: 9229
-        protocol: tcp
+      - "3000:3000"
+    environment:
+      CI: "true" # lets pnpm run without interactive prompts
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules # Linux packages, kept apart from your Mac's node_modules
+      - next:/app/.next # Linux build cache, kept apart from your Mac's .next
 
 volumes:
-  frontend:
+  node_modules:
+  next:

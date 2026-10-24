@@ -1,0 +1,2 @@
+# The code is mounted into the container at runtime (see docker-compose.yml), so the image needs no files.
+*

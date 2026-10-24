@@ -9,6 +9,7 @@ Content is **not** edited here. It is published from the Control Room in Domino 
 | Command | What it does |
 | --- | --- |
 | `pnpm dev` | Local dev server |
+| `pnpm docker` (or `docker compose up`) | Same dev server inside Docker, nothing to install but Docker · http://localhost:3000 |
 | `pnpm check` | Lint, typecheck and production build |
 | `pnpm env:pull` | Copy Vercel's env into `.env.vercel` (reference only; `.env.local` is never overwritten) |
 | `pnpm content:pull` | Save the live content to `content.fallback.json` (commit it) |

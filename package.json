@@ -1,32 +1,43 @@
 {
-  "name": "portfolio",
+  "name": "pantho-haque-portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "check": "pnpm lint && pnpm typecheck && pnpm build",
+    "vercel:link": "vercel link",
+    "env:pull": "vercel env pull .env.vercel",
+    "content:pull": "node --env-file=.env.local scripts/content-pull.ts",
+    "revalidate": "node --env-file=.env.local scripts/revalidate.ts",
+    "deploy:preview": "vercel deploy",
+    "ship": "pnpm check && vercel deploy --prod",
+    "prepare": "husky"
   },
   "dependencies": {
-    "@types/node": "18.16.0",
-    "@types/react": "18.0.38",
-    "@types/react-dom": "18.0.11",
-    "autoprefixer": "10.4.14",
-    "clsx": "^2.1.1",
-    "eslint": "8.39.0",
-    "eslint-config-next": "13.3.1",
-    "framer-motion": "10.12.4",
-    "next": "13.3.1",
-    "postcss": "8.4.23",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "tailwind-merge": "^3.3.1",
-    "tailwindcss": "3.3.1",
-    "typescript": "5.0.4"
+    "@pantho075/trackima": "0.1.0",
+    "@vercel/speed-insights": "^2.0.0",
+    "next": "16.4.3",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
   },
   "devDependencies": {
-    "github-markdown-css": "5.8.1",
-    "marked": "15.0.7"
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.3",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.0",
+    "typescript": "^5",
+    "vercel": "^65.1.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ]
   }
 }

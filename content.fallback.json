@@ -1,0 +1,505 @@
+{
+  "schemaVersion": 3,
+  "profile": {
+    "name": "Pantho Haque",
+    "headline": "Software Engineer · Frontend & Platform at Pathao",
+    "proof": "I build the React dashboards that run Pathao's logistics and rides operations: **12+ in production, 70+ pages**, used every day by teams serving millions of riders.",
+    "summary": "Software Engineer with 1+ years building scalable, high-traffic web applications at Pathao. Specialized in React.js and Next.js with a proven track record of delivering production dashboards, performance optimizations, and multi-language support across logistics and rides platforms serving millions of users.",
+    "location": "Dhaka, BD",
+    "timezone": "UTC+6",
+    "available": true,
+    "email": "pantho.haque.dev@gmail.com",
+    "phone": "+8801689833981",
+    "resumeUrl": "https://domiknows.vercel.app/resume",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/Pantho-Haque",
+        "icon": "github"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/panthohaque/",
+        "icon": "linkedin"
+      },
+      {
+        "label": "Email",
+        "url": "mailto:pantho.haque.dev@gmail.com",
+        "icon": "mail"
+      }
+    ],
+    "photo": {
+      "url": "https://domiknows.vercel.app/cdn/profile_picture.png",
+      "alt": "Portrait of Pantho Haque",
+      "w": 512,
+      "h": 512,
+      "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBMRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAEKADAAQAAAABAAAAEAAAAAD/7QA4UGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAAAA4QklNBCUAAAAAABDUHYzZjwCyBOmACZjs+EJ+/8AAEQgAEAAQAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/bAEMACQkJCQkJEAkJEBYQEBAWHhYWFhYeJh4eHh4eJi4mJiYmJiYuLi4uLi4uLjc3Nzc3N0BAQEBASEhISEhISEhISP/bAEMBCwwMEhESHxERH0szKjNLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS//dAAQAAf/aAAwDAQACEQMRAD8A80g0u5vWWG2O0dWbngfhzTrrSLiwJjnbepGVbBHPcc81r6U0tv8AvVcDKkED0p2qySXe2XdnCgAGkM//2Q=="
+    },
+    "cover": {
+      "url": "https://domiknows.vercel.app/cdn/cover-cropped.jpg",
+      "alt": "Pantho standing still in a moving crowd, seen from above",
+      "w": 900,
+      "h": 600,
+      "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBMRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAEKADAAQAAAABAAAACgAAAAD/wAARCAAKABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9sAQwAJCQkJCQkQCQkQFhAQEBYeFhYWFh4mHh4eHh4mLiYmJiYmJi4uLi4uLi4uNzc3Nzc3QEBAQEBISEhISEhISEhI/9sAQwELDAwSERIfEREfSzMqM0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tL/90ABAAB/9oADAMBAAIRAxEAPwDnbk2ySxShGQIhyDxksnp6jH6Vz12xt2t47pRiHLAEYyrc8+pJpyO7qm8lvkHXntWZeSSSTxs7FjlRknPAoA//2Q=="
+    },
+    "coverFocus": {
+      "x": 39,
+      "y": 25,
+      "w": 22,
+      "h": 70
+    }
+  },
+  "sections": [
+    {
+      "id": "experience",
+      "type": "timeline",
+      "title": "Experience",
+      "nav": "Experience",
+      "intro": "Where I've shipped production software.",
+      "hidden": false,
+      "onResume": true,
+      "items": [
+        {
+          "title": "Software Engineer I",
+          "org": "Pathao",
+          "url": "https://pathao.com",
+          "start": "Jan 2025",
+          "end": "",
+          "summary": "Frontend engineer building and scaling high-traffic consumer-facing web applications for logistics and rides platforms serving millions of daily users.",
+          "tags": [
+            "React.js",
+            "Next.js",
+            "TypeScript",
+            "Docker",
+            "CI/CD",
+            "GitLab Actions",
+            "Go"
+          ],
+          "highlights": [
+            "**Cut feature delivery time ~30%** by building a configuration-driven component layer behind 12+ production dashboards (70+ pages)",
+            "**Made real-time dashboards ~40% more responsive** by restructuring state management and removing render bottlenecks",
+            "**Shipped surge pricing, zonal promotions and lifecycle tools** used in operations handling millions of daily transactions",
+            "**Opened the platform to 3 regions** by designing Bengali, English and Nepali language support",
+            "**Made production rollouts routine** by containerising services with Docker and tightening the CI/CD pipeline"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "work",
+      "type": "projects",
+      "title": "Case files",
+      "nav": "Work",
+      "intro": "A few projects in depth. Open one for the full story.",
+      "hidden": false,
+      "onResume": true,
+      "show": "featured"
+    },
+    {
+      "id": "skills",
+      "type": "skills",
+      "title": "Loadout",
+      "nav": "Skills",
+      "intro": "Select a skill to see where I've used it.",
+      "hidden": false,
+      "onResume": true,
+      "groups": [
+        {
+          "name": "Languages",
+          "items": [
+            "TypeScript",
+            "JavaScript",
+            "Go",
+            "PHP",
+            "SQL",
+            "Shell Script"
+          ]
+        },
+        {
+          "name": "Frameworks",
+          "items": [
+            "React.js",
+            "Next.js",
+            "Tailwind CSS",
+            "Laravel",
+            "Express.js"
+          ]
+        },
+        {
+          "name": "Data",
+          "items": [
+            "PostgreSQL",
+            "MySQL",
+            "Supabase",
+            "Firebase",
+            "Redis"
+          ]
+        },
+        {
+          "name": "Delivery",
+          "items": [
+            "Docker",
+            "CI/CD Pipelines",
+            "GitLab Actions",
+            "GitHub Actions",
+            "Nginx",
+            "Linux",
+            "Vercel",
+            "Git"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "education",
+      "type": "timeline",
+      "title": "Education",
+      "nav": "Education",
+      "intro": "",
+      "hidden": false,
+      "onResume": true,
+      "items": [
+        {
+          "title": "B.Sc in Computer Science & Engineering",
+          "org": "Khulna University of Engineering & Technology",
+          "start": "2020",
+          "end": "June 2025",
+          "summary": "CGPA 3.69",
+          "tags": [],
+          "highlights": [
+            "**Led the React & Next.js track** at Bit2Byte, KUET's software engineering club"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "achievements",
+      "type": "achievements",
+      "title": "Achievements",
+      "nav": "Achievements",
+      "intro": "",
+      "hidden": false,
+      "onResume": true,
+      "items": [
+        {
+          "title": "ITEE FE (half) passer",
+          "issuer": "IT Engineers Examination",
+          "date": "Oct 2023"
+        },
+        {
+          "title": "Team lead, React & Next.js",
+          "issuer": "Bit2Byte, KUET"
+        },
+        {
+          "title": "12+ dashboards in production",
+          "issuer": "Pathao",
+          "date": "2025"
+        }
+      ]
+    },
+    {
+      "id": "writing",
+      "type": "links",
+      "title": "Field notes",
+      "nav": "Writing",
+      "intro": "From my DomiKnows notes.",
+      "hidden": false,
+      "onResume": false,
+      "items": [
+        {
+          "title": "RAG architecture, end to end",
+          "topic": "AI",
+          "url": "https://domiknows.vercel.app/handnotes?blog=AI_RAG"
+        },
+        {
+          "title": "Long polling vs sockets",
+          "topic": "Concepts",
+          "url": "https://domiknows.vercel.app/handnotes?blog=concepts_Long-Polling"
+        },
+        {
+          "title": "Auth with Laravel Sanctum",
+          "topic": "Laravel",
+          "url": "https://domiknows.vercel.app/handnotes?blog=Laravel_authSANCTUM"
+        },
+        {
+          "title": "Docker for app developers",
+          "topic": "Concepts",
+          "url": "https://domiknows.vercel.app/handnotes?blog=concepts_Docker"
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "slug": "ops-dashboards",
+      "name": "Ops dashboards",
+      "tagline": "A configuration-driven component layer behind Pathao's logistics and rides tools.",
+      "featured": true,
+      "role": "Frontend engineer · owned the shared component layer",
+      "period": "2025 – now",
+      "team": "Pathao frontend team",
+      "status": "Internal",
+      "stack": [
+        "React.js",
+        "Next.js",
+        "TypeScript"
+      ],
+      "links": {},
+      "gallery": [],
+      "metrics": [
+        {
+          "value": "12+",
+          "label": "dashboards in production"
+        },
+        {
+          "value": "~30%",
+          "label": "faster feature delivery"
+        },
+        {
+          "value": "~40%",
+          "label": "more responsive real-time views"
+        }
+      ],
+      "problem": "Every operations team needed its own dashboard, and each one was hand-built. Shipping a new tool took weeks and the UIs drifted apart.",
+      "approach": "Designed a component layer driven by configuration: tables, filters, forms and charts described in data, with escape hatches for custom widgets. Restructured state so real-time views re-render only what changed.",
+      "outcome": "New dashboards became mostly configuration. 12+ shipped across 70+ pages, including surge pricing, zonal promotions and lifecycle tools, in three languages."
+    },
+    {
+      "slug": "domiknows",
+      "name": "DomiKnows",
+      "tagline": "My notes from GitHub as a fast reading site, with a RAG chatbot that answers from them.",
+      "featured": true,
+      "role": "Solo · design, build, ship",
+      "period": "2024 – now",
+      "status": "Live",
+      "stack": [
+        "Next.js",
+        "TypeScript",
+        "Supabase",
+        "Redis",
+        "Gemini API"
+      ],
+      "links": {
+        "live": "https://domiknows.vercel.app"
+      },
+      "cover": {
+        "url": "https://domiknows.vercel.app/cdn/domiknows-notes.jpg",
+        "alt": "DomiKnows showing the RAG guide with the notes tree on the left and the table of contents on the right",
+        "w": 1440,
+        "h": 900,
+        "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBMRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAEKADAAQAAAABAAAACgAAAAD/wAARCAAKABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9sAQwAJCQkJCQkQCQkQFhAQEBYeFhYWFh4mHh4eHh4mLiYmJiYmJi4uLi4uLi4uNzc3Nzc3QEBAQEBISEhISEhISEhI/9sAQwELDAwSERIfEREfSzMqM0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tL/90ABAAB/9oADAMBAAIRAxEAPwD2qQlcBTjJpcB9rEZKninsASMjNNAHm/hQB//Z"
+      },
+      "gallery": [
+        {
+          "url": "https://domiknows.vercel.app/cdn/domiknows-notes.jpg",
+          "alt": "DomiKnows showing the RAG guide with the notes tree on the left and the table of contents on the right",
+          "w": 1440,
+          "h": 900,
+          "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBMRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAEKADAAQAAAABAAAACgAAAAD/wAARCAAKABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9sAQwAJCQkJCQkQCQkQFhAQEBYeFhYWFh4mHh4eHh4mLiYmJiYmJi4uLi4uLi4uNzc3Nzc3QEBAQEBISEhISEhISEhI/9sAQwELDAwSERIfEREfSzMqM0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tL/90ABAAB/9oADAMBAAIRAxEAPwD2qQlcBTjJpcB9rEZKninsASMjNNAHm/hQB//Z"
+        },
+        {
+          "url": "https://domiknows.vercel.app/cdn/RAG%20archi%20simple.png",
+          "alt": "Diagram: a query is embedded, matched in a vector store and passed to the LLM with context",
+          "w": 1920,
+          "h": 1246,
+          "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBMRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAEKADAAQAAAABAAAACgAAAAD/wAARCAAKABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9sAQwAJCQkJCQkQCQkQFhAQEBYeFhYWFh4mHh4eHh4mLiYmJiYmJi4uLi4uLi4uNzc3Nzc3QEBAQEBISEhISEhISEhI/9sAQwELDAwSERIfEREfSzMqM0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tL/90ABAAB/9oADAMBAAIRAxEAPwD1uaRUdRbFE3yjdwRn1PHf3qSeeSC2Ls6owViCegx3PtUiKpzkdJKsyIrjDAEe9AH/2Q=="
+        },
+        {
+          "url": "https://domiknows.vercel.app/cdn/dataIngentionPileline.png",
+          "alt": "Hand-drawn pipeline: documents are chunked, embedded and stored in a vector database",
+          "w": 2972,
+          "h": 1340,
+          "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAkACQAAD/4QCARXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAIdpAAQAAAABAAAATgAAAAAAAACQAAAAAQAAAJAAAAABAAOgAQADAAAAAQABAACgAgAEAAAAAQAAABCgAwAEAAAAAQAAAAcAAAAA/+0AOFBob3Rvc2hvcCAzLjAAOEJJTQQEAAAAAAAAOEJJTQQlAAAAAAAQ1B2M2Y8AsgTpgAmY7PhCfv/AABEIAAcAEAMBIgACEQEDEQH/xAAfAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+fr/xAAfAQADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJCgv/xAC1EQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2wBDAAkJCQkJCRAJCRAWEBAQFh4WFhYWHiYeHh4eHiYuJiYmJiYmLi4uLi4uLi43Nzc3NzdAQEBAQEhISEhISEhISEj/2wBDAQsMDBIREh8RER9LMyozS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0v/3QAEAAH/2gAMAwEAAhEDEQA/APJ2xjB5pcKOvccU1utOft9KQz//2Q=="
+        },
+        {
+          "url": "https://domiknows.vercel.app/cdn/querytovector.png",
+          "alt": "Diagram of a text query turning into a vector",
+          "w": 1892,
+          "h": 502,
+          "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAkACQAAD/4QCARXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAIdpAAQAAAABAAAATgAAAAAAAACQAAAAAQAAAJAAAAABAAOgAQADAAAAAQABAACgAgAEAAAAAQAAABCgAwAEAAAAAQAAAAQAAAAA/+0AOFBob3Rvc2hvcCAzLjAAOEJJTQQEAAAAAAAAOEJJTQQlAAAAAAAQ1B2M2Y8AsgTpgAmY7PhCfv/AABEIAAQAEAMBIgACEQEDEQH/xAAfAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+fr/xAAfAQADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJCgv/xAC1EQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2wBDAAkJCQkJCRAJCRAWEBAQFh4WFhYWHiYeHh4eHiYuJiYmJiYmLi4uLi4uLi43Nzc3NzdAQEBAQEhISEhISEhISEj/2wBDAQsMDBIREh8RER9LMyozS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0v/3QAEAAH/2gAMAwEAAhEDEQA/APGjtCj5R+tSSSjJwijIHb26/wBaiP3RRJ1/AfyrQSP/2Q=="
+        }
+      ],
+      "metrics": [
+        {
+          "value": "35",
+          "label": "notes across 6 topics"
+        },
+        {
+          "value": "24 h",
+          "label": "Redis cache per note"
+        },
+        {
+          "value": "RAG",
+          "label": "chatbot grounded in the notes"
+        }
+      ],
+      "problem": "Notes in a GitHub repo are hard to read on a phone and impossible to ask questions of.",
+      "approach": "Render Markdown from the repo with a Redis cache in front of GitHub's API, plus session caching in the browser. A retrieval pipeline chunks and embeds the notes so a chatbot can answer from them.",
+      "outcome": "A reading site that loads instantly after the first visit, a chatbot that stays on topic, and a reader feedback flow moderated from the Control Room."
+    },
+    {
+      "slug": "hittable",
+      "name": "Hittable",
+      "tagline": "A browser-based Postman alternative with collection management, HTTP request building, and full request history persisted in localStorage.",
+      "featured": true,
+      "role": "Solo · design, build, ship",
+      "period": "",
+      "status": "Live",
+      "stack": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS"
+      ],
+      "links": {
+        "live": "https://hittable.vercel.app",
+        "code": "https://github.com/Pantho-Haque/hittable"
+      },
+      "cover": {
+        "url": "https://domiknows.vercel.app/cdn/hittable-home.jpg",
+        "alt": "Hittable home page: 'API testing, without the bloat' next to a sample POST request and its 200 OK response",
+        "w": 1440,
+        "h": 900,
+        "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBMRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAEKADAAQAAAABAAAACgAAAAD/wAARCAAKABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9sAQwAJCQkJCQkQCQkQFhAQEBYeFhYWFh4mHh4eHh4mLiYmJiYmJi4uLi4uLi4uNzc3Nzc3QEBAQEBISEhISEhISEhI/9sAQwELDAwSERIfEREfSzMqM0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tL/90ABAAB/9oADAMBAAIRAxEAPwDygxwfZw2GD8/Q1BwpytJkngngUV0GJ//Z"
+      },
+      "gallery": [
+        {
+          "url": "https://domiknows.vercel.app/cdn/hittable-home.jpg",
+          "alt": "Hittable home page: 'API testing, without the bloat' next to a sample POST request and its 200 OK response",
+          "w": 1440,
+          "h": 900,
+          "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBMRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAEKADAAQAAAABAAAACgAAAAD/wAARCAAKABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9sAQwAJCQkJCQkQCQkQFhAQEBYeFhYWFh4mHh4eHh4mLiYmJiYmJi4uLi4uLi4uNzc3Nzc3QEBAQEBISEhISEhISEhI/9sAQwELDAwSERIfEREfSzMqM0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tL/90ABAAB/9oADAMBAAIRAxEAPwDygxwfZw2GD8/Q1BwpytJkngngUV0GJ//Z"
+        }
+      ],
+      "metrics": [
+        {
+          "value": "0",
+          "label": "accounts or servers needed"
+        },
+        {
+          "value": "100%",
+          "label": "client-side, history stays local"
+        }
+      ],
+      "problem": "Testing an API shouldn't need an account or a heavy desktop app.",
+      "approach": "Collections, a request builder and full history, all persisted in localStorage. Everything runs in the browser.",
+      "outcome": "A tool I use daily, open source, deployed on Vercel."
+    },
+    {
+      "slug": "filedrive",
+      "name": "FileDrive",
+      "tagline": "A secure cloud file storage system with role-based access control, authentication, and organized file management.",
+      "featured": false,
+      "role": "Solo · design, build, ship",
+      "period": "",
+      "status": "Archived",
+      "stack": [
+        "React.js",
+        "Chakra UI",
+        "Laravel"
+      ],
+      "links": {
+        "code": "https://github.com/Pantho-Haque/FileDrive"
+      },
+      "gallery": [],
+      "metrics": [],
+      "problem": "",
+      "approach": "",
+      "outcome": ""
+    },
+    {
+      "slug": "banglahire",
+      "name": "BanglaHire",
+      "tagline": "A full-stack freelance marketplace with JWT authentication, dynamic job listings, and role-based dashboards.",
+      "featured": false,
+      "role": "Solo · design, build, ship",
+      "period": "",
+      "status": "Live",
+      "stack": [
+        "Laravel",
+        "Next.js",
+        "Tailwind CSS"
+      ],
+      "links": {
+        "live": "https://youtu.be/BOzMvYXFKCs",
+        "code": "https://github.com/Pantho-Haque/Bangla_Peon"
+      },
+      "gallery": [],
+      "metrics": [],
+      "problem": "",
+      "approach": "",
+      "outcome": ""
+    },
+    {
+      "slug": "blog-bit2byte",
+      "name": "Blog – Bit2Byte",
+      "tagline": "Official knowledge-sharing platform for Bit2Byte, KUET's software engineering club.",
+      "featured": false,
+      "role": "Solo · design, build, ship",
+      "period": "",
+      "status": "Live",
+      "stack": [
+        "Next.js",
+        "Spring Boot",
+        "Tailwind CSS"
+      ],
+      "links": {
+        "live": "https://www.bit2bytekuet.com/"
+      },
+      "gallery": [],
+      "metrics": [],
+      "problem": "",
+      "approach": "",
+      "outcome": ""
+    },
+    {
+      "slug": "biolock",
+      "name": "BioLock",
+      "tagline": "An IoT-integrated security system bridging hardware and software with real-time SMS alerts.",
+      "featured": false,
+      "role": "Solo · design, build, ship",
+      "period": "",
+      "status": "Archived",
+      "stack": [
+        "React.js",
+        "Express.js",
+        "Arduino",
+        "Twilio"
+      ],
+      "links": {
+        "code": "https://github.com/Pantho-Haque/BioLock"
+      },
+      "gallery": [],
+      "metrics": [],
+      "problem": "",
+      "approach": "",
+      "outcome": ""
+    },
+    {
+      "slug": "salami-web3",
+      "name": "Salami – Web3",
+      "tagline": "A Web3 micro-payment DApp for sending crypto tips via MetaMask using Hardhat and Ethers.js.",
+      "featured": false,
+      "role": "Solo · design, build, ship",
+      "period": "",
+      "status": "Archived",
+      "stack": [
+        "Next.js",
+        "Hardhat",
+        "MetaMask",
+        "Ethers.js"
+      ],
+      "links": {
+        "code": "https://github.com/Pantho-Haque/Salami---Web3"
+      },
+      "gallery": [],
+      "metrics": [],
+      "problem": "",
+      "approach": "",
+      "outcome": ""
+    }
+  ],
+  "seo": {
+    "title": "Pantho Haque · Software Engineer",
+    "description": "Frontend and platform engineer at Pathao. React, Next.js and TypeScript dashboards for logistics and rides at scale."
+  }
+}

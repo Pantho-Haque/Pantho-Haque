@@ -6,31 +6,34 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "prepare": "husky",
-    "commitlint": "commitlint --edit"
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "check": "pnpm lint && pnpm typecheck && pnpm build",
+    "vercel:link": "vercel link",
+    "env:pull": "vercel env pull .env.vercel",
+    "content:pull": "node --env-file=.env.local scripts/content-pull.ts",
+    "revalidate": "node --env-file=.env.local scripts/revalidate.ts",
+    "deploy:preview": "vercel deploy",
+    "ship": "pnpm check && vercel deploy --prod",
+    "prepare": "husky"
   },
   "dependencies": {
-    "framer-motion": "^12.23.0",
-    "next": "16.1.6",
-    "postcss": "^8.5.6",
-    "react": "19.2.0",
-    "react-dom": "19.2.0",
-    "lucide-react": "^0.548.0"
+    "@pantho075/trackima": "0.1.0",
+    "@vercel/speed-insights": "^2.0.0",
+    "next": "16.4.3",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.0.0",
-    "@commitlint/config-conventional": "^19.0.0",
-    "@tailwindcss/postcss": "^4.1.11",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.0.0",
+    "eslint-config-next": "16.4.3",
     "husky": "^9.1.7",
     "lint-staged": "^15.2.0",
-    "tailwindcss": "^4.1.11",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vercel": "^65.1.0"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [

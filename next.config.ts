@@ -1,13 +1,17 @@
-import { NextConfig } from "next";
+import type { NextConfig } from "next";
+
+// Content images come from Domino (built-in files at /cdn) and from Vercel Blob (Control Room uploads).
+const domino = process.env.DOMINO_URL ? new URL(process.env.DOMINO_URL) : null;
 
 const nextConfig: NextConfig = {
   images: {
-    dangerouslyAllowSVG: true,
     remotePatterns: [
-      { protocol: "http", hostname: "localhost", port: "3000" },
-      { protocol: "https", hostname: "domiknows.vercel.app" },
+      ...(domino ? [{ protocol: domino.protocol.replace(":", "") as "http" | "https", hostname: domino.hostname, pathname: "/cdn/**" }] : []),
+      { protocol: "https", hostname: "*.public.blob.vercel-storage.com", pathname: "/**" },
     ],
-    qualities: [25, 50, 75, 100],
+    formats: ["image/webp"],
+    minimumCacheTTL: 2678400, // 31 days
+    qualities: [75],
   },
 };
 

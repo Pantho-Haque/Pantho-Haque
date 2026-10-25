@@ -2,7 +2,7 @@ import { Fragment, ViewTransition, type CSSProperties } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import type { Content, Img, Project, Section } from "@/types/content";
-import { caseFiles, gainOf, usedIn, visibleSections } from "@/lib/content";
+import { caseFiles, gainOf, updatedOn, usedIn, visibleSections } from "@/lib/content";
 import { Clock, CopyButton, Gallery, Loadout, RailNav } from "./client";
 
 const pad = (n: number) => String(n).padStart(2, "0");
@@ -25,6 +25,8 @@ export function Pic({ img, sizes, preload, decorative }: { img: Img; sizes: stri
 }
 
 export function CaseCover({ p, sizes, preload }: { p: Project; sizes: string; preload?: boolean }) {
+  // No cover: no empty frame on the case file page, a slim band on cards (keeps the FILE label in place).
+  if (!p.cover) return preload ? null : <div className="cv none" />;
   return (
     <ViewTransition name={`cover-${p.slug}`} share="morph" default="none">
       <div className={preload ? "dz-hero corners" : "cv"}>
@@ -80,7 +82,7 @@ export function Briefing({ c }: { c: Content }) {
         <span className="osd tl" aria-hidden>CAM 04 · {p.location}</span>
         <span className="osd tr" aria-hidden><span className="rec">● REC</span> <Clock part="time" /></span>
         <span className="osd bl" aria-hidden><Clock part="date" /></span>
-        <span className="osd br" aria-hidden>Case file v{c.meta?.version ?? 1}</span>
+        <span className="osd br" aria-hidden>{updatedOn(c) ? `Updated ${updatedOn(c)}` : "Case file"}</span>
       </div>
       <div className="brief-copy">
         <div>
@@ -103,7 +105,8 @@ export function Briefing({ c }: { c: Content }) {
   );
 }
 
-function Body({ s, c }: { s: Section; c: Content }) {
+/** `base` prefixes project links: "" on the main site, "/for/<slug>" inside an exposure. */
+function Body({ s, c, base }: { s: Section; c: Content; base: string }) {
   switch (s.type) {
     case "timeline":
       return (
@@ -156,7 +159,7 @@ function Body({ s, c }: { s: Section; c: Content }) {
                   <p>{p.tagline}</p>
                   {p.metrics[0] && <div className="kpi"><b>{p.metrics[0].value}</b><span>{p.metrics[0].label}</span></div>}
                   {p.featured
-                    ? <Link className="btn sm open" href={`/work/${p.slug}`} data-trackima-event="project_open" data-trackima-project={p.slug}>Open case file<span className="sr">: {p.name}</span> →</Link>
+                    ? <Link className="btn sm open" href={`${base}/work/${p.slug}`} data-trackima-event="project_open" data-trackima-project={p.slug}>Open case file<span className="sr">: {p.name}</span> →</Link>
                     : (p.links.live || p.links.code) && <a className="btn sm open" href={p.links.live || p.links.code} rel="noopener" data-trackima-event="project_visit" data-trackima-project={p.slug} data-trackima-kind={p.links.live ? "live" : "code"}>Visit ↗</a>}
                 </div>
               </li>
@@ -178,7 +181,7 @@ function Body({ s, c }: { s: Section; c: Content }) {
       );
     }
     case "skills":
-      return <Loadout groups={s.groups.map((g) => ({ name: g.name, items: g.items.map((name) => ({ name, uses: usedIn(name, c) })) }))} />;
+      return <Loadout base={base} groups={s.groups.map((g) => ({ name: g.name, items: g.items.map((name) => ({ name, uses: usedIn(name, c) })) }))} />;
     case "achievements":
       return (
         <ul className="badges">
@@ -219,7 +222,7 @@ function Body({ s, c }: { s: Section; c: Content }) {
   }
 }
 
-export function Sections({ c }: { c: Content }) {
+export function Sections({ c, base = "" }: { c: Content; base?: string }) {
   return visibleSections(c).map((s, i) => (
     <section className="sec" id={`lv-${s.id}`} key={s.id} data-level="1" data-name={`LVL ${pad(i + 1)} · ${s.title}`} aria-labelledby={`h-${s.id}`}>
       <div className="sec-h">
@@ -228,7 +231,7 @@ export function Sections({ c }: { c: Content }) {
         <h2 id={`h-${s.id}`}>{s.title}</h2>
         {s.intro && <p><Md text={s.intro} /></p>}
       </div>
-      <Body s={s} c={c} />
+      <Body s={s} c={c} base={base} />
     </section>
   ));
 }
@@ -253,7 +256,7 @@ export function Finale({ c }: { c: Content }) {
         </div>
         <span className="mail">{p.email}</span>
       </div>
-      <div className="jr-foot"><span>© {new Date().getFullYear()} {p.name}</span><span>Content from the Control Room · v{c.meta?.version ?? 1}</span></div>
+      <div className="jr-foot"><span>© {new Date().getFullYear()} {p.name}</span><span>Content from the Control Room{updatedOn(c) && ` · updated ${updatedOn(c)}`}</span></div>
     </section>
   );
 }

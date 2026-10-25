@@ -25,7 +25,6 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const { isEnabled: preview } = await draftMode();
-  const trackima = process.env.NEXT_PUBLIC_TRACKIMA_SITE;
   return (
     <html lang="en" className={`${display.variable} ${body.variable} ${mono.variable}`}>
       <body>
@@ -38,7 +37,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         {children}
         <AchievementToast />
         <SpeedInsights sampleRate={0.5} />
-        {trackima && <Trackima site={trackima} />}
+        <Trackima />
       </body>
     </html>
   );

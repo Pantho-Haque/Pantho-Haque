@@ -1,9 +1,8 @@
-import Engine from "@/components/Engine";
-import { Briefing, Finale, Hud, LevelMap, Sections } from "@/components/journey";
-import { getContent, SITE_URL } from "@/lib/content";
+import { JourneyView } from "@/components/views";
+import { getExposure, SITE_URL } from "@/lib/content";
 
 export default async function Home() {
-  const c = await getContent();
+  const { content: c, exposure: x } = (await getExposure("main"))!;
   const p = c.profile;
   const person = {
     "@context": "https://schema.org",
@@ -18,18 +17,7 @@ export default async function Home() {
   };
   return (
     <>
-      <a className="skip" href="#main">Skip to content</a>
-      <Hud resumeUrl={p.resumeUrl} />
-      <div className="jr-grid">
-        <main id="main" className="jr-main">
-          <div className="route" aria-hidden><i /></div>
-          <Briefing c={c} />
-          <Sections c={c} />
-          <Finale c={c} />
-        </main>
-        <LevelMap c={c} />
-      </div>
-      <Engine />
+      <JourneyView c={c} x={x} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(person).replace(/</g, "\\u003c") }} />
     </>
   );

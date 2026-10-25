@@ -2,7 +2,7 @@
 // Small interactive islands. Everything else on the site is server-rendered HTML.
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { init } from "@pantho075/trackima";
+import { track, trackEvent, trackIdentify } from "@/lib/track";
 import { ACHIEVEMENTS, award, markOpened, type AchievementKey } from "@/lib/achievements";
 import type { GalleryImg } from "@/types/content";
 
@@ -58,7 +58,7 @@ export function RailNav({ railId }: { railId: string }) {
 }
 
 type Use = { name: string; slug?: string };
-export function Loadout({ groups }: { groups: { name: string; items: { name: string; uses: Use[] }[] }[] }) {
+export function Loadout({ groups, base = "" }: { groups: { name: string; items: { name: string; uses: Use[] }[] }[]; base?: string }) {
   const [sel, setSel] = useState<{ name: string; uses: Use[] } | null>(null);
   return (
     <div className="loadout rv">
@@ -88,7 +88,7 @@ export function Loadout({ groups }: { groups: { name: string; items: { name: str
         <h3>{sel ? sel.name : "Select a skill"}</h3>
         {!sel && <p>Each slot shows the projects and roles where I used it.</p>}
         {sel && (sel.uses.length ? (
-          <ul>{sel.uses.map((u) => <li key={u.name}>{u.slug ? <a href={`/work/${u.slug}`}>{u.name}</a> : <span>{u.name}</span>}</li>)}</ul>
+          <ul>{sel.uses.map((u) => <li key={u.name}>{u.slug ? <a href={`${base}/work/${u.slug}`}>{u.name}</a> : <span>{u.name}</span>}</li>)}</ul>
         ) : <p>Studied and used in coursework; not in a listed project yet.</p>)}
       </div>
     </div>
@@ -167,10 +167,25 @@ export function AchievementToast() {
   );
 }
 
-export function Trackima({ site }: { site: string }) {
+/** Starts Trackima (production only; the server accepts data from the production domain). */
+export function Trackima() {
+  useEffect(() => { track(); }, []);
+  return null;
+}
+
+/** Files this visit under the exposure in Trackima and tags every no-code event on the page with it. */
+export function ExposureTrack({ slug, company, role, view }: { slug: string; company: string; role: string; view: "one-page" | "full" }) {
   useEffect(() => {
-    // The Trackima server only accepts data from the production domain.
-    if (process.env.NODE_ENV === "production") init({ site, host: "https://trackima.pantho-haque-dev.workers.dev" });
-  }, [site]);
+    if (slug !== "main") trackIdentify(slug, { company, role });
+    trackEvent("exposure_view", { exposure: slug, app: "portfolio", view, ...(company ? { company } : {}) });
+    const tag = (e: MouseEvent) => {
+      const el = (e.target as Element | null)?.closest?.<HTMLElement>("[data-trackima-event]");
+      if (!el) return;
+      el.dataset.trackimaExposure ??= slug;
+      if (company) el.dataset.trackimaCompany ??= company;
+    };
+    document.addEventListener("click", tag, true); // capture: runs before Trackima's own click listener
+    return () => document.removeEventListener("click", tag, true);
+  }, [slug, company, role, view]);
   return null;
 }

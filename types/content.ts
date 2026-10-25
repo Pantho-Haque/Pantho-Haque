@@ -92,6 +92,22 @@ export type Content = {
   sections: Section[]; // page order = level order
   projects: Project[]; // array order = display order
   seo: { title: string; description: string };
-  /** Filled in by getContent() from the database row; not stored. */
-  meta?: { version: number; publishedAt: string };
+  /** Filled in when content is read from the database; not stored. */
+  meta?: { publishedAt: string };
+};
+
+/* ---------------- Exposures ----------------
+   A tailored copy of the content for one company. "main" is the public site and the block library.
+   Every exposure is a full Content; this is the extra information about who it is for. */
+export type ExposureMeta = {
+  slug: string; // "main", or company + random suffix: "acme-k7q2"
+  company: string; // "" for main
+  role: string;
+  showPreparedFor: boolean; // show "Prepared for Acme · Frontend Engineer" on the pages
+};
+
+/** One file in content/exposures/<slug>.json (content/main.json holds a plain Content). */
+export type ExposureFile = {
+  exposure: { company: string; role: string; jobUrl?: string; active: boolean; showPreparedFor: boolean };
+  content: Content;
 };

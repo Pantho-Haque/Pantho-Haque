@@ -1,6 +1,6 @@
 // Three small achievements, remembered per browser. Storage can be blocked (private mode), so every
 // access is wrapped and the in-memory set keeps a toast from repeating within the page.
-import { event } from "@pantho075/trackima";
+import { trackEvent } from "./track";
 
 export const ACHIEVEMENTS = {
   case: "Investigator · opened your first case file",
@@ -35,7 +35,7 @@ export function award(k: AchievementKey) {
   shown.add(k);
   add(GOT, k);
   window.dispatchEvent(new CustomEvent("ph:award", { detail: k }));
-  event("achievement", { id: k });
+  trackEvent("achievement", { id: k });
 }
 
 export const openedCases = () => read(OPENED);
